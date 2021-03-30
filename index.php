@@ -51,7 +51,7 @@ include 'function php/conn.php';
               <div class="col-lg-7 mb-4 text-white">
                 <!-- <header class="py-5 mt-5"> -->
                 <header>
-                    <h1 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC)</h1>
+                    <h1 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC) Test</h1>
                     <p class="lead mb-0 text-muted">Builds learning communities that pursue local governance excellence through knowledge sharing.</p>
                     <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo">Who Are We</a>
                 </header>
