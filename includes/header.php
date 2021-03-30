@@ -6,7 +6,7 @@
             
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="index.php" class="nav-link" id="navHome">Homes <span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link" id="navHome">Home <span class="sr-only">(current)</span></a></li>
                     <li class="nav-item"><a href="about.php" class="nav-link"  id="navAbout">About</a></li>
                     <li class="nav-item"><a href="news.php" class="nav-link"  id="navNews">News</a></li>
                     <li class="nav-item"><a href="msac.php" class="nav-link"  id="navMsac">MSAC</a></li>
