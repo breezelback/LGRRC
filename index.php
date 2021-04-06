@@ -34,7 +34,7 @@ include 'function php/conn.php';
       }
 
     </style>
-    <title>LGRRC</title>
+    <title>LGRRC CALABARZON</title>
   </head>
   <body>
   <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
