@@ -740,7 +740,12 @@ include 'function php/conn.php';
               dataType:"text",
               cache:false,     
               beforeSend:function() {
-
+                swal({
+                position: "top-end",
+                type: "info",
+                title: "Processing Data...",
+                showConfirmButton: false,
+                });
                        
               },  
               error:function(data){
@@ -749,6 +754,8 @@ include 'function php/conn.php';
               }, 
               success:function(data)
               {
+                swal.close();
+                data = data.trim();
                 // alert(data);
                 if (data == 'error') 
                 {

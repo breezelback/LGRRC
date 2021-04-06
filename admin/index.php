@@ -19,7 +19,7 @@
     <div class="page-wrapper default-theme sidebar-bg bg1 toggled">
         
         <!-- sidebar -->
-        <?php include 'includes/sidebar.php' ?>
+        <?php include 'includes/sidebar.php'; ?>
 
         <!-- page-content  -->
         <main class="page-content pt-2">
@@ -319,7 +319,7 @@
 
 
     <!-- using local scripts -->
-<?php include 'includes/js_includes.php' ?>
+<?php include 'includes/js_includes.php'; ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
 
 <script>
