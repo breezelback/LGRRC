@@ -65,7 +65,7 @@ include 'function php/conn.php';
                     <?php 
                     if (isset($_SESSION['id'])) 
                     {
-                      $selectUser = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `borrowerId` FROM `tbl_user` WHERE `id` = "'.$_SESSION['id'].'" ';
+                      $selectUser = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `borrowerId`, `email` FROM `tbl_user` WHERE `id` = "'.$_SESSION['id'].'" ';
                       $execUser = $conn->query($selectUser);
                       $resUser = $execUser->fetch_assoc();
 
@@ -157,17 +157,21 @@ include 'function php/conn.php';
                                   <input type="date" class="form-control" id="updateBirthday" value="<?php echo $mysqldate; ?>">
                                 </div>
                                 <div class="col-sm-6">
-                                  Username:
-                                  <input type="text" class="form-control" id="updateUsername" value="<?php echo $resUser['username']; ?>">
+                                  Email:
+                                  <input type="email" class="form-control" id="updateEmail" value="<?php echo $resUser['email']; ?>">
                                 </div>
                               </div>
 
                               <div class="row">
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
+                                  Username:
+                                  <input type="text" class="form-control" id="updateUsername" value="<?php echo $resUser['username']; ?>">
+                                </div>
+                                <div class="col-sm-4">
                                   Password:
                                   <input type="password" class="form-control" id="updatePassword" value="<?php echo $resUser['password']; ?>">
                                 </div>
-                                <div class="col-sm-6">
+                                <div class="col-sm-4">
                                   Confirm Password:
                                   <input type="password" class="form-control" id="confirmPassword" value="<?php echo $resUser['password']; ?>">
                                 </div>
@@ -802,8 +806,9 @@ include 'function php/conn.php';
         var updateUsername = $('#updateUsername').val();
         var updatePassword = $('#updatePassword').val();
         var confirmPassword = $('#confirmPassword').val();
+        var updateEmail = $('#updateEmail').val();
 
-        if ( updateLastname == '' || updateFirstname == '' || updateMiddlename == '' || updateAddress == '' || updateMobile == '' || updateBirthday == '' || updateUsername == '' || updatePassword == '' ) 
+        if ( updateLastname == '' || updateFirstname == '' || updateMiddlename == '' || updateAddress == '' || updateMobile == '' || updateBirthday == '' || updateUsername == '' || updatePassword == '' || updateEmail == '' ) 
         {
           swal('Error','Please fill up required fields!','error');
         }
@@ -813,7 +818,7 @@ include 'function php/conn.php';
         }
         else
         {
-          var other_data = 'updateLastname='+updateLastname+'&updateFirstname='+updateFirstname+'&updateMiddlename='+updateMiddlename+'&updateAddress='+updateAddress+'&updateMobile='+updateMobile+'&updateBirthday='+updateBirthday+'&updateUsername='+updateUsername+'&updatePassword='+updatePassword;
+          var other_data = 'updateLastname='+updateLastname+'&updateFirstname='+updateFirstname+'&updateMiddlename='+updateMiddlename+'&updateAddress='+updateAddress+'&updateMobile='+updateMobile+'&updateBirthday='+updateBirthday+'&updateUsername='+updateUsername+'&updatePassword='+updatePassword+'&updateEmail='+updateEmail;
           // alert(other_data);
           
           $.ajax({

@@ -10,6 +10,7 @@ $mobile = $_GET['mobile'];
 $birthday	 = $_GET['birthday'];
 $username = $_GET['username'];
 $password = $_GET['password'];
+$email = $_GET['email'];
 
 
 
@@ -22,7 +23,7 @@ if ($execSelect->num_rows > 0)
 }
 else
 {
-	$sql = ' INSERT INTO `tbl_user`( `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `usertype` ) VALUES ( "'.$lastname.'", "'.$firstname.'", "'.$middlename.'", "'.$address.'", "'.$mobile.'", "'.$birthday.'", "'.$username.'", "'.$password.'", "approved", NOW(), "user" ) ';
+	$sql = ' INSERT INTO `tbl_user`( `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `usertype`, `email` ) VALUES ( "'.$lastname.'", "'.$firstname.'", "'.$middlename.'", "'.$address.'", "'.$mobile.'", "'.$birthday.'", "'.$username.'", "'.$password.'", "approved", NOW(), "user", "'.$email.'" ) ';
 
 	$exec = $conn->query($sql);
 	echo "Success";

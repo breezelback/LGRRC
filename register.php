@@ -26,15 +26,23 @@
           Address
           <input type="text" class="form-control" name="" id="address">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
           Mobile
           <input type="text" class="form-control" name="" id="mobile">
         </div>
-        <div class="col-md-3">
+      </div>
+      
+      <div class="row">
+        <div class="col-md-6">
           Birthday
           <input type="date" class="form-control" name="" id="birthday">
         </div>
+        <div class="col-md-6">
+          Email Address
+          <input type="email" class="form-control" name="" id="email">
+        </div>
       </div>
+
       <br><hr>
       <div class="row">
         <div class="col-md-4">
@@ -75,11 +83,12 @@ $('#btnRegister').click(function(){
   var username = $('#username').val();
   var password = $('#password').val();
   var confirmPassword = $('#confirmPassword').val();
+  var email = $('#email').val();
 
 
   var passwordLength = password.length;
 
-  if ( lastname == '' || firstname == '' || middlename == '' || address == '' || mobile == '' || birthday == '' || username == '' || password == '' || confirmPassword == '' ) 
+  if ( lastname == '' || firstname == '' || middlename == '' || address == '' || mobile == '' || birthday == '' || username == '' || password == '' || confirmPassword == '' || email == '' ) 
   {
     swal('Incomplete Data!','Please fill up required fields','error');
   }
@@ -95,7 +104,7 @@ $('#btnRegister').click(function(){
     }
     else
     {
-      var other_data = 'lastname='+lastname+'&firstname='+firstname+'&middlename='+middlename+'&address='+address+'&mobile='+mobile+'&birthday='+birthday+'&username='+username+'&password='+password;
+      var other_data = 'lastname='+lastname+'&firstname='+firstname+'&middlename='+middlename+'&address='+address+'&mobile='+mobile+'&birthday='+birthday+'&username='+username+'&password='+password+'&email='+email;
       // alert(other_data);
       $.ajax({
         url:"function php/insertUser.php?"+other_data,  

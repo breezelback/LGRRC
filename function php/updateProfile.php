@@ -10,6 +10,7 @@ $updateMobile = $_GET['updateMobile'];
 $updateBirthday = $_GET['updateBirthday'];
 $updateUsername = $_GET['updateUsername'];
 $updatePassword = $_GET['updatePassword'];
+$updateEmail = $_GET['updateEmail'];
 
 
 $sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$updateUsername.'" AND `id` != "'.$_SESSION['id'].'" ';
@@ -21,7 +22,7 @@ if ($execSelect->num_rows > 0)
 }
 else
 {
-	$sql = ' UPDATE `tbl_user` SET `lastname`= "'.$updateLastname.'", `firstname`= "'.$updateFirstname.'", `middlename`= "'.$updateMiddlename.'", `address`= "'.$updateAddress.'", `mobile`= "'.$updateMobile.'", `birthday`= "'.$updateBirthday.'", `username`= "'.$updateUsername.'", `password`= "'.$updatePassword.'"  WHERE `id` = "'.$_SESSION['id'].'" ';
+	$sql = ' UPDATE `tbl_user` SET `lastname`= "'.$updateLastname.'", `firstname`= "'.$updateFirstname.'", `middlename`= "'.$updateMiddlename.'", `address`= "'.$updateAddress.'", `mobile`= "'.$updateMobile.'", `birthday`= "'.$updateBirthday.'", `username`= "'.$updateUsername.'", `password`= "'.$updatePassword.'", `email`= "'.$updateEmail.'"  WHERE `id` = "'.$_SESSION['id'].'" ';
 	$exec = $conn->query($sql);
 
 	echo "success";
