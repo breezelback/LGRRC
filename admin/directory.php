@@ -56,10 +56,10 @@
                               <tr>
                                 <th>PICTURE</th>
                                 <th>NAME</th>
-                                <th>AREA OF EXPERTISE</th>
-                                <th>ADDRESS</th> 
-                                <th>CONTACT NUMBER</th>
+                                <th>POSITION</th> 
                                 <th>EMAIL</th> 
+                                <th>AREA OF EXPERTISE</th>
+                                <th>LICENSES/ACCREDITATION:</th>
                                 <th width="7%"><center>Action</center></th>
                               </tr>
                             </thead>
@@ -101,12 +101,12 @@
                   <input type="text" class="form-control" id="name" name="">
                   Expertise <i>(Please add , if 2 or more field of expertise)</i>:
                   <input type="text" class="form-control" id="expertise" name="">
-                  Address:
+                  Position:
                   <input type="text" class="form-control" id="address" name="">
-                  Contact Number:
-                  <input type="text" class="form-control" id="contactNumber" name="">
                   Email:
                   <input type="text" class="form-control" id="email" name="">
+                  Licenses/Accreditation:
+                  <input type="text" class="form-control" id="contactNumber" name="">
 
 
                 </div><!-- <div class="modal-body"> -->
@@ -145,12 +145,12 @@
                   <input type="text" class="form-control" id="updateName" name="">
                   Expertise <i>(Please add , if 2 or more field of expertise)</i>:
                   <input type="text" class="form-control" id="updateExpertise" name="">
-                  Address:
+                  Position:
                   <input type="text" class="form-control" id="updateAddress" name="">
-                  Contact Number:
-                  <input type="text" class="form-control" id="updateContactNumber" name="">
                   Email:
                   <input type="text" class="form-control" id="updateEmail" name="">
+                  Licenses/Accreditation:
+                  <input type="text" class="form-control" id="updateContactNumber" name="">
 
 
                 </div><!-- <div class="modal-body"> -->
@@ -288,7 +288,7 @@ $('#btnInsertExpert').click(function(){
 
 
   //alert if incomplete start
-  if(name=="" || expertise=="" || contactNumber=="" || address=="" || email=="" ) 
+  if(name=="" || expertise=="" || address=="" || email=="" ) 
   {
       swal({
         title: "Incomplete Registration!",
@@ -600,7 +600,7 @@ $('#btnUpdateExpert').click(function(){
 
 
   //alert if incomplete start
-  if(updateName=="" || updateExpertise=="" || updateAddress=="" || updateContactNumber=="" || updateEmail=="" ) 
+  if(updateName=="" || updateExpertise=="" || updateAddress=="" || updateEmail=="" ) 
   {
       swal({
         title: "Incomplete Registration!",

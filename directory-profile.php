@@ -47,8 +47,8 @@ $result = $exec->fetch_assoc();
                       <img src="images/expert/<?php echo $result['imageName']; ?>" alt="" width="200px">
                        <h1 class="display-6 headingText"><?php echo $result['name']; ?></h1>
                         <p class="lead mb-0">Expertise: <b><?php echo $result['expertise']; ?></b></p>
-                        <p class="lead mb-0">Contact Number: <b><?php echo $result['contactNumber']; ?></b></p>
-                        <p class="lead mb-0">Address: <b><?php echo $result['address']; ?></b></p>
+                        <p class="lead mb-0">Licenses/Accreditation: <b><?php echo $result['contactNumber']; ?></b></p>
+                        <p class="lead mb-0">Position: <b><?php echo $result['address']; ?></b></p>
                         <p class="lead mb-0">Email: <b><?php echo $result['email']; ?></b></p>
                    
 

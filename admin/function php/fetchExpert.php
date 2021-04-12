@@ -56,10 +56,10 @@ while($row = mysqli_fetch_array($result)) {
                     </center>
                     ';
  $sub_array[] = '<div id="td_name'.$row["id"].'" data-data1="'.$row["name"].'">'.$row["name"].'</div>';
- $sub_array[] = '<div id="td_expertise'.$row["id"].'" data-data2="'.$row["expertise"].'">'.$row["expertise"].'</div>';
  $sub_array[] = '<div id="td_address'.$row["id"].'" data-data3="'.$row["address"].'">'.$row["address"].'</div>';
- $sub_array[] = '<div id="td_contact'.$row["id"].'" data-data4="'.$row["contactNumber"].'">'.$row["contactNumber"].'</div>';
  $sub_array[] = '<div id="td_email'.$row["id"].'" data-data5="'.$row["email"].'">'.$row["email"].'</div>';
+ $sub_array[] = '<div id="td_expertise'.$row["id"].'" data-data2="'.$row["expertise"].'">'.$row["expertise"].'</div>';
+ $sub_array[] = '<div id="td_contact'.$row["id"].'" data-data4="'.$row["contactNumber"].'">'.$row["contactNumber"].'</div>';
 
 
 $sub_array[] .= '<center>
