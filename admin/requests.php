@@ -59,7 +59,7 @@
                                 <th>Expert Name</th>
                                 <th>Requestor Name</th>
                                 <th>Date Requested</th>
-                                <th width="7%"><center>Action</center></th>
+                                <!-- <th width="7%"><center>Action</center></th> -->
                               </tr>
                             </thead>
                           </table>

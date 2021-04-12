@@ -62,17 +62,17 @@ while($row = mysqli_fetch_array($result)) {
  $sub_array[] = '<div id="td_contact'.$row["id"].'" data-data4="'.$row["contactNumber"].'">'.$row["contactNumber"].'</div>';
 
 
-$sub_array[] .= '<center>
-        <div class="cell-button-alignment">
-        <div class="cell-button btn-group">
-         <button type="button" id="td_btn_edit" data-id_edit="'.$row["id"].'" data-toggle= "modal" data-target="#modalUpdateExpert" class="btn btn-md btn-primary">
-         <span class="fas fa-edit"></span></button>
-         <button type="button" id="td_btn_delete" data-id_delete="'.$row["id"].'" class="btn btn-md btn-danger">
-         <span class="fa fa-trash"></span></button>
-         </div>
+// $sub_array[] .= '<center>
+//         <div class="cell-button-alignment">
+//         <div class="cell-button btn-group">
+//          <button type="button" id="td_btn_edit" data-id_edit="'.$row["id"].'" data-toggle= "modal" data-target="#modalUpdateExpert" class="btn btn-md btn-primary">
+//          <span class="fas fa-edit"></span></button>
+//          <button type="button" id="td_btn_delete" data-id_delete="'.$row["id"].'" class="btn btn-md btn-danger">
+//          <span class="fa fa-trash"></span></button>
+//          </div>
         
-        </div>
-        </center>';
+//         </div>
+//         </center>';
    
    
 

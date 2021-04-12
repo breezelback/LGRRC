@@ -71,7 +71,9 @@ include 'function php/conn.php';
             while ( $result = $exec->fetch_assoc() ) {
               $expertise = $result['expertise'];
 
-              $expertise = str_replace(' ', '', $expertise);
+              $expertise = str_replace(', ', ',', $expertise);
+              $expertise = str_replace(' ,', ',', $expertise);
+
               $expertise1 .= $expertise.',';
 
               $expertise = explode(',', $expertise1);
