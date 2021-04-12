@@ -61,15 +61,15 @@ $updateBirthday = date( 'Y-m-d', $phpdate );
  $sub_array[] = '<div id="td_birthday'.$row["id"].'" data-data3="'.$updateBirthday.'">'.$mysqldate.'</div>';
 
 
- $sub_array[] .= '<center>
-    <div class="cell-button-alignment">
-    <div class="cell-button btn-group">
-     <button style="width:60px;" type="button" id="td_btn_approve" data-id_approve="'.$row["id"].'" class="btn btn-md btn-danger">
-     <span class="fa fa-times"></span></button>
-     </div>
+ // $sub_array[] .= '<center>
+ //    <div class="cell-button-alignment">
+ //    <div class="cell-button btn-group">
+ //     <button style="width:60px;" type="button" id="td_btn_approve" data-id_approve="'.$row["id"].'" class="btn btn-md btn-danger">
+ //     <span class="fa fa-times"></span></button>
+ //     </div>
     
-    </div>
-    </center>';  
+ //    </div>
+ //    </center>';  
         
 
 
