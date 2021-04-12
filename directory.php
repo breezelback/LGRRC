@@ -115,7 +115,7 @@ include 'function php/conn.php';
               </div>
         </div>
         <hr>
-        <p>Filter Address</p>
+        <p>Filter Position</p>
         <div class="row">
           <div class="input-group col-md-12">
                   <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Address" id="searchAddress">
