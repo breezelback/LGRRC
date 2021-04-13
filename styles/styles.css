@@ -665,7 +665,21 @@ ul {
 }
 
 
+.expertImage
+{
+  border-radius: 5px;
+  height: 85px;
+  width: 85px;
+  border: 1px solid darkgray;
+}
 
+.expertProfilePicture
+{
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  height: 145px;
+  width: 145px;
+}
 
 
 

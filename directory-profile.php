@@ -44,7 +44,7 @@ $result = $exec->fetch_assoc();
               <div class="col-lg-12 mb-4 text-white headingContent" style="background-color: rgba(0,0,0,0.9) !important;">
                 <header class="py-5 mt-2">  
 
-                      <img src="images/expert/<?php echo $result['imageName']; ?>" alt="" width="200px">
+                      <img class="expertProfilePicture" src="images/expert/<?php echo $result['imageName']; ?>" alt="" width="200px">
                        <h1 class="display-6 headingText"><?php echo $result['name']; ?></h1>
                         <p class="lead mb-0">Expertise: <b><?php echo $result['expertise']; ?></b></p>
                         <p class="lead mb-0">Licenses/Accreditation: <b><?php echo $result['contactNumber']; ?></b></p>

@@ -57,6 +57,33 @@ include 'function php/conn.php';
       </div>
       <div class="col-md-3" style="border-right: 2px solid lightgray;">
         <p style="font-weight: bold;">Categories:</p><br>
+        <hr>
+
+
+        <p>Filter by Name</p>
+        <div class="row">
+          <div class="input-group col-md-12">
+                  <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Name" id="searchName">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary border-left-0 border" type="button" id="btnSearchName" onclick="searchCategory('test');">
+                          <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+              </div>
+        </div>
+        <hr>
+        <p>Filter Position</p>
+        <div class="row">
+          <div class="input-group col-md-12">
+                  <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Position" id="searchAddress">
+                  <span class="input-group-append">
+                      <button class="btn btn-outline-secondary border-left-0 border" type="button" id="btnSearchAddress" onclick="searchCategory('test');">
+                          <i class="fa fa-search"></i>
+                      </button>
+                    </span>
+              </div>
+        </div>
+        <hr>
         <p>Filter by Expertise</p>
         <div class="row">
           <ul class="nav nav-pills">
@@ -73,6 +100,9 @@ include 'function php/conn.php';
 
               $expertise = str_replace(', ', ',', $expertise);
               $expertise = str_replace(' ,', ',', $expertise);
+
+
+              $expertise = rtrim($expertise, ' ');
 
               $expertise1 .= $expertise.',';
 
@@ -103,29 +133,7 @@ include 'function php/conn.php';
              </ul>
         </div>
         <hr>
-        <p>Filter by Name</p>
-        <div class="row">
-          <div class="input-group col-md-12">
-                  <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Name" id="searchName">
-                  <span class="input-group-append">
-                      <button class="btn btn-outline-secondary border-left-0 border" type="button" id="btnSearchName" onclick="searchCategory('test');">
-                          <i class="fa fa-search"></i>
-                      </button>
-                    </span>
-              </div>
-        </div>
-        <hr>
-        <p>Filter Position</p>
-        <div class="row">
-          <div class="input-group col-md-12">
-                  <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Address" id="searchAddress">
-                  <span class="input-group-append">
-                      <button class="btn btn-outline-secondary border-left-0 border" type="button" id="btnSearchAddress" onclick="searchCategory('test');">
-                          <i class="fa fa-search"></i>
-                      </button>
-                    </span>
-              </div>
-        </div>
+
       </div>
       <div class="col-md-7 ml-2">
         <!-- <br><hr> -->

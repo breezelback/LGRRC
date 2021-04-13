@@ -54,15 +54,14 @@
 
 
 
-	$sqlMain = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` FROM `tbl_expert` '.$queryCondition.' ORDER BY `name` ASC ';
+	$sqlMain = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` FROM `tbl_expert` '.$queryCondition.' GROUP BY `name` ORDER BY `name` ASC ';
 	$exec = $conn->query($sqlMain);
 
 	if ($exec->num_rows > 0) 
 	{
-			while ( $result = $exec->fetch_assoc() ) 
+		while ( $result = $exec->fetch_assoc() ) 
 		{
 	
-
 			 ?>
 
 			<div class="col-md-4 asda" align="center">
@@ -71,7 +70,7 @@
 				<div class="row tab-pane fade show" id="<?php echo $result['expertise']; ?>" role="tabpanel" aria-labelledby="<?php echo $result['expertise']; ?>-tab" style="border: 1px solid grey; border-radius: 5px; margin-right: 1px; height: 320px;">
 
 					<div class="col-md-5" style="border-right: 2px solid grey; background-color: lightgray">
-						<center><img class="m-2" src="images/expert/<?php echo $result['imageName']; ?>" width="70"></center>
+						<center><img class="m-2 expertImage" src="images/expert/<?php echo $result['imageName']; ?>" width="70"></center>
 					</div>
 					<div class="col-md-7" style="word-wrap: break-word;">
 						<a href="directory-profile.php?id=<?php echo $result['id']; ?>" style="margin:1px; color: black;"><h4 style="border-bottom: 1px solid grey;"><?php echo $result['name']; ?></h4></a>
