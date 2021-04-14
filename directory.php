@@ -117,8 +117,8 @@ include 'function php/conn.php';
             foreach($expertise as $output) {
             ?>
                 <li class="nav-item ml-1">
-                      <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
-                    </li>
+                  <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
+                </li>
 
 
               <?php
@@ -214,7 +214,7 @@ include 'function php/conn.php';
 
       $.ajax({
 
-      url:"function php/fetchExperts.php?id="+keywordHolder+'&nameHolder='+nameHolder+'&addressHolder='+addressHolder, 
+        url:"function php/fetchExperts.php?id="+keywordHolder+'&nameHolder='+nameHolder+'&addressHolder='+addressHolder, 
         method:"GET",  
 
         contentType:false,
@@ -232,8 +232,8 @@ include 'function php/conn.php';
         success:function(data){
         // alert(data); 
            $('#imgLoading').hide();
-      document.getElementById("directoryOutput").innerHTML=data;
-      document.getElementById("directoryOutput").hidden=false;
+          document.getElementById("directoryOutput").innerHTML=data;
+          document.getElementById("directoryOutput").hidden=false;
 
         }
                 

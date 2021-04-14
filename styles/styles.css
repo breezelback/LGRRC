@@ -681,8 +681,33 @@ ul {
   width: 145px;
 }
 
+.expertDetails
+{
+  height: 300px;
+  overflow-y: scroll;
+}
+/* width */
+.expertDetails::-webkit-scrollbar {
+  width: 5px;
+}
 
+/* Track */
+.expertDetails::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  height: 10px;
+}
+ 
+/* Handle */
+.expertDetails::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
 
+/* Handle on hover */
+.expertDetails::-webkit-scrollbar-thumb:hover {
+  background: grey; 
+}
 
 
 

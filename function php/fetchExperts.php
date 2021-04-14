@@ -72,7 +72,7 @@
 					<div class="col-md-5" style="border-right: 2px solid grey; background-color: lightgray">
 						<center><img class="m-2 expertImage" src="images/expert/<?php echo $result['imageName']; ?>" width="70"></center>
 					</div>
-					<div class="col-md-7" style="word-wrap: break-word;">
+					<div class="col-md-7 expertDetails" style="word-wrap: break-word;">
 						<a href="directory-profile.php?id=<?php echo $result['id']; ?>" style="margin:1px; color: black;"><h4 style="border-bottom: 1px solid grey;"><?php echo $result['name']; ?></h4></a>
 						<p style="font-size: 13px;"><b>Expertise</b>: <b style="color: black;"><?php echo $result['expertise']; ?></b></p>
 						<p style="font-size: 13px;"><b>Position</b>: <b style="color: black;"><?php echo $result['address']; ?></b></p>
