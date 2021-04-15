@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: http://www.lgrc.calabarzon.dilg.gov.ph/sitemap.xml

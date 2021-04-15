@@ -19,6 +19,10 @@ else
   $searchValue = '';
 }
  ?>
+<?php include 'validate.php'; ?>
+
+
+ 
 <!DOCTYPE html>
 <html lang="en">
 
