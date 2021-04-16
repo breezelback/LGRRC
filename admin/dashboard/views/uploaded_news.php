@@ -1,6 +1,6 @@
 <div class="col-xl-8 col-sm-8 mb-3">
-  <div class="card-header bg-primary text-white">
-    <i class="fa fa-newspaper-o"></i> Newly Uploaded News
+  <div class="card-header bg-warning text-white">
+    <i class="fa fa-newspaper"></i> Newly Uploaded News
   </div>
 
   <div class="row mt-1">

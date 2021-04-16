@@ -6,8 +6,8 @@
 ?>
 
 <div class="col-xl-4 col-sm-4">
-  <div class="card-header bg-primary text-white">
-    <i class="fa fa-newspaper-o"></i> Newly Added MSAC Members
+  <div class="card-header bg-success text-white">
+    <i class="fa fa-users"></i> Newly Added MSAC Members
   </div>
 
   <div class="row mt-1">
