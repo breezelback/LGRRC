@@ -1,6 +1,9 @@
 
-<?php include 'validate.php'; ?>
+<?php 
+require_once 'validate.php';
+require_once 'function php/fetchUsersData.php';
 
+ ?>
  <!DOCTYPE html>
 <html lang="en">
 

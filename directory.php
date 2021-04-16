@@ -111,21 +111,31 @@ include 'function php/conn.php';
              ?>
 
             <?php 
-            $x++;
-            }
-
-            foreach($expertise as $output) {
+              $x++;
+              }
             ?>
-                <li class="nav-item ml-1">
+
+            <select name="" class="form-control mt-3" onchange="searchCategory('<?php foreach($expertise as $output){  echo $output; } ?>');">
+
+            <?php
+              foreach($expertise as $output) 
+              {
+            ?>
+                <!-- <li class="nav-item ml-1">
                   <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
-                </li>
+                </li> -->
+
+                <option value="<?php echo $output; ?> "><?php echo $output; ?></option>
 
 
-              <?php
-            }
 
-             ?>
-                   
+            <?php
+              }
+
+            ?>
+                  
+                    
+            </select> 
 
                     <!-- <li class="nav-item ml-1"> 
                       <a type="submit" class="nav-link navPill" data-toggle="pill" href="#<?php echo $expertise[$x]; ?>" role="tab" onclick="searchCategory('<?php echo $expertise[$x]; ?>');"><?php echo $expertise[$x]; ?></a>
