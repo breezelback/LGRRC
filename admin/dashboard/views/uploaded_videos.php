@@ -5,8 +5,8 @@
 ?>
 
 <div class="col-xl-12 col-sm-12 mb-3">
-  <div class="card-header bg-primary text-white">
-    <i class="fa fa-area-chart"></i> New Embedded Videos
+  <div class="card-header bg-danger text-white">
+    <i class="fa fa-video"></i> New Embedded Videos
   </div>
 
   <div class="row mt-1">

@@ -7,7 +7,7 @@
 
 <div class="col-xl-12 col-sm-12 mb-3">
   <div class="card-header bg-primary text-white">
-    <i class="fa fa-area-chart"></i> Knowledge Product Borrowed History
+    <i class="fa fa-history"></i> Knowledge Product Borrowed History
   </div>
 
   <div class="row mt-1">
