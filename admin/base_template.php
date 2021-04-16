@@ -29,7 +29,23 @@
         
         <!-- content -->
         <div id="content">
-          <?php emptyblock('content') ?>
+            <main class="page-content pt-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-12 col-sm-12 mb-1">
+                          <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
+                              <span class="fas fa-list"></span>
+                          </a>
+                          <a id="pin-sidebar" class="btn btn-outline-secondary rounded-0" href="#">
+                              <span class="fas fa-map"></span>
+                          </a>
+                        </div>
+                    </div>
+                </div>    
+            </main>  
+
+            <?php emptyblock('content') ?>
+        
         </div>
         <!-- end content -->
     </div>
@@ -37,7 +53,7 @@
 </body>
 <?php startblock('assets') ?>
     <?php include 'includes/js_includes.php'; ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    
 
     
 <?php endblock() ?>

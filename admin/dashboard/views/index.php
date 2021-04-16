@@ -5,7 +5,7 @@
   <div id="overlay" class="overlay"></div>
     <!-- container -->
     <div class="container-fluid">
-      <div class="row">
+      <!-- <div class="row">
         <div class="col-xl-12 col-sm-12 mb-1">
           <a id="toggle-sidebar" class="btn btn-secondary rounded-0" href="#">
               <span class="fas fa-list"></span>
@@ -14,7 +14,7 @@
               <span class="fas fa-map"></span>
           </a>
         </div>
-      </div>
+      </div> -->
       <div class="row">
         <div class="col-md-12 mt-2">
           <center><h2>Dashboard</h2></center>
