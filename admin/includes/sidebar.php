@@ -1,26 +1,3 @@
-<?php 
-// session_start();
-
-// if (!isset($_SESSION)) 
-// {
-//     header('location: admin-login.php');
-// }
-// else
-// {
-//     if (!isset($_SESSION['usertype'])) 
-//     {
-//         header('location: admin-login.php');
-
-//         if ($_SESSION['usertype'] != 'admin') 
-//         {
-//             header('location: admin-login.php');
-//         }
-//     }
-    
-// }
-
- ?>
-
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
         <!-- sidebar-brand  -->
@@ -38,25 +15,8 @@
                     <strong>LGRRC</strong>
                 </span>
                 <span class="user-role">Administrator</span>
-               <!--  <span class="user-status">
-                    <i class="fa fa-circle"></i>
-                    <span>Online</span>
-                </span> -->
             </div>
         </div>
-        <!-- sidebar-search  -->
-        <!-- <div class="sidebar-item sidebar-search">
-            <div>
-                <div class="input-group">
-                    <input type="text" class="form-control search-menu" placeholder="Search...">
-                    <div class="input-group-append">
-                        <span class="input-group-text">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         <!-- sidebar-menu  -->
         <div class=" sidebar-item sidebar-menu">
             <ul>
@@ -174,14 +134,6 @@
                         <span class="menu-text">FAQ</span>
                     </a>
                 </li>
-
-            
-                <!-- <li class="">
-                    <a href="../function php/logout.php">
-                        <i class="fa fa-sign-out-alt"></i>
-                        <span class="menu-text">Logout</span>
-                    </a>
-                </li> -->
                 
             </ul>
         </div>
@@ -189,125 +141,6 @@
     </div>
     <!-- sidebar-footer  -->
     <div class="sidebar-footer">
-        <!-- <div class="dropdown">
-
-            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-bell"></i>
-                <span class="badge badge-pill badge-warning notification">3</span>
-            </a>
-            <div class="dropdown-menu notifications" aria-labelledby="dropdownMenuMessage">
-                <div class="notifications-header">
-                    <i class="fa fa-bell"></i>
-                    Notifications
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <div class="notification-content">
-                        <div class="icon">
-                            <i class="fas fa-check text-success border border-success"></i>
-                        </div>
-                        <div class="content">
-                            <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                            <div class="notification-time">
-                                6 minutes ago
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="dropdown-item" href="#">
-                    <div class="notification-content">
-                        <div class="icon">
-                            <i class="fas fa-exclamation text-info border border-info"></i>
-                        </div>
-                        <div class="content">
-                            <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                            <div class="notification-time">
-                                Today
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <a class="dropdown-item" href="#">
-                    <div class="notification-content">
-                        <div class="icon">
-                            <i class="fas fa-exclamation-triangle text-warning border border-warning"></i>
-                        </div>
-                        <div class="content">
-                            <div class="notification-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                            <div class="notification-time">
-                                Yesterday
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-center" href="#">View all notifications</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-envelope"></i>
-                <span class="badge badge-pill badge-success notification">7</span>
-            </a>
-            <div class="dropdown-menu messages" aria-labelledby="dropdownMenuMessage">
-                <div class="messages-header">
-                    <i class="fa fa-envelope"></i>
-                    Messages
-                </div>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
-                    <div class="message-content">
-                        <div class="pic">
-                            <img src="../images/lgrc_logo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="message-title">
-                                <strong> Jhon doe</strong>
-                            </div>
-                            <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                        </div>
-                    </div>
-
-                </a>
-                <a class="dropdown-item" href="#">
-                    <div class="message-content">
-                        <div class="pic">
-                            <img src="../images/lgrc_logo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="message-title">
-                                <strong> Jhon doe</strong>
-                            </div>
-                            <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                        </div>
-                    </div>
-
-                </a>
-                <a class="dropdown-item" href="#">
-                    <div class="message-content">
-                        <div class="pic">
-                            <img src="../images/lgrc_logo.png" alt="">
-                        </div>
-                        <div class="content">
-                            <div class="message-title">
-                                <strong> Jhon doe</strong>
-                            </div>
-                            <div class="message-detail">Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit. In totam explicabo</div>
-                        </div>
-                    </div>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item text-center" href="#">View all messages</a>
-
-            </div>
-        </div> -->
 
         <div class="dropdown">
             <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -315,9 +148,6 @@
                 <span class="badge-sonar"></span>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuMessage">
-               <!--  <a class="dropdown-item" href="#">My profile</a>
-                <a class="dropdown-item" href="#">Help</a>
-                <a class="dropdown-item" href="#">Setting</a> -->
                 <center>
                     Update Password <br>
                     <input type="password" class="form-control mb-2" placeholder="New Password" style="width: 70%;" id="updatePassword">
