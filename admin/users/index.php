@@ -1,3 +1,5 @@
+<?php require_once 'function php/fetchUsersData.php'; ?>
+
 <!-- page-content  -->
 <main class="page-content pt-2">
   <div id="overlay" class="overlay"></div>
@@ -132,11 +134,8 @@
     </div>
   </div>
 
-
-
-
-
-
   </div><!-- container -->
 </main>
 <!-- page-content" -->
+
+<?php include 'users.js'; ?>

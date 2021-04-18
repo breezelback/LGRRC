@@ -1,7 +1,5 @@
 <?php 
   include 'base_template.php'; 
-  include 'users/users.js';
-  require_once 'function php/fetchUsersData.php';
 ?>
 
 
