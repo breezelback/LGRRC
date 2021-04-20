@@ -32,55 +32,35 @@
       }
     }); 
 
-    $('#btnInsertMsac').click(function(){
-      var agencyName = document.getElementById("agencyName").value;
-      var address = document.getElementById("address").value;
-      var contactNumber = document.getElementById("contactNumber").value;
-      var email = document.getElementById("email").value;
-      var file = document.getElementById("file_editProfile").value;
-
+    $(document).on('click', '#btnInsertMsac', function(){
+      let agencyName = $("#agencyName").val();
+      let address = $("#address").val();
+      let contactNumber = $("#contactNumber").val();
+      let email = $("#email").val();
+      let file = $("#file_editProfile").val();
+      let data = {
+        title: "Incomplete Registration!", 
+        msg: "Please complete required fields!", 
+        type: "error",
+        show_cancel: false, 
+        btn_color: "#5cb85c", 
+        btn_text: "<span class='fa fa-check'></span>&nbspProceed", 
+        btn_class: "btn"
+      }
 
       //alert if incomplete start
       if(agencyName=="" || address=="" || contactNumber=="" || email=="" ) 
       {
-          swal({
-            title: "Incomplete Registration!",
-            text: "Please complete required fields!",
-            type: "error",
-            showCancelButton: false,
-            confirmButtonColor: "#5cb85c",
-            confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-            confirmButtonClass: "btn"
-            }).then((result) => {
-            if (result.value) {
-
-                swal.close();
-
-            }
-          });
-      } // alert if incomplete end
-
+        createSwal(data);   
+      }
       else if(file =="") 
       {
+        data['msg'] = "Please browse your image on the computer!";
+        data['type'] = "warning";
 
-            swal({
-                title: "Incomplete Registration!",
-                text: "Please browse your image on the computer!",
-                type: "warning",
-                showCancelButton: false,
-                confirmButtonColor: "#5cb85c",
-                confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-                confirmButtonClass: "btn"
-                }).then((result) => {
-                if (result.value) {
-
-                    document.getElementById("image_add").className += " required-fields";
-
-                }
-                });
+        createSwal(data);
              
       }//if file is nothing
-
       else
       {
               //get file
@@ -162,21 +142,21 @@
 
     $(document).on('click', "#td_btn_delete", function(){
  
-      var id=$(this).data("id_delete");
+      let id = $(this).data("id_delete");
       // alert(id);
 
       //confirmation start
       swal({
-      title: "Are you sure?",
-      text: "Delete MSAC!",
-      type: "question",
-      showCancelButton: true,
-      confirmButtonColor: "#5cb85c",
-      cancelButtonColor: "#d9534f",
-      confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-      cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
-      confirmButtonClass: "btn",
-      cancelButtonClass: "btn"
+        title: "Are you sure?",
+        text: "Delete MSAC!",
+        type: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#5cb85c",
+        cancelButtonColor: "#d9534f",
+        confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
+        cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
+        confirmButtonClass: "btn",
+        cancelButtonClass: "btn"
       }).then((result) => {
       if (result.value) {  
           //ajax start

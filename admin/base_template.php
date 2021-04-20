@@ -41,8 +41,9 @@
                           </a>
                         </div>
                     </div>
+                  <hr class="mt-2">  
                 </div>    
-            </main>  
+            </main>
 
             <?php emptyblock('content') ?>
         
