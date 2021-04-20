@@ -114,32 +114,31 @@ include 'function php/conn.php';
               $x++;
               }
             ?>
+            <!-- <center> -->
+              <div style="float: left;">
+              <!-- <select name="" class="form-control mt-3" style="width: 90%;" onchange="searchCategory('<?php foreach($expertise as $output){  echo $output; } ?>');"> -->
+                  <!-- <option value="all" selected="">All</option>  -->
 
-            <select name="" class="form-control mt-3" onchange="searchCategory('<?php foreach($expertise as $output){  echo $output; } ?>');">
+              <?php
+                foreach($expertise as $output) 
+                {
+              ?>
+                  <li class="nav-item ml-1">
+                    <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
+                  </li>
 
-            <?php
-              foreach($expertise as $output) 
-              {
-            ?>
-                <!-- <li class="nav-item ml-1">
-                  <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
-                </li> -->
-
-                <option value="<?php echo $output; ?> "><?php echo $output; ?></option>
+                  <!-- <option value="<?php echo $output; ?> "><?php echo $output; ?></option>  -->
 
 
 
-            <?php
-              }
+              <?php
+                }
 
-            ?>
-                  
-                    
-            </select> 
-
-                    <!-- <li class="nav-item ml-1"> 
-                      <a type="submit" class="nav-link navPill" data-toggle="pill" href="#<?php echo $expertise[$x]; ?>" role="tab" onclick="searchCategory('<?php echo $expertise[$x]; ?>');"><?php echo $expertise[$x]; ?></a>
-                    </li> -->
+              ?>
+                    </div>
+                      
+              <!-- </select>  -->
+            <!-- </center> -->
              </ul>
         </div>
         <hr>
@@ -207,7 +206,8 @@ include 'function php/conn.php';
 
     function searchCategory(searchCategory)
     { 
-      $(this).addClass("active");
+     $('.navPill').removeClass("active");
+      // $('.navPill').addClass("active");
       // alert(searchCategory)
       document.getElementById("directoryOutput").hidden=true;
 
