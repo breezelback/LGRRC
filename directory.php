@@ -91,7 +91,8 @@ include 'function php/conn.php';
                     <a type="submit" class="nav-link" data-toggle="pill" href="#" role="tab" onclick="fetchExperts();" id="btnAll">All</a>
                   </li>
             <?php 
-            $sql = ' SELECT `expertise` FROM `tbl_expert` ORDER BY `expertise` ASC ';
+            // $sql = ' SELECT `expertise` FROM `tbl_expert` ORDER BY `expertise` ASC ';
+            $sql = ' SELECT `expertise` FROM `tbl_expert` ';
             $exec = $conn->query($sql);
             $expertise1 = '';
             $x = 0;
@@ -108,37 +109,28 @@ include 'function php/conn.php';
 
               $expertise = explode(',', $expertise1);
               $expertise = array_unique($expertise);
+              asort($expertise);
+              // print_r($expertise)
              ?>
 
             <?php 
               $x++;
               }
             ?>
-            <!-- <center> -->
               <div style="float: left;">
-              <!-- <select name="" class="form-control mt-3" style="width: 90%;" onchange="searchCategory('<?php foreach($expertise as $output){  echo $output; } ?>');"> -->
-                  <!-- <option value="all" selected="">All</option>  -->
-
-              <?php
-                foreach($expertise as $output) 
+                <?php
+                  foreach($expertise as $output) 
                 {
-              ?>
+                ?>
                   <li class="nav-item ml-1">
-                    <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
+                  <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
                   </li>
 
-                  <!-- <option value="<?php echo $output; ?> "><?php echo $output; ?></option>  -->
-
-
-
-              <?php
+                <?php
                 }
 
-              ?>
-                    </div>
-                      
-              <!-- </select>  -->
-            <!-- </center> -->
+                ?>
+              </div>
              </ul>
         </div>
         <hr>
