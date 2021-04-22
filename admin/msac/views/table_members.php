@@ -1,5 +1,5 @@
 <div class="table-responsive" style="font-family: ui monospace;">
-  <table class="table table-bordered" id="table_members" width="100%" cellspacing="0" style="font-size: 15px;">
+  <table class="table table-bordered mt-3" id="table_members" width="100%" cellspacing="0" style="font-size: 15px;">
     <thead>
       <tr>
         <th>LOGO</th>
