@@ -34,11 +34,11 @@
             <center>
               <div class="cell-button-alignment">
                 <div class="cell-button btn-group">
-                  <button type="button" id="td_btn_edit" data-id_edit="<?php echo $user['id'];?>" data-toggle= "modal" data-target="#modalUpdateProduct" class="btn btn-md btn-primary">
+                  <button type="button" id="td_btn_edit" data-id_edit="<?php echo $user['id'];?>" data-toggle= "modal" data-target="#modalUpdateProduct" class="btn btn-md btn-primary" data-toggle="tooltip" title="Edit">
                     <span class="fas fa-edit"></span>
                   </button>
                   
-                  <button type="button" id="td_btn_delete" data-id_delete="<?php echo $user['id'];?>" class="btn btn-md btn-danger">
+                  <button type="button" id="td_btn_delete" data-id_delete="<?php echo $user['id'];?>" class="btn btn-md btn-danger" data-toggle="tooltip" title="Delete">
                   <span class="fa fa-trash"></span>
                 </button>
                 </div>

@@ -8,22 +8,35 @@
         <h4 class="modal-title" style=" margin: 0 auto;">Add MSAC Member</h4>
       </div>
       <div class="modal-body">
-        <center>
-          <img class="ml-2" src="../images/attachedagency_dilgcentral.png" style="width: 170px; height: 170px; border-radius: 50%;" id="image_editProfile"><br>
-          <label class="btn btn-primary btn mt-2" style="width:150px;">
-          <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile">
-          </label>
-        </center>
-        
-        Agency Name:
-        <input type="text" class="form-control" id="agencyName" name="">
-        Address:
-        <input type="text" class="form-control" id="address" name="">
-        Contact Number:
-        <input type="text" class="form-control" id="contactNumber" name="">
-        Website:
-        <input type="text" class="form-control" id="email" name="">
+        <div class="form-group mb-4">
+          <center>
+            <img class="ml-2" src="../images/attachedagency_dilgcentral.png" style="width: 170px; height: 170px; border-radius: 50%;" id="image_editProfile"><br>
+            <label class="btn btn-primary btn mt-2" style="width:150px;">
+            <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile">
+            </label>
+          </center>
+        </div>
 
+
+        <div class="form-group">
+          <label class="control-label mb-1">Agency Name:</label><br>
+          <input type="text" class="form-control" id="agencyName" name="agencyName" placeholder="Agency Name">
+        </div>  
+
+        <div class="form-group">
+          <label class="control-label mb-1">Address:</label><br>
+          <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+        </div>
+        
+        <div class="form-group">
+          <label class="control-label mb-1">Contact Number:</label><br>  
+          <input type="text" class="form-control" id="contactNumber" name="contactNumber" placeholder="Contact Number">
+        </div>
+
+        <div class="form-group">
+          <label class="control-label mb-1">Website:</label><br>
+          <input type="text" class="form-control" id="email" name="email" placeholder="Website">
+        </div> 
 
       </div><!-- <div class="modal-body"> -->
       <div class="modal-footer">
