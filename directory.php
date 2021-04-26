@@ -12,6 +12,22 @@ include 'function php/conn.php';
     <meta name="author" content="Jeck Castillo">
     <link rel="icon" type="image/png" href="images/lgrc_logo.png">
     <?php include 'includes/css_includes.php'; ?>
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+
 
     <title>LGRRC</title>
   </head>
@@ -48,6 +64,7 @@ include 'function php/conn.php';
 
 
     <hr>
+
 
  <!-- <div class="parallax"> -->
  <div class="container-fluid">
@@ -86,52 +103,7 @@ include 'function php/conn.php';
         <hr>
         <p>Filter by Expertise</p>
         <div class="row">
-          <ul class="nav nav-pills">
-                  <li class="nav-item ml-1">
-                    <a type="submit" class="nav-link" data-toggle="pill" href="#" role="tab" onclick="fetchExperts();" id="btnAll">All</a>
-                  </li>
-            <?php 
-            // $sql = ' SELECT `expertise` FROM `tbl_expert` ORDER BY `expertise` ASC ';
-            $sql = ' SELECT `expertise` FROM `tbl_expert` ';
-            $exec = $conn->query($sql);
-            $expertise1 = '';
-            $x = 0;
-            while ( $result = $exec->fetch_assoc() ) {
-              $expertise = $result['expertise'];
-
-              $expertise = str_replace(', ', ',', $expertise);
-              $expertise = str_replace(' ,', ',', $expertise);
-
-
-              $expertise = rtrim($expertise, ' ');
-
-              $expertise1 .= $expertise.',';
-
-              $expertise = explode(',', $expertise1);
-              $expertise = array_unique($expertise);
-              asort($expertise);
-              // print_r($expertise)
-             ?>
-
-            <?php 
-              $x++;
-              }
-            ?>
-              <div style="float: left;">
-                <?php
-                  foreach($expertise as $output) 
-                {
-                ?>
-                  <li class="nav-item ml-1">
-                  <a type="submit" class="nav-link navPill" data-toggle="pill" href="<?php echo $output; ?>" role="tab" onclick="searchCategory('<?php echo $output; ?>');"><?php echo $output; ?></a>
-                  </li>
-
-                <?php
-                }
-
-                ?>
-              </div>
-             </ul>
+          <?php include 'expertise_selection.php'; ?> 
         </div>
         <hr>
 
@@ -156,7 +128,107 @@ include 'function php/conn.php';
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/js_includes.php'; ?>
 
+<script type="text/javascript" src="admin/assets/bootstrap-4/dist/js/BsMultiSelect.js"></script>
+
+  <style type="text/css">
+    .dashboardcode-bsmultiselect ul > li {
+      color: black;
+    }
+  </style>
     <script type="text/javascript">
+
+    // $("select").bsMultiSelect();
+
+    $("select").bsMultiSelect({
+
+  cssPatch: {
+
+    choices: {
+      listStyleType:'none',
+      columnCount:'1'
+    },
+    picks: {
+      listStyleType:'none',
+      display:'flex',
+      flexWrap:'wrap',
+      height:'auto',
+      marginBottom:'0'
+    },
+    choice:'px-md-2 px-1',
+    choice_hover:'text-primary bg-light',
+    filterInput: {
+      border:'0px',
+      height:'auto',
+      boxShadow:'none',
+      padding:'0',
+      margin:'0',
+      outline:'none',
+      backgroundColor:'transparent',
+      backgroundImage:'none' // otherwise BS .was-vali<a href="https://www.jqueryscript.net/time-clock/">date</a>d set its image
+ 
+    },
+    filterInput_empty:'form-control',
+    // need for placeholder, TODO test form-control-plaintext
+    // used in staticContentGenerator
+    picks_disabled: {
+      backgroundColor:'#e9ecef'
+    },
+    picks_focus: {
+      borderColor:'#80bdff',
+      boxShadow:'0 0 0 0.2rem rgba(0, 123, 255, 0.25)'
+    },
+    picks_focus_valid: {
+      borderColor:'',
+      boxShadow:'0 0 0 0.2rem rgba(40, 167, 69, 0.25)'
+    },
+    picks_focus_invalid: {
+      borderColor:'',
+      boxShadow:'0 0 0 0.2rem rgba(220, 53, 69, 0.25)'
+    },
+    // used in BsAppearance
+    picks_def: {
+      minHeight:'calc(2.25rem + 2px)'
+    },
+    picks_lg: {
+      minHeight:'calc(2.875rem + 2px)'
+    },
+    picks_sm: {
+      minHeight:'calc(1.8125rem + 2px)'
+    },
+    // used in pickContentGenerator
+    pick: {
+      paddingLeft:'0px',
+      lineHeight:'1.5em'
+    },
+    pickButton: {
+      fontSize:'1.5em',
+      lineHeight:'.9em',
+      float:"none"
+    },
+    pickContent_disabled: {
+      opacity:'.65'
+    },
+    // used in choiceContentGenerator
+    choiceContent: {
+      justifyContent:'initial'
+    },
+    // BS problem: without this on inline form menu items justified center
+    choiceLabel: {
+      color:'inherit'
+    },
+    // otherwise BS .was-validated set its color
+    choiceCheckBox: {
+      color:'inherit'
+    },
+    choiceLabel_disabled: {
+      opacity:'.65'
+    }
+  }
+});
+
+// $("select").bsMultiSelect({cssPatch : {
+//                    choices: {columnCount:'4' },
+//                 }});
 
     $('#navDir').addClass('active');
 
@@ -194,6 +266,13 @@ include 'function php/conn.php';
         }
     });
 
+
+    $('#expertise_opt').change(function() {
+      console.log('qweqweqwe');
+      let opt = $(this).children("option:selected").val();
+    
+      searchCategory(opt);
+    });
 
 
     function searchCategory(searchCategory)
