@@ -350,10 +350,10 @@ include 'function php/conn.php';
         <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px;">
           <div class="col-lg-8" style="border:1px solid whitesmoke; padding-top: 10px; border-radius:5px;">
             <div class="row mb-5 justify-content-center">
-              <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: #c41021;">
-              <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
-              <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
-              <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p>
+              <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: darkred;">
+                <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
+                <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
+                <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p>
               </div>
             </div>
             <div class="row mb-5 align-items-center">
