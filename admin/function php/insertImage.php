@@ -5,7 +5,7 @@ $imageStatus= $_GET["status"];
 $image_name= $_GET["image_name"];
 
 
-if ($imageStatus == 'mainImage') 
+if ($imageStatus == 'mainImg') 
 {
 	$selectImage = " SELECT `imageName` FROM `tbl_program_images` WHERE `status` = 'mainImage' ";
 	$exec1 = $conn->query($selectImage);
