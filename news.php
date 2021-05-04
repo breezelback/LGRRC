@@ -56,7 +56,7 @@ else
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
 
-<br><br><br>
+      <br><br><br>
       <div class="container">
 
           <div class="pt-5">
@@ -95,6 +95,7 @@ else
           </center>
         </div>
       </div>
+
       <div class="row aos-init" data-aos="fade-up"  data-aos-duration="1500" data-aos-duration="2000">
 
         <div class="col-md-7" style="border: 1px solid blue; padding:20px; border-radius:10px;" id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
@@ -105,8 +106,8 @@ else
 
 
         </div>
-        <div class="col-md-4">
-             <div class="list-group menuOutput">
+        <div class="col-md-5">
+           <div class="list-group menuOutput">
             
             <?php
             $sql = ' SELECT `id`, `title`, `description`, `imageName`, `status`, `dateUploaded`, `author` FROM `tbl_news` WHERE `status` = "published" ORDER BY `dateUploaded` DESC ';

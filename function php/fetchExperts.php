@@ -2,55 +2,114 @@
 	include 'conn.php';
 	$queryCondition = '';
 
+	$id = '';
+	$nameHolder = '';
+	$addressHolder = '';
+	$newExpertiseQry = '';
+
+
 	// if (isset($_GET['id'])) 
-	if (isset($_GET['id']) || isset($_GET['nameHolder']) || isset($_GET['addressHolder'])) 
+	if (isset($_GET['id']) || isset($_GET['nameHolder']) || isset($_GET['addressHolder']) || isset($_GET['identifier'])) 
 	{
 		$id = $_GET['id'];
 		$nameHolder = $_GET['nameHolder'];
 		$addressHolder = $_GET['addressHolder'];
+		$identifier = $_GET['identifier'];
+		$expertiseQry = '(';
 
-
-		if (($id != '') OR ($id == 'test') )
+		if ($identifier != 'undefined') 
 		{
-			$queryCondition = ' WHERE (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+			$identifier = explode(',', $identifier);
+
+			for ($i=0; $i < count($identifier); $i++) { 
+				$expertiseQry .= '`expertise` LIKE "%'.$identifier[$i].'%" AND ';
+			}
+			$newExpertiseQry = rtrim($expertiseQry, " AND ");
+			$newExpertiseQry = $newExpertiseQry.')';
+
+			if (($id != '') OR ($id == 'test') )
+			{
+				$queryCondition = ' WHERE '.$newExpertiseQry.' ';
+				if ($nameHolder != '') 
+				{
+					$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				}
+				if ($addressHolder != '') 
+				{
+					$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				}
+			}
+
 			if ($nameHolder != '') 
 			{
-				$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				$queryCondition = ' WHERE (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				if ($id != '') 
+				{
+					$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				}
+				if ($addressHolder != '') 
+				{
+					$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				}
 			}
+
 			if ($addressHolder != '') 
 			{
-				$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				$queryCondition = ' WHERE (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				if ($id != '') 
+				{
+					$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				}
+				if ($nameHolder != '') 
+				{
+					$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				}
 			}
-		}
 
-		if ($nameHolder != '') 
-		{
-			$queryCondition = ' WHERE (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
-			if ($id != '') 
-			{
-				$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
-			}
-			if ($addressHolder != '') 
-			{
-				$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
-			}
-		}
 
-		if ($addressHolder != '') 
+		}//second if
+		else
 		{
-			$queryCondition = ' WHERE (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
-			if ($id != '') 
+			if (($id != '') OR ($id == 'test') )
 			{
-				$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				$queryCondition = ' WHERE (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				if ($nameHolder != '') 
+				{
+					$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				}
+				if ($addressHolder != '') 
+				{
+					$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				}
 			}
+
 			if ($nameHolder != '') 
 			{
-				$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				$queryCondition = ' WHERE (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				if ($id != '') 
+				{
+					$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				}
+				if ($addressHolder != '') 
+				{
+					$queryCondition .= ' AND (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				}
 			}
-		}
-			
-	}
 
+			if ($addressHolder != '') 
+			{
+				$queryCondition = ' WHERE (`address` LIKE "'.$addressHolder.'%" OR `address` LIKE "%'.$addressHolder.'%" OR `address` LIKE "'.$addressHolder.'")    ';
+				if ($id != '') 
+				{
+					$queryCondition .= ' AND (`expertise` LIKE "'.$id.'%" OR `expertise` LIKE "%'.$id.'%" OR `expertise` LIKE "'.$id.'")    ';
+				}
+				if ($nameHolder != '') 
+				{
+					$queryCondition .= ' AND (`name` LIKE "'.$nameHolder.'%" OR `name` LIKE "%'.$nameHolder.'%" OR `name` LIKE "'.$nameHolder.'")    ';
+				}
+			}
+		}		
+	}//main if
 
 
 
@@ -65,7 +124,7 @@
 			 ?>
 
 			<div class="col-md-4 asda" align="center">
-
+<!-- 
 
 				<div class="row tab-pane fade show" id="<?php echo $result['expertise']; ?>" role="tabpanel" aria-labelledby="<?php echo $result['expertise']; ?>-tab" style="border: 1px solid grey; border-radius: 5px; margin-right: 1px; height: 320px;">
 
@@ -78,7 +137,21 @@
 						<p style="font-size: 13px;"><b>Position</b>: <b style="color: black;"><?php echo $result['address']; ?></b></p>
 					</div>
 
-				</div>
+				</div> -->
+
+				<a href="" style="text-decoration: none; color:black;">
+					<div class="card" style="width: 18rem; border: 1px solid gray;">
+					  <img class="card-img-top" src="images/expert/<?php echo $result['imageName']; ?>" alt="Card image cap" height="265">
+					  <div class="card-body" style="background-color: #e8e6e6;">
+					    <h5 class="card-title"><?php echo resultHighlight($nameHolder,$result['name']); ?></h5>
+					    <p style="font-size: 12px;"><?php echo resultHighlight($addressHolder,$result['address']); ?></p><hr>
+					    <div class="expertisePanel" style="height: 75px; overflow-y: scroll;">
+					    	<p class="card-text"><?php echo resultHighlight($newExpertiseQry,$result['expertise']); ?></p>
+					    </div>
+					  </div>
+					</div>
+				</a>
+
 				<hr>
 
 			</div>
@@ -88,6 +161,10 @@
 	<?php } }
 
 
+function resultHighlight($keyword,$yourString)
+{
+  echo str_replace($keyword,'<span style="background-color:yellow; padding:3px; border-radius:3px;">'.$keyword.'</span>',$yourString);
+}
 
 
 	 ?>

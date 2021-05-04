@@ -1,63 +1,142 @@
 
     <?php include 'includes/css_includes.php'; ?><br><br>
 <center>
-  <h3 style="font-family: cursive;">Registration</h3><hr>
+  <h1 style="font-family: sans-serif;">Registration</h1><hr>
   <!-- <div class="loginForm"> -->
 
-    <div class="container" style="font-family: monospace;">
+    <div class="container" style="font-family: sans-serif;">
 
       <div class="row">
-        <div class="col-md-4">
-          Lastname
+        <div class="col-md-12">
+          <h4 class="float-left">Basic Information</h4>
+        </div>
+      </div>  
+      <hr>
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+          <h6>Lastname:</h6>
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="lastname">
         </div>
-        <div class="col-md-4">
-          Firstname
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+          <h6>Firstname:</h6>
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="firstname">
         </div>
-        <div class="col-md-4">
-          Middlename
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
+          <h6>Middlename:</h6>
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="middlename">
         </div>
       </div>
       
-      <div class="row">
-        <div class="col-md-6">
+
+
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
           Address
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="address">
         </div>
-        <div class="col-md-6">
-          Mobile
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-3">
+          Mobile Number
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="mobile">
         </div>
       </div>
+
       
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
           Birthday
+        </div>
+        <div class="col-md-8">
           <input type="date" class="form-control" name="" id="birthday">
         </div>
-        <div class="col-md-6">
+      </div>
+
+      
+      <div class="row mb-4">
+        <div class="col-md-3">
           Email Address
+        </div>
+        <div class="col-md-8">
           <input type="email" class="form-control" name="" id="email">
         </div>
       </div>
 
-      <br><hr>
-      <div class="row">
-        <div class="col-md-4">
+      <hr>
+      <div class="row my-2">
+        <div class="col-md-12">
+          <h4 class="float-left">Account Information</h4>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
           Username
+        </div>
+        <div class="col-md-8">
           <input type="text" class="form-control" name="" id="username">
         </div>
-        <div class="col-md-4">
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
           Password
+        </div>
+        <div class="col-md-8">
           <input type="Password" class="form-control" name="" id="password">
         </div>
-        <div class="col-md-4">
+      </div>
+
+
+
+      <div class="row mb-2">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-2">
           Confirm Password
+        </div>
+        <div class="col-md-8">
           <input type="Password" class="form-control" name="" id="confirmPassword">
         </div>
       </div>
+
+
+
+
 
     </div>
     <!-- <div class="container"> -->
@@ -67,7 +146,7 @@
   <!-- </div> -->
   <br>
 </center>
-
+<br><br>
 
 <?php include 'includes/js_includes.php'; ?>
 <script type="text/javascript">

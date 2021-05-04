@@ -30,6 +30,38 @@ include 'function php/conn.php';
 
 
     <title>LGRRC</title>
+    <style>
+      /* width */
+      .expertisePanel::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      /* Track */
+      .expertisePanel::-webkit-scrollbar-track {
+        background: #f1eaea; 
+      }
+       
+      /* Handle */
+      .expertisePanel::-webkit-scrollbar-thumb {
+        background: #e8e6e6; 
+      }
+
+      /* Handle on hover */
+      .expertisePanel::-webkit-scrollbar-thumb:hover {
+        /*background: #555; */
+        background: whitesmoke; 
+      }
+
+      #expertise_opt {
+          min-height:190px; 
+          overflow-y :auto; 
+          overflow-x:hidden; 
+          position:absolute;
+          width:300px;
+          display: contents;
+       }
+       
+      </style>    
   </head>
   <body>
   <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
@@ -46,7 +78,7 @@ include 'function php/conn.php';
               <div class="col-lg-12 mb-4 text-white headingContent">
                 <header class="py-5 mt-5">
                     <h1 class="display-6 headingText">Directory of Experts</h1>
-                    <p class="lead mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+                    <p class="lead mb-0 text-muted"></p>
                     <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
                 </header>
               </div>
@@ -73,7 +105,10 @@ include 'function php/conn.php';
       <div class="col-md-1">
       </div>
       <div class="col-md-3" style="border-right: 2px solid lightgray;">
-        <p style="font-weight: bold;">Categories:</p><br>
+        <p style="font-weight: bold;">Categories:</p>
+
+        <button class="btn btn-sm float-right text-white" style="background-color: gray;" id="btnReload"><i class="fa fa-sync-alt"></i></button>
+        <br>
         <hr>
 
 
@@ -115,7 +150,7 @@ include 'function php/conn.php';
         <div class="row" id="directoryOutput">
         </div>
       </div>
-    
+    <!-- asd -->
     </div>
         <!-- <div class="row"> -->
 
@@ -128,7 +163,6 @@ include 'function php/conn.php';
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/js_includes.php'; ?>
 
-<script type="text/javascript" src="admin/assets/bootstrap-4/dist/js/BsMultiSelect.js"></script>
 
   <style type="text/css">
     .dashboardcode-bsmultiselect ul > li {
@@ -141,90 +175,90 @@ include 'function php/conn.php';
 
     $("select").bsMultiSelect({
 
-  cssPatch: {
+    cssPatch: {
 
-    choices: {
-      listStyleType:'none',
-      columnCount:'1'
-    },
-    picks: {
-      listStyleType:'none',
-      display:'flex',
-      flexWrap:'wrap',
-      height:'auto',
-      marginBottom:'0'
-    },
-    choice:'px-md-2 px-1',
-    choice_hover:'text-primary bg-light',
-    filterInput: {
-      border:'0px',
-      height:'auto',
-      boxShadow:'none',
-      padding:'0',
-      margin:'0',
-      outline:'none',
-      backgroundColor:'transparent',
-      backgroundImage:'none' // otherwise BS .was-vali<a href="https://www.jqueryscript.net/time-clock/">date</a>d set its image
- 
-    },
-    filterInput_empty:'form-control',
-    // need for placeholder, TODO test form-control-plaintext
-    // used in staticContentGenerator
-    picks_disabled: {
-      backgroundColor:'#e9ecef'
-    },
-    picks_focus: {
-      borderColor:'#80bdff',
-      boxShadow:'0 0 0 0.2rem rgba(0, 123, 255, 0.25)'
-    },
-    picks_focus_valid: {
-      borderColor:'',
-      boxShadow:'0 0 0 0.2rem rgba(40, 167, 69, 0.25)'
-    },
-    picks_focus_invalid: {
-      borderColor:'',
-      boxShadow:'0 0 0 0.2rem rgba(220, 53, 69, 0.25)'
-    },
-    // used in BsAppearance
-    picks_def: {
-      minHeight:'calc(2.25rem + 2px)'
-    },
-    picks_lg: {
-      minHeight:'calc(2.875rem + 2px)'
-    },
-    picks_sm: {
-      minHeight:'calc(1.8125rem + 2px)'
-    },
-    // used in pickContentGenerator
-    pick: {
-      paddingLeft:'0px',
-      lineHeight:'1.5em'
-    },
-    pickButton: {
-      fontSize:'1.5em',
-      lineHeight:'.9em',
-      float:"none"
-    },
-    pickContent_disabled: {
-      opacity:'.65'
-    },
-    // used in choiceContentGenerator
-    choiceContent: {
-      justifyContent:'initial'
-    },
-    // BS problem: without this on inline form menu items justified center
-    choiceLabel: {
-      color:'inherit'
-    },
-    // otherwise BS .was-validated set its color
-    choiceCheckBox: {
-      color:'inherit'
-    },
-    choiceLabel_disabled: {
-      opacity:'.65'
+      choices: {
+        listStyleType:'none',
+        columnCount:'1'
+      },
+      picks: {
+        listStyleType:'none',
+        display:'flex',
+        flexWrap:'wrap',
+        height:'auto',
+        marginBottom:'0'
+      },
+      choice:'px-md-2 px-1',
+      choice_hover:'text-primary bg-light',
+      filterInput: {
+        border:'0px',
+        height:'auto',
+        boxShadow:'none',
+        padding:'0',
+        margin:'0',
+        outline:'none',
+        backgroundColor:'transparent',
+        backgroundImage:'none' // otherwise BS .was-vali<a href="https://www.jqueryscript.net/time-clock/">date</a>d set its image
+   
+      },
+      filterInput_empty:'form-control',
+      // need for placeholder, TODO test form-control-plaintext
+      // used in staticContentGenerator
+      picks_disabled: {
+        backgroundColor:'#e9ecef'
+      },
+      picks_focus: {
+        borderColor:'#80bdff',
+        boxShadow:'0 0 0 0.2rem rgba(0, 123, 255, 0.25)'
+      },
+      picks_focus_valid: {
+        borderColor:'',
+        boxShadow:'0 0 0 0.2rem rgba(40, 167, 69, 0.25)'
+      },
+      picks_focus_invalid: {
+        borderColor:'',
+        boxShadow:'0 0 0 0.2rem rgba(220, 53, 69, 0.25)'
+      },
+      // used in BsAppearance
+      picks_def: {
+        minHeight:'calc(2.25rem + 2px)'
+      },
+      picks_lg: {
+        minHeight:'calc(2.875rem + 2px)'
+      },
+      picks_sm: {
+        minHeight:'calc(1.8125rem + 2px)'
+      },
+      // used in pickContentGenerator
+      pick: {
+        paddingLeft:'0px',
+        lineHeight:'1.5em'
+      },
+      pickButton: {
+        fontSize:'1.5em',
+        lineHeight:'.9em',
+        float:"none"
+      },
+      pickContent_disabled: {
+        opacity:'.65'
+      },
+      // used in choiceContentGenerator
+      choiceContent: {
+        justifyContent:'initial'
+      },
+      // BS problem: without this on inline form menu items justified center
+      choiceLabel: {
+        color:'inherit'
+      },
+      // otherwise BS .was-validated set its color
+      choiceCheckBox: {
+        color:'inherit'
+      },
+      choiceLabel_disabled: {
+        opacity:'.65'
+      }
     }
-  }
-});
+  });
 
 // $("select").bsMultiSelect({cssPatch : {
 //                    choices: {columnCount:'4' },
@@ -268,14 +302,29 @@ include 'function php/conn.php';
 
 
     $('#expertise_opt').change(function() {
-      console.log('qweqweqwe');
       let opt = $(this).children("option:selected").val();
-    
-      searchCategory(opt);
+      var expertiseVal = $(this).val();
+      
+      if (opt) 
+      {
+        if (expertiseVal.length > 1) 
+        {
+          searchCategory(opt,expertiseVal);
+        }
+        else
+        {
+           searchCategory(opt);
+        }
+      }
+      else
+      {
+        fetchExperts();
+      }
+      
     });
 
 
-    function searchCategory(searchCategory)
+    function searchCategory(searchCategory,identifier)
     { 
      $('.navPill').removeClass("active");
       // $('.navPill').addClass("active");
@@ -286,16 +335,15 @@ include 'function php/conn.php';
       {
         keywordHolder = searchCategory;
       }
-
+      
       nameHolder = $('#searchName').val();
       addressHolder = $('#searchAddress').val();
 
       $('#ViewText').text('Results for: '+keywordHolder+' '+nameHolder+' '+addressHolder);
 
-
       $.ajax({
 
-        url:"function php/fetchExperts.php?id="+keywordHolder+'&nameHolder='+nameHolder+'&addressHolder='+addressHolder, 
+        url:"function php/fetchExperts.php?id="+keywordHolder+'&nameHolder='+nameHolder+'&addressHolder='+addressHolder+'&identifier='+identifier, 
         method:"GET",  
 
         contentType:false,
@@ -303,7 +351,7 @@ include 'function php/conn.php';
         processData:false,
         beforeSend:function() {
 
-         $('#imgLoading').show();
+          $('#imgLoading').show();
 
         },  
         error:function(data){
@@ -351,10 +399,10 @@ include 'function php/conn.php';
                        
         }, 
         success:function(data){
-       $('#imgLoading').hide();
+         $('#imgLoading').hide();
 
-      document.getElementById("directoryOutput").innerHTML=data;
-      document.getElementById("directoryOutput").hidden=false;
+        document.getElementById("directoryOutput").innerHTML=data;
+        document.getElementById("directoryOutput").hidden=false;
 
           }
                 
@@ -364,6 +412,32 @@ include 'function php/conn.php';
     }
 
     fetchExperts();
+
+
+
+    $('#btnReload').click(function(){
+      fetchExperts();
+
+
+      $('#searchName').val('');
+      $('#searchAddress').val('');
+      // $('#expertise_opt').removeAttr("selected");
+      $("#expertise_opt option:selected").removeAttr("selected");
+    });
+
+
+
+    $('#expertiseSearch').change(function(){
+      let expertiseSearch = $('#expertiseSearch').val();
+      alert(expertiseSearch);
+    });
+
+
+
+
+
+
+
 
     </script>
 

@@ -32,12 +32,12 @@ include 'function php/conn.php';
         position: absolute;
         margin-left: -34px;
       }
-
     </style>
     <title>LGRRC CALABARZON</title>
   </head>
   <body>
   <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+  <!-- <div class="bgImage" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;"> -->
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
     <br><br><br><br>
@@ -59,8 +59,6 @@ include 'function php/conn.php';
               <div class="col-md-5">
                 <div class="py-5">
                    <div class="form-box">
-
-
 
                     <?php 
                     if (isset($_SESSION['id'])) 
@@ -312,14 +310,14 @@ include 'function php/conn.php';
                       <h3 class="h4 text-black mb-4 text-center">Login Now</h3>
                       <span style="color:red;"><i><?php echo $auth; ?></i></span>
                       <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username" id="username">
+                        <input type="text" class="form-control" placeholder="Username" id="username">
                       </div>
                       <div class="form-group">
-                      <input type="password" class="form-control" placeholder="Password" id="password">
+                        <input type="password" class="form-control" placeholder="Password" id="password">
                       </div>
                       <div class="form-group" align="center">
-                      <input type="submit" class="btn btn-primary btn-pill" value="Login" id="btnLogin"><br><br>
-                      <button onclick="modalRegister();" style="background-color: transparent; border:0px; color: blue; cursor: pointer;"><i>Register new account</i></button>
+                        <input type="submit" class="btn btn-primary btn-pill" value="Login" id="btnLogin"><br><br>
+                        <button onclick="modalRegister();" style="background-color: transparent; border:0px; color: blue; cursor: pointer;"><i>Register new account</i></button>
                      
                       </div>
 
@@ -352,23 +350,24 @@ include 'function php/conn.php';
         <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px;">
           <div class="col-lg-8" style="border:1px solid whitesmoke; padding-top: 10px; border-radius:5px;">
             <div class="row mb-5 justify-content-center">
-              <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);">
-              <h2 class="section-title text-white">Program Facilities</h2>
+              <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: #c41021;">
+              <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
+              <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
               <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p>
               </div>
             </div>
             <div class="row mb-5 align-items-center">
-              <div class="col-lg-6 mb-5 aos-init" data-aos="fade-up"  data-aos-duration="1500">
+
+              <div class="col-lg-6 mb-4 aos-init" data-aos="fade-up"  data-aos-duration="1500">
                  <?php 
                   $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "mainImage" ');
                   $result = $exec->fetch_assoc();
                    ?>
                 <img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid" style="margin-left: 10px;">
               </div>
+
               <div class="col-lg-6 ml-auto aos-init" data-aos="fade-up"  data-aos-duration="1500">
                 
-
-
                 <div class="row">
                   <div class="col-sm-6 mb-4">
                       <?php 
@@ -781,7 +780,7 @@ include 'function php/conn.php';
         headerColor: '#192f72',
         width: 970,
         iframe: true, 
-        iframeHeight: 450, 
+        iframeHeight: 600, 
         iframeURL: 'register.php',
         // openFullscreen: true,
         closeOnEscape: false,
