@@ -36,8 +36,8 @@ include 'function php/conn.php';
     <title>LGRRC CALABARZON</title>
   </head>
   <body>
-  <!-- <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;"> -->
-  <div class="bgImage1" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;">
+  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+  <!-- <div class="bgImage1" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;"> -->
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
     <br><br><br><br>
