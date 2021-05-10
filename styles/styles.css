@@ -92,6 +92,15 @@
   height: 100%;
 
 }
+.bgImage1
+{
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+
+}
 body, html {
   height: 100%;
 }
@@ -141,7 +150,8 @@ li
 
 .parallax {
   /* The image used */
-  background-image: url("../images/lgrc_logo3.png");
+  /*background-image: url("../images/lgrc_logo3.png");*/
+  background-image: url("../images/lgrc_background1.png");
 
   /* Set a specific height */
   min-height: 700px; 

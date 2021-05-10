@@ -36,8 +36,8 @@ include 'function php/conn.php';
     <title>LGRRC CALABARZON</title>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
-  <!-- <div class="bgImage" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;"> -->
+  <!-- <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;"> -->
+  <div class="bgImage1" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;">
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
     <br><br><br><br>
@@ -347,8 +347,61 @@ include 'function php/conn.php';
       <div class="parallax bgIndex"><br><br>
 
 
-        <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px;">
-          <div class="col-lg-8" style="border:1px solid whitesmoke; padding-top: 10px; border-radius:5px;">
+        <div class="row" style="background-color: rgba(200,200,200,0.3); padding: 50px;">
+
+
+          <div class="col-lg-6 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px;">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-md-12 text-center testimony">
+              
+                <?php 
+                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 2 ';
+                $exec = $conn->query($sql);
+                $res = $exec->fetch_assoc();
+
+                 ?>
+
+                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
+                <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                <h6 class="mb-4">Regional Director</h6>
+                <blockquote>
+                <p style="font-size: 17px; text-indent: 50px; text-align: justify;"><i><?php echo $res['quotation']; ?></i></p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-1"></div>
+          
+          <div class="col-lg-5 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px;">
+            <div class="row justify-content-center align-items-center">
+              <div class="col-md-12 text-center testimony">
+              
+                <?php 
+                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 3 ';
+                $exec = $conn->query($sql);
+                $res = $exec->fetch_assoc();
+
+                 ?>    
+
+                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
+                <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                <h6 class="mb-4">Assistant Regional Director</h6>
+                <blockquote>
+                <p style="font-size: 17px; text-indent: 50px; text-align: justify;"><i><?php echo $res['quotation']; ?></i></p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <br>
+
+        <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px; ">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-8" style="border:1px solid whitesmoke; padding-top: 50px; border-radius:5px;">
             <div class="row mb-5 justify-content-center">
               <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: darkred;">
                 <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
@@ -403,48 +456,9 @@ include 'function php/conn.php';
 
               </div>
             </div>  
-          </div>
-          <!-- <div class="col-lg-8"> -->
-          <!-- <div class="col-lg-4 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="font-family: monospace;"> -->
-          <div class="col-lg-4 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-8 text-center testimony">
-              
-                <?php 
-                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 2 ';
-                $exec = $conn->query($sql);
-                $res = $exec->fetch_assoc();
-
-                 ?>
-
-                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
-                <h4 class="mb-4 directorText"><?php echo $res['name']; ?></h4>
-                <blockquote>
-                <p style="font-size: 10px;"><i><?php echo $res['quotation']; ?></i></p>
-                </blockquote>
-              </div>
-            </div>
-            <br><br>
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-8 text-center testimony">
-              
-                <?php 
-                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 3 ';
-                $exec = $conn->query($sql);
-                $res = $exec->fetch_assoc();
-
-                 ?>
-
-                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
-                <h4 class="mb-4 directorText"><?php echo $res['name']; ?></h4>
-                <blockquote>
-                <p style="font-size: 10px;"><i><?php echo $res['quotation']; ?></i></p>
-                </blockquote>
-              </div>
-            </div>
-          </div>
+          </div> 
+          <div class="col-lg-2"></div>
         </div>
-
 
 
 

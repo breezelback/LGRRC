@@ -1,5 +1,4 @@
 <?php require_once 'function php/conn.php'; ?>
-<?php require_once 'validate.php'; ?>
 
 <main class="page-content pt-2">
   <div id="overlay" class="overlay"></div>

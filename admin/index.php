@@ -1,3 +1,4 @@
+<?php require_once 'validate.php'; ?>
 <?php include 'base_template.php'; ?>
 
 <?php startblock('title'); ?>
