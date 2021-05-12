@@ -396,8 +396,8 @@ $(document).on("change", "#btnMainImg", function() {
         }, 
 
          success:function(data){  
+          // alert(data); 
           swal.close();
-          //alert(data); 
          
 
           }

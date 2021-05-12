@@ -17,9 +17,16 @@ $email = $_GET['email'];
 $sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$username.'" ';
 $execSelect = $conn->query($sqlSelect);
 
+$sqlSelectEmail = ' SELECT `username` FROM `tbl_user` WHERE `email` = "'.$email.'" ';
+$execSelectEmail = $conn->query($sqlSelectEmail);
+
 if ($execSelect->num_rows > 0) 
 {
 	echo "error";
+}
+else if ($execSelectEmail->num_rows > 0) 
+{
+	echo "errorEmail";
 }
 else
 {

@@ -66,7 +66,7 @@ else
               <div class="col-lg-12 mb-4 text-white headingContent">
                 <header class="py-5 mt-5">
                     <h1 class="display-6 headingText">LGRRC News and Events</h1>
-                    <p class="lead mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+                    <!-- <p class="lead mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p> -->
                     <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
                 </header>
               </div>

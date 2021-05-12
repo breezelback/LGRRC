@@ -31,7 +31,6 @@
 for ($i=1; $i < 13; $i++) 
 { 
 
-
   $sql = ' SELECT COUNT(`id`) as totalDownload FROM `tbl_downloads` WHERE MONTH(dateDownloaded) = '.$i.' ';
   $exec = $conn->query($sql);
   $resTotal = $exec->fetch_assoc();

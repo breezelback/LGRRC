@@ -203,8 +203,13 @@ $('#btnRegister').click(function(){
           // alert(data);
           if (data == 'error') 
           {
-            swal('Username Exist!','Please select other username','warning');
+            swal('Username Already Exist!','Please select other username','warning');
             document.getElementById("username").style.borderColor = "red";
+          }
+          else if (data == 'errorEmail') 
+          {
+            swal('Email Already Exist!','Please select other username','warning');
+            document.getElementById("email").style.borderColor = "red";
           }
           else
           {
