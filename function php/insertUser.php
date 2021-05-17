@@ -12,7 +12,7 @@ $username = $_GET['username'];
 $password = $_GET['password'];
 $email = $_GET['email'];
 
-
+$newPassword = password_hash($password, PASSWORD_DEFAULT);
 
 $sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$username.'" ';
 $execSelect = $conn->query($sqlSelect);
@@ -30,7 +30,7 @@ else if ($execSelectEmail->num_rows > 0)
 }
 else
 {
-	$sql = ' INSERT INTO `tbl_user`( `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `usertype`, `email` ) VALUES ( "'.$lastname.'", "'.$firstname.'", "'.$middlename.'", "'.$address.'", "'.$mobile.'", "'.$birthday.'", "'.$username.'", "'.$password.'", "approved", NOW(), "user", "'.$email.'" ) ';
+	$sql = ' INSERT INTO `tbl_user`( `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `usertype`, `email` ) VALUES ( "'.$lastname.'", "'.$firstname.'", "'.$middlename.'", "'.$address.'", "'.$mobile.'", "'.$birthday.'", "'.$username.'", "'.$newPassword.'", "approved", NOW(), "user", "'.$email.'" ) ';
 
 	$exec = $conn->query($sql);
 	echo "Success";

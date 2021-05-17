@@ -84,6 +84,8 @@
 
 .bgImage 
 {
+  background-image: url(../images/LGRC_Static.png) !important; 
+  background-position: 50% -25px;
   background-size: cover;
   margin: 0;
   text-align: center;
@@ -92,6 +94,10 @@
   height: 100%;
 
 }
+
+
+
+
 .bgImage1
 {
   background-size: cover;
@@ -545,7 +551,10 @@ ul {
   background: #55ACEE;
 }
 .google-bg{
-  background: #DD4B39;
+  background: #fa169f;
+}
+.youtube-bg{
+  background: #f43720;
 }
 .footer-widget-heading h3 {
   color: #fff;

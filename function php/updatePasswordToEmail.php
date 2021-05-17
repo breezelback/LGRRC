@@ -39,12 +39,12 @@ $sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$password
 $execSelect = $conn->query($sqlSelect);
 
 $newPassword = generateRandomString();
-
+$hashPassword = password_hash($newPassword, PASSWORD_DEFAULT);
 
 if ($execSelect->num_rows > 0) 
 {
 
-	$sql = ' UPDATE `tbl_user` SET  `password`= "'.$newPassword.'"  WHERE `username` = "'.$passwordUsername.'" AND `email` = "'.$passwordEmail.'" ';
+	$sql = ' UPDATE `tbl_user` SET  `password`= "'.$hashPassword.'"  WHERE `username` = "'.$passwordUsername.'" AND `email` = "'.$passwordEmail.'" ';
 	$exec = $conn->query($sql);
 
 

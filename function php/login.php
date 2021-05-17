@@ -6,24 +6,48 @@ include ('conn.php');
 $username = $conn -> real_escape_string($_GET['username']);
 $password = $conn -> real_escape_string($_GET['password']);
 
-$sqlSelect = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `borrowerId` FROM `tbl_user` WHERE `username` = "'.$username.'" AND `password` = "'.$password.'" AND `status` = "approved" AND `usertype` != "admin" ';
-$execSelect = $conn->query($sqlSelect);
 
-if ($execSelect->num_rows > 0) 
+$selectUsername = ' SELECT `password` FROM `tbl_user` WHERE `username` = "'.$username.'" ';
+$execSelectUsername = $conn->query($selectUsername);
+
+if ($execSelectUsername->num_rows > 0) 
 {
-	$result = $execSelect->fetch_assoc();
-	$_SESSION['id'] = $result['id'];
-	$_SESSION['lastname'] = $result['lastname'];
-	$_SESSION['firstname'] = $result['firstname'];
-	$_SESSION['middlename'] = $result['middlename'];
-	$_SESSION['username'] = $result['username'];
-	$_SESSION['address'] = $result['address'];
-	$_SESSION['mobile'] = $result['mobile'];
-	$_SESSION['birthday'] = $result['birthday'];
-	$_SESSION['password'] = $result['password'];
-	$_SESSION['borrowerId'] = $result['borrowerId'];
-	// header('location: ../browse_books.php');
-	echo "success";
+	$resultUser = $execSelectUsername->fetch_assoc();
+	$hashPassword = $resultUser['password'];
+
+	if (password_verify($password, $hashPassword)) 
+	{
+	    $sqlSelect = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `borrowerId`, `usertype` FROM `tbl_user` WHERE `username` = "'.$username.'" AND `status` = "approved"';
+		$execSelect = $conn->query($sqlSelect);
+		$result = $execSelect->fetch_assoc();
+
+		if ($result['usertype'] == 'admin') 
+		{
+			$_SESSION['usertype'] = $result['usertype'];
+			echo "admin";
+		}
+		else
+		{
+			$_SESSION['id'] = $result['id'];
+			$_SESSION['lastname'] = $result['lastname'];
+			$_SESSION['firstname'] = $result['firstname'];
+			$_SESSION['middlename'] = $result['middlename'];
+			$_SESSION['username'] = $result['username'];
+			$_SESSION['address'] = $result['address'];
+			$_SESSION['mobile'] = $result['mobile'];
+			$_SESSION['birthday'] = $result['birthday'];
+			$_SESSION['password'] = $result['password'];
+			$_SESSION['borrowerId'] = $result['borrowerId'];
+			// header('location: ../browse_books.php');
+			echo "success";
+		}
+
+	}
+	else 
+	{
+	    echo "error";
+	}
+
 }
 else
 {

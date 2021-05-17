@@ -4,12 +4,25 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-4 mb-50">
                         <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="images/lgrc_logo.png" class="img-fluid" alt="logo"></a>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="images/lgrc_logo.png" class="img-fluid" alt="logo"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-4">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="images/attachedagency_dilgcentral.png" class="img-fluid mt-4" alt="logo" width="150"></a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2"></div>
                             </div>
+                            
+                            
                             <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
-                                elit,Lorem ipsum dolor sit amet.</p>
+                                <p>Address: <b>3/F Andenson Bldg. 1, National Highway, Brgy, 4027 Manila S Rd, Calamba, 4027 Laguna</b></p>
+                                <p>Phone: <b>(049) 827 4755</b></p>
                             </div>
                             <!-- <div class="footer-social-icon">
                                 <span>Follow us</span>
@@ -41,9 +54,10 @@
                         <div class="footer-widget">
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                                <a href="https://www.facebook.com/dilgr4a"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="https://twitter.com/dilgr4a"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="https://www.instagram.com/dilgr4a/"><i class="fab fa-instagram google-bg"></i></a>
+                                <a href="https://www.youtube.com/channel/UCGApvxj6AnY3bRrPtEq3xGw"><i class="fab fa-youtube youtube-bg"></i></a>
                             </div>
 
                            <!--  <div class="footer-widget-heading">

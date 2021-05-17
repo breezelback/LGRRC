@@ -22,11 +22,19 @@ if ($execSelect->num_rows > 0)
 }
 else
 {
-	$sql = ' UPDATE `tbl_user` SET `lastname`= "'.$updateLastname.'", `firstname`= "'.$updateFirstname.'", `middlename`= "'.$updateMiddlename.'", `address`= "'.$updateAddress.'", `mobile`= "'.$updateMobile.'", `birthday`= "'.$updateBirthday.'", `username`= "'.$updateUsername.'", `password`= "'.$updatePassword.'", `email`= "'.$updateEmail.'"  WHERE `id` = "'.$_SESSION['id'].'" ';
+	if ($updatePassword == '') 
+	{
+		$sql = ' UPDATE `tbl_user` SET `lastname`= "'.$updateLastname.'", `firstname`= "'.$updateFirstname.'", `middlename`= "'.$updateMiddlename.'", `address`= "'.$updateAddress.'", `mobile`= "'.$updateMobile.'", `birthday`= "'.$updateBirthday.'", `username`= "'.$updateUsername.'", `email`= "'.$updateEmail.'"  WHERE `id` = "'.$_SESSION['id'].'" ';
+	}
+	else
+	{
+		$newPassword = password_hash($updatePassword, PASSWORD_DEFAULT);
+		$sql = ' UPDATE `tbl_user` SET `lastname`= "'.$updateLastname.'", `firstname`= "'.$updateFirstname.'", `middlename`= "'.$updateMiddlename.'", `address`= "'.$updateAddress.'", `mobile`= "'.$updateMobile.'", `birthday`= "'.$updateBirthday.'", `username`= "'.$updateUsername.'", `password`= "'.$newPassword.'", `email`= "'.$updateEmail.'"  WHERE `id` = "'.$_SESSION['id'].'" ';
+	}
+	
 	$exec = $conn->query($sql);
 
 	echo "success";
-
 }
 
 

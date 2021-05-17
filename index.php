@@ -36,7 +36,7 @@ include 'function php/conn.php';
     <title>LGRRC CALABARZON</title>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/LGRC_Static.png); background-position: 50% -25px;">
+  <div class="bgImage">
   <!-- <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;"> -->
   <!-- <div class="bgImage1" style="background-image: url(images/LGRC_gif.gif); background-position: 50% -25px;"> -->
      <!-- Navbar-->
@@ -168,11 +168,11 @@ include 'function php/conn.php';
                                 </div>
                                 <div class="col-sm-4">
                                   Password:
-                                  <input type="password" class="form-control" id="updatePassword" value="<?php echo $resUser['password']; ?>">
+                                  <input type="password" class="form-control" id="updatePassword">
                                 </div>
                                 <div class="col-sm-4">
                                   Confirm Password:
-                                  <input type="password" class="form-control" id="confirmPassword" value="<?php echo $resUser['password']; ?>">
+                                  <input type="password" class="form-control" id="confirmPassword">
                                 </div>
                               </div>
                              
@@ -626,7 +626,7 @@ include 'function php/conn.php';
       <div class="row mb-5 justify-content-center">
         <div class="col-lg-7 text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" >
           <h2 class="section-title">FEATURED KNOWLEDGE PRODUCT</h2>
-          <p class="mb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p>
+          <!-- <p class="mb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p> -->
         </div>
       </div>
     </div>
@@ -803,12 +803,18 @@ include 'function php/conn.php';
                 swal.close();
                 data = data.trim();
                 // alert(data);
-                if (data == 'error') 
+                if (data == 'error')
                 {
                   swal('Invalid Username or Password!','Please check your details','error');
                 }
+                else if (data == 'admin') 
+                {
+                  // alert('admin');
+                  window.location = 'admin/';
+                }
                 else
                 {
+                  // alert('user');
                   window.location = 'index.php';
                 }
               }
@@ -850,7 +856,7 @@ include 'function php/conn.php';
         var confirmPassword = $('#confirmPassword').val();
         var updateEmail = $('#updateEmail').val();
 
-        if ( updateLastname == '' || updateFirstname == '' || updateMiddlename == '' || updateAddress == '' || updateMobile == '' || updateBirthday == '' || updateUsername == '' || updatePassword == '' || updateEmail == '' ) 
+        if ( updateLastname == '' || updateFirstname == '' || updateMiddlename == '' || updateAddress == '' || updateMobile == '' || updateBirthday == '' || updateUsername == '' || updateEmail == '' ) 
         {
           swal('Error','Please fill up required fields!','error');
         }
