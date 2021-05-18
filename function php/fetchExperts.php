@@ -139,7 +139,7 @@
 
 				</div> -->
 
-				<a href="" style="text-decoration: none; color:black;">
+				<a href="directory-profile.php?id=<?php echo $result['id']; ?>" style="text-decoration: none; color:black;">
 					<div class="card" style="width: 18rem; border: 1px solid gray;">
 					  <img class="card-img-top" src="images/expert/<?php echo $result['imageName']; ?>" alt="Card image cap" height="265">
 					  <div class="card-body" style="background-color: #e8e6e6;">
