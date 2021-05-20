@@ -48,7 +48,8 @@ if ($execSelect->num_rows > 0)
 	$exec = $conn->query($sql);
 
 
-	$mail = new PHPMailer(true);
+	// $mail = new PHPMailer(true);
+	$mail = new PHPMailer();
   
 	$mail->isSMTP();
 	//Define smtp host
@@ -83,7 +84,7 @@ if ($execSelect->num_rows > 0)
 	}
 	else
 	{
-	    // echo "Message could not be sent. Mailer Error: "{$mail->ErrorInfo};
+	    echo "Message could not be sent. Mailer Error: "{$mail->ErrorInfo};
 	    echo "errorSending";
 	}
 	//Closing smtp connection

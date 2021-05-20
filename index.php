@@ -974,7 +974,7 @@ include 'function php/conn.php';
 
                  success:function(data){  
                   swal.close();
-                  // alert(data); 
+                  alert(data); 
                   if (data == 'error') 
                   {
                     swal('Error','Username and Email do not Match!','error');
@@ -1018,7 +1018,23 @@ include 'function php/conn.php';
       });
 
 
+  $('#username').keypress(function(e) {
+    var key = e.which;
+    if (key == 13) // the enter key code
+    {
+      $('#btnLogin').click();
+      return false;
+    }
+  });
 
+  $('#password').keypress(function(e) {
+    var key = e.which;
+    if (key == 13) // the enter key code
+    {
+      $('#btnLogin').click();
+      return false;
+    }
+  });
 
 
     </script>

@@ -20,7 +20,9 @@
   </div>
 </main>
 
+
+
+
 <?php include 'includes/js_includes.php' ?>
-<script type="text/javascript" src="../rich texteditor/src/jquery.richtext.js"></script>
-<?php include 'assets.js' ?>
+<script type="text/javascript" src="news/views/assets.js"></script>
 

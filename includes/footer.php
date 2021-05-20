@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-content pt-5 pb-5">
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="col-xl-5 col-lg-5 mb-50">
                         <div class="footer-widget">
                             <div class="row">
                                 <div class="col-sm-4">
@@ -32,7 +32,7 @@
                             </div> -->
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
                         <div class="footer-widget">
                             <div class="footer-widget-heading">
                                 <h3>Useful Links</h3>

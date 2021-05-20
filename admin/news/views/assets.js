@@ -1,4 +1,4 @@
-<script type="text/javascript">
+// <script type="text/javascript">
 
   var dt = $('#table_news').DataTable( {
       // 'paging'      : true,  
@@ -42,6 +42,7 @@ fetch_users();
 
 var image_status = 'old'
 var newsId = 0;
+var description = '';
 //-----------------------------------------------------fetch data-----------------------------------------------------------------------
 
 
@@ -115,7 +116,7 @@ $(document).on("change", "#file_editProfile", function() {
 
 
 
-//----------------------------------------------------------------------------INSERT DATA-----------------------------------------------------------
+//-----------------------------------------------------------------INSERT DATA-----------------------------------------------------------
 
 function insertData()
 {
@@ -276,7 +277,7 @@ function insertData()
 
 
 
-//----------------------------------------------------------------------------INSERT DATA--------------------------------------------------------------
+//----------------------------------------------------------------INSERT DATA--------------------------------------------------------------
 
 $(document).on('click', "#td_btn_delete", function(){
  
@@ -332,9 +333,9 @@ $(document).on('click', "#td_btn_delete", function(){
             }).then((result) => {
               if (result.value) {
 
-                  fetch_users();
+                  // fetch_users();
                   //close modal
-                  // location.reload();
+                  location.reload();
               }
             });
 
@@ -423,7 +424,7 @@ $(document).on("change", "#file_updateProfile", function() {
 
 
 
-//----------------------------------------------------------------------------UPDATE DATA-----------------------------------------------------------
+//------------------------------------------------------------------UPDATE DATA-----------------------------------------------------------
 
 $('#btnUpdateNews').click(function(){
 
@@ -432,14 +433,18 @@ $('#btnUpdateNews').click(function(){
 
 
   var editNoise =  $('.content2').val();
-  // var editNoise = document.getElementById("editSummernote").value;
-  
+ 
+  if (editNoise == '<div><br></div>') 
+  {
+    editNoise = description;
+  }
+
 
   var file = document.getElementById("file_updateProfile").value;
   var editAuthor = document.getElementById("editAuthor").value;
   var newsStatus = document.getElementById("newsStatus").value;
 
-  // alert(editNoise);
+
 
   //alert if incomplete start
   if(editTitle=="" || editNoise=="" || editAuthor=="" ) 
@@ -567,24 +572,7 @@ $('#btnUpdateNews').click(function(){
 
 
 
-//----------------------------------------------------------------------------UPDATE DATA--------------------------------------------------------------
-
-
-// $('#editSummernote').summernote({
-//   placeholder: 'News Description',
-//   tabsize: 2,
-//   height: 175,
-//   toolbar: [
-//     ['style', ['style']],
-//     ['font', ['bold', 'underline', 'clear']],
-//     ['color', ['color']],
-//     ['para', ['ul', 'ol', 'paragraph']],
-//     ['table', ['table']],
-//     ['insert', ['link', 'picture', 'video']],
-//     ['view', ['fullscreen', 'codeview', 'help']]
-//   ]
-// });
-
+//--------------------------------------------------------------UPDATE DATA--------------------------------------------------------------
 
 
 $(document).on('click', "#btnAddNews", function(){
@@ -595,8 +583,9 @@ $(document).on('click', "#btnAddNews", function(){
 });
 
 
-
 $(document).on('click', "#td_btn_edit", function(){
+
+  $('#modalEditProduct').modal({backdrop: 'static', keyboard: false});
 
   var id=$(this).data("id_edit");
 
@@ -604,21 +593,17 @@ $(document).on('click', "#td_btn_edit", function(){
 
   var title=$("#td_title"+id).data("data1");
   var author=$("#td_author"+id).data("data2");
-  var description=$("#td_description"+id).data("data3");
+  description=$("#td_description"+id).data("data3");
   var status=$("#td_status"+id).data("data5");
 
-  // alert(description);
-
-  // $("#editSummernote").summernote("code", description);
   $('.richText-editor').html(description)
-  // $('.content2').val(description);
 
 
   $('#editTitle').val(title);
   $('#editAuthor').val(author);
-  // $('#editNoise').val(description);
+
   document.getElementById("image_updateProfile").src=imageName;
-  // document.getElementById("editNoise").value = description;
+  
   newsId = id;
 
 
@@ -627,7 +612,6 @@ $(document).on('click', "#td_btn_edit", function(){
   $('#editNoiseWidgToolbarSelectBlock').addClass('form-control');
   $('#editNoiseWidgToolbarSelectBlock').css("height", "30px");
 
-  // $('editNoise').val('background-color');
 });
 
 
@@ -641,4 +625,4 @@ $(document).on('click', "#td_btn_edit", function(){
 
 
 
-</script>
+// </script>

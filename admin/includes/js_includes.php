@@ -1,15 +1,16 @@
     
-    <script src="assets/js/jquery3.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="assets/js/sweetalert2.all.min.js"></script>
+<script src="assets/js/jquery3.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="assets/js/sweetalert2.all.min.js"></script>
 
 
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 
-    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
+<script type="text/javascript" src="../rich texteditor/src/jquery.richtext.js"></script>
 
 
 <script type="text/javascript" src="../widgEditor/scripts/widgEditor.js"></script>

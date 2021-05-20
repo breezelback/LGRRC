@@ -1,7 +1,7 @@
 <?php
 require "function php/conn.php";
 
-$sql = ' SELECT `id`, `title`, `description`, `imageName`, `status`, `dateUploaded`, `author` FROM `tbl_news` WHERE `status` = "published" ORDER BY `dateUploaded` DESC ';
+$sql = ' SELECT `id`, `title`, `description`, `imageName`, `status`, `dateUploaded`, `author` FROM `tbl_news` ORDER BY `dateUploaded` DESC ';
 
 $result = mysqli_query($conn, $sql);
 $news = [];
