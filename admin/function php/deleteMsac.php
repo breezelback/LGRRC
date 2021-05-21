@@ -8,13 +8,12 @@ $exec = $conn->query($sql);
 $result = $exec->fetch_assoc();
 $filename = $result['imageName'];
 
+unlink('../../images/msac/'.$filename);
 
 
 $sql = " DELETE FROM `tbl_msac` WHERE `id` = '".$id."' ";
 $exec = $conn->query($sql);
-$conn->query($sql);
 
-unlink('../../images/msac/'.$filename);
 // echo 'File '.$filename.' has been deleted';
 echo "Success";
 

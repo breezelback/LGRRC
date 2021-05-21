@@ -8,13 +8,12 @@ $exec = $conn->query($sql);
 $result = $exec->fetch_assoc();
 $filename = $result['imageName'];
 
+unlink('../../images/news/'.$filename);
 
 
 $sql = " DELETE FROM `tbl_news` WHERE `id` = '".$id."' ";
 $exec = $conn->query($sql);
-$conn->query($sql);
 
-unlink('../../images/news/'.$filename);
 // echo 'File '.$filename.' has been deleted';
 echo "Success";
 

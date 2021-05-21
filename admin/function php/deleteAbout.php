@@ -9,12 +9,11 @@ $result = $exec->fetch_assoc();
 $filename = $result['imageName'];
 
 
+unlink('../../images/lgrrc about/'.$filename);
 
 $sql = " DELETE FROM `tbl_about` WHERE `id` = '".$id."' ";
 $exec = $conn->query($sql);
-$conn->query($sql);
 
-unlink('../../images/lgrrc about/'.$filename);
 // echo 'File '.$filename.' has been deleted';
 echo "Success";
 

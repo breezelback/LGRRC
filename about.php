@@ -87,12 +87,11 @@ include 'function php/conn.php';
               <!-- <h2>Full Gallery</h2> -->
               <div id="full-gallery" class="content-slideshow">
 
-                <div class="mibreit-imageElement" style="opacity: 0.0">
+                <!-- <div class="mibreit-imageElement" style="opacity: 0.0">
                   <img src="images/lgrrc about/1.png"
                   data-src="images/lgrrc about/1.png"
                   data-title="LGRRC" alt="LGRRC" width="1280" height="853"/>
-                  <!-- <h3>Stubai Mountains</h3> -->
-                </div>
+                </div> -->
 
                 <?php 
                 $sql = ' SELECT `id`, `position`, `imageName`, `dateUploaded` FROM `tbl_about` ORDER BY `position` ASC ';
