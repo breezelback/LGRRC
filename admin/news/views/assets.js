@@ -237,7 +237,7 @@ function insertData()
 
                  success:function(data){  
                   swal.close();
-                  alert(data);
+                  // alert(data);
                   
                   swal({
                   title: "NEWS Successfully Uploaded!",
@@ -262,8 +262,8 @@ function insertData()
                       
               });  
               //ajax end 
-      }
-      });
+        }
+      }); 
       //confirmation end
 
   } // else end
@@ -421,9 +421,9 @@ $(document).on("change", "#file_updateProfile", function() {
 
 
 //--------------------------------------------------------------------IMAGE UPDATE DATA---------------------------------------------------
-
-
-
+$('#btnAddNews').click(function(){
+    $('.richText-editor').html('')
+});
 //------------------------------------------------------------------UPDATE DATA-----------------------------------------------------------
 
 $('#btnUpdateNews').click(function(){
@@ -563,24 +563,11 @@ $('#btnUpdateNews').click(function(){
 
   } // else end
 
-
-
 });
-
-
-
 
 
 
 //--------------------------------------------------------------UPDATE DATA--------------------------------------------------------------
-
-
-$(document).on('click', "#btnAddNews", function(){
-
-  $('#noiseWidgToolbarSelectBlock').addClass('form-control');
-  $('#noiseWidgToolbarSelectBlock').css("height", "30px");
-
-});
 
 
 $(document).on('click', "#td_btn_edit", function(){
@@ -596,6 +583,7 @@ $(document).on('click', "#td_btn_edit", function(){
   description=$("#td_description"+id).data("data3");
   var status=$("#td_status"+id).data("data5");
 
+  // $('.richText-editor').html(description)
   $('.richText-editor').html(description)
 
 
@@ -613,12 +601,6 @@ $(document).on('click', "#td_btn_edit", function(){
   $('#editNoiseWidgToolbarSelectBlock').css("height", "30px");
 
 });
-
-
-
-
-
-
 
 
 

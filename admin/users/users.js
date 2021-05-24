@@ -5,7 +5,7 @@
 
     //-----------------------------------------------------FETCH USER-----------------------------------------------------------------------
     let dt = $('#result1').DataTable( {
-        // 'paging'      : true,  
+        'paging'      : true,  
         'lengthChange': false,
         'searching'   : true,
         'ordering'    : true,
@@ -71,9 +71,9 @@
                 }).then((result) => {
                   if (result.value) {
 
-                      fetch_users();
+                      // fetch_users();
                       //close modal
-                      // location.reload();
+                      location.reload();
                   }
                 });
 
@@ -146,9 +146,9 @@
                 }).then((result) => {
                   if (result.value) {
 
-                      fetch_users();
+                      // fetch_users();
                       //close modal
-                      // location.reload();
+                      location.reload();
                   }
                 });
 
@@ -173,13 +173,14 @@
       id=$(this).data("id_edit");
       var updateName=$("#td_name"+id).data("data0");
 
-      var updateName = updateName.split(',');
+      updateName = updateName.split(',');
       var updateLastname = updateName[0];
       var updateFirstname = updateName[1];
       var updateMiddlename = updateName[2];
       var updateAddress=$("#td_address"+id).data("data1");
       var updateMobile=$("#td_mobile"+id).data("data2");
       var updateBirthday=$("#td_birthday"+id).data("data3");
+
       var updateStatus=$("#td_status"+id).data("data4");
 
       $('#updateLastname').val(updateLastname);
@@ -267,10 +268,10 @@
                   }).then((result) => {
                     if (result.value) {
 
-                        fetch_users();
+                        // fetch_users();
                         $('#modalUpdate').modal('hide');
                         //close modal
-                        // location.reload();
+                        location.reload();
                     }
                   });
 

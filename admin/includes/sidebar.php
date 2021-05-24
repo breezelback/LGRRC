@@ -172,6 +172,8 @@
 
 
 <script src="assets/js/jquery3.min.js"></script>
+<script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/main.js"></script>
 <script>
     $('#btnUpdate').click(function(){
         var updatePassword = $('#updatePassword').val();

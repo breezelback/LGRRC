@@ -71,7 +71,7 @@ include 'function php/conn.php';
                       <!-- <marquee behavior="" direction=""><span style="font-family:monospace; font-size:30px;">Welcome</span></marquee> -->
                      <span style="font-family:monospace; font-size:20px;">Welcome</span><br>
                       <img src="images/attachedagency_dilgcentral.png" alt="" width="70">
-                      <p>Borrow ID: <b style="color:red;"><?php echo $resUser['borrowerId']; ?></b></p>
+                      <p>User ID: <b style="color:red;"><?php echo $resUser['borrowerId']; ?></b></p>
                       <h5 class="mt-3"><?php echo $resUser['lastname'].', '.$resUser['firstname'].' '.$resUser['middlename']; ?></h5>
                       <h6 class="mb-3"><?php echo $resUser['address'];?></h6>
 
@@ -974,7 +974,7 @@ include 'function php/conn.php';
 
                  success:function(data){  
                   swal.close();
-                  alert(data); 
+                  // alert(data); 
                   if (data == 'error') 
                   {
                     swal('Error','Username and Email do not Match!','error');

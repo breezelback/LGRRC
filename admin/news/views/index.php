@@ -4,7 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-12 mt-2">
-        <button class="btn btn-success float-right" data-toggle="modal" data-target="#modalAddProduct" id="btnAddNews">Add News <i class="fas fa-plus"></i></button>
+        <button class="btn btn-success float-right" data-toggle="modal" data-target="#modalAddProduct" data-backdrop="static" data-keyboard="false" id="btnAddNews">Add News <i class="fas fa-plus"></i></button>
         <center><h2>News</h2></center><br>
         <div class="card mb-3">
           <div class="card-header bg-primary text-white">
@@ -21,8 +21,7 @@
 </main>
 
 
-
-
 <?php include 'includes/js_includes.php' ?>
 <script type="text/javascript" src="news/views/assets.js"></script>
+<?php //include 'assets.js' ?>
 

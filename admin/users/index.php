@@ -30,11 +30,37 @@
                     <tbody>
                       <?php foreach ($users as $key => $user): ?>  
                       <tr>
-                        <td><?php echo $user['firstname'].' '.$user['middlename'].' '.$user['lastname']; ?></td>
-                        <td><?php echo $user['address']; ?></td>
-                        <td><?php echo $user['mobile']; ?></td>
-                        <td><?php echo $user['birthday']; ?></td>
-                        <td><?php echo $user['status']; ?></td>
+
+                        <td>
+                          <div id="td_name<?php echo $user['id'];?>" data-data0="<?php echo $user['lastname'].','.$user['firstname'].','.$user['middlename']; ?>">
+                            <?php echo $user['firstname'].' '.$user['middlename'].' '.$user['lastname']; ?>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div id="td_address<?php echo $user['id'];?>" data-data1="<?php echo $user['address']; ?>">
+                            <?php echo $user['address']; ?>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div id="td_mobile<?php echo $user['id'];?>" data-data2="<?php echo $user['mobile']; ?>">
+                             <?php echo $user['mobile']; ?>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div id="td_birthday<?php echo $user['id'];?>" data-data3="<?php echo $user['birthday']; ?>">
+                             <?php echo $user['birthday']; ?>
+                          </div>
+                        </td>
+
+                        <td>
+                          <div id="td_status<?php echo $user['id'];?>" data-data4="<?php echo $user['status']; ?>">
+                             <?php echo $user['status']; ?>
+                          </div>
+                        </td>
+
                         <td><?php echo $user['dateUploaded']; ?></td>
 
                         <?php if ( $user['status'] == 'approved' ) { ?>
