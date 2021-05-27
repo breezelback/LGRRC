@@ -28,6 +28,7 @@ if ($conn->query($sql))
 	$query = "UPDATE tbl_news SET imageName='$image' WHERE Id='$last_id'";
 	mysqli_query($conn,$query);
 	}
+	header('location: ../news.php');
 }
 
 
