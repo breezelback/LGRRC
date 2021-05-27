@@ -8,7 +8,7 @@ $author= $_POST["author"];
 $description = htmlentities($description);
 $description = str_replace("'", '&quot;', $description);
 
-echo $sql = " INSERT INTO `tbl_news`(`title`, `description`, `status`, `dateUploaded`, `author`) VALUES ( '".$title."', '".$description."', 'draft', NOW(), '".$author."' ) ";
+$sql = " INSERT INTO `tbl_news`(`title`, `description`, `status`, `dateUploaded`, `author`) VALUES ( '".$title."', '".$description."', 'draft', NOW(), '".$author."' ) ";
 
 if ($conn->query($sql)) 
 {
