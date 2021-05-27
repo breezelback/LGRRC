@@ -101,7 +101,7 @@
                   <div class="row">
                     <div class="col-md-6">
                      <center>
-                        <img class="ml-2" src="../images/news.png" style="width: 190px; height: 170px;" id="image_editProfile"><br>
+                        <img class="ml-2" src="../images/news.png" style="width: 343px; height: 208px;" id="image_editProfile"><br>
                         <label class="btn btn-primary btn mt-2" style="width:150px;">
                         <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile" name="file_editProfile">
                         </label>
@@ -159,7 +159,7 @@
                     <div class="row">
                       <div class="col-sm-6">
                          <center>
-                            <img class="ml-2" src="../images/news.png" style="width: 170px; height: 170px;" id="image_updateProfile"><br>
+                            <img class="ml-2" src="../images/news.png" style="width: 343px; height: 208px;" id="image_updateProfile"><br>
                             <label class="btn btn-primary btn mt-2" style="width:150px;">
                             <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_updateProfile" name="file_updateProfile">
                             </label>
