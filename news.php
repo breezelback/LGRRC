@@ -98,15 +98,15 @@ else
 
       <div class="row aos-init" data-aos="fade-up"  data-aos-duration="1500" data-aos-duration="2000">
 
-        <div class="col-md-7" style="border: 1px solid blue; padding:20px; border-radius:10px;" id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
+        <div class="col-md-8" style="border: 3px solid #6c6c9c; padding:20px; border-radius:10px;" id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
 
-        <div class="col-md-7" style="border: 1px solid blue; padding:50px; border-radius:10px;" id="newsOutput">
+        <div class="col-md-8" style="border: 3px solid #6c6c9c; padding:50px; border-radius:10px;" id="newsOutput">
           
           <!-- newsoutput -->
 
 
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
            <div class="list-group menuOutput">
             
             <?php
@@ -114,8 +114,8 @@ else
             $exec = $conn->query($sql);
             while ($res = $exec->fetch_assoc()) 
             {
-
-              $string = strip_tags($res['description']);
+              $description = html_entity_decode($res['description']);
+              $string = strip_tags($description);
               if (strlen($string) > 100) 
               {
 
@@ -129,7 +129,7 @@ else
               }
 
              ?>
-              <a onclick="fetchNews(<?php echo $res['id']; ?>);" class="list-group-item list-group-item-action newsList">
+              <a onclick="fetchNews(<?php echo $res['id']; ?>);" class="list-group-item list-group-item-action newsList" style="border:1px solid seagreen;">
                 <?php echo $res['title']; ?> 
                 <p class="float-right "><?php echo date("d-M-Y", strtotime($res['dateUploaded'])); ?></p>
                 <p style="font-size: 12px;"><?php echo $string; ?></p>

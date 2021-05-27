@@ -125,7 +125,8 @@ function insertData()
   // var description = document.getElementById("summernote").value;
 
   var description =  $('.content1').val();
-
+  alert(description);
+  asdf
   var file = document.getElementById("file_editProfile").value;
   var author = document.getElementById("author").value;
 
@@ -382,6 +383,7 @@ $(document).on("change", "#file_updateProfile", function() {
                       this.value="";
                       document.getElementById("image_updateProfile").src=current_image;
                       image_status="old"; 
+                      document.getElementById('imageStatus').value = 'old';
 
                   }
                   });      
@@ -404,6 +406,7 @@ $(document).on("change", "#file_updateProfile", function() {
                         this.value="";
                         document.getElementById("image_updateProfile").src=current_image;
                         image_status="old";
+                        document.getElementById('imageStatus').value = 'old';
 
                   }
                   });
@@ -415,6 +418,7 @@ $(document).on("change", "#file_updateProfile", function() {
       obj.onload = function(data) { document.getElementById("image_updateProfile").src = data.target.result; }
       obj.readAsDataURL(this.files[0]);
       image_status="new";
+      document.getElementById('imageStatus').value = 'new';
     }
 
    }); 
@@ -583,7 +587,8 @@ $(document).on('click', "#td_btn_edit", function(){
   description=$("#td_description"+id).data("data3");
   var status=$("#td_status"+id).data("data5");
 
-  // $('.richText-editor').html(description)
+  // alert(id);
+
   $('.richText-editor').html(description)
 
 
@@ -591,6 +596,10 @@ $(document).on('click', "#td_btn_edit", function(){
   $('#editAuthor').val(author);
 
   document.getElementById("image_updateProfile").src=imageName;
+
+  document.getElementById("newsId").value = id;
+  document.getElementById("imageStatus").value = 'old';
+  document.getElementById("oldDesc").value = description;
   
   newsId = id;
 

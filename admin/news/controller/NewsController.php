@@ -7,10 +7,13 @@ $result = mysqli_query($conn, $sql);
 $news = [];
 
 while($row = mysqli_fetch_array($result)) {
+	// $description = html_entity_decode($row['description']);
+	$description = $row['description'];
 	$news[] = [
 		'id' => $row['id'],
 		'title' => $row['title'],
-		'description' => mb_strimwidth($row['description'], 0, 250, '...'),
+		// 'description' => mb_strimwidth($description, 0, 250, '...'),
+		'description' => $row['description'],
 		'image' => "../images/news/". $row["imageName"],
 		'status' => $row["status"],
 		'dateuploaded' => $row["dateUploaded"],

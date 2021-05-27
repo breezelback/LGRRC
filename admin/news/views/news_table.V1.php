@@ -45,11 +45,8 @@
         </td>
         <td>
           <div id="td_description<?php echo $article['id'];?>" data-data3="<?php echo $article['description']; ?>">
-            <!-- <?php echo mb_strimwidth($article['description'], 0, 200, '...'); ?> -->
-            <!-- <?php echo $article['description']; ?> -->
-            <?php echo $description = mb_strimwidth(html_entity_decode($article['description']), 0, 200, '...'); ?>
 
-
+            <?php echo $article['description']; ?>
           </div>
         </td>
         <td>
@@ -89,8 +86,7 @@
           <div id="modalAddProduct" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg">
 
-              <!-- <form action="" onsubmit="insertData(); return false;"> -->
-              <form action="function php/insertNews.php" method="post" enctype="multipart/form-data">
+              <form action="" onsubmit="insertData(); return false;">
                 <!-- Modal content-->
                 <div class="modal-content">
                   <div class="modal-header bg-primary text-white">
@@ -101,21 +97,25 @@
                   <div class="row">
                     <div class="col-md-6">
                      <center>
-                        <img class="ml-2" src="../images/news.png" style="width: 190px; height: 170px;" id="image_editProfile"><br>
+                        <img class="ml-2" src="../images/news.png" style="width: 170px; height: 170px; border-radius: 50%;" id="image_editProfile"><br>
                         <label class="btn btn-primary btn mt-2" style="width:150px;">
-                        <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile" name="file_editProfile">
+                        <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile">
                         </label>
                       </center>
                       Author:
-                      <input type="text" class="form-control" id="author" name="author">
+                      <input type="text" class="form-control" id="author">
                       Title:
-                      <input type="text" class="form-control" id="title" name="title">
+                      <input type="text" class="form-control" id="title" name="">
                     </div>
                     <div class="col-md-6">
                       Description:
+
+                      <!-- <textarea id="noise" name="noise" class="widgEditor nothing"></textarea> -->
+                      <!-- <textarea id="summernote"></textarea> -->
+
                       <div class="page-wrapper1 box-content">
 
-                        <textarea class="content1" name="example" required=""></textarea>
+                          <textarea class="content1" name="example"></textarea>
 
                       </div>
 
@@ -148,7 +148,6 @@
           <div class="modal-dialog modal-lg">
 
           <!-- <form action="" onsubmit="updateData(); return false;"> -->
-          <form action="function php/updateNews.php" method="post"  enctype="multipart/form-data">
             <!-- Modal content-->
               <div class="modal-content">
                 <div class="modal-header bg-danger text-white">
@@ -161,47 +160,46 @@
                          <center>
                             <img class="ml-2" src="../images/news.png" style="width: 170px; height: 170px;" id="image_updateProfile"><br>
                             <label class="btn btn-primary btn mt-2" style="width:150px;">
-                            <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_updateProfile" name="file_updateProfile">
+                            <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_updateProfile">
                             </label>
                           </center>
                           Author:
-                          <input type="text" class="form-control" id="editAuthor" name="editAuthor">
+                          <input type="text" class="form-control" id="editAuthor">
                           Title:
-                          <input type="text" class="form-control" id="editTitle" name="editTitle">
+                          <input type="text" class="form-control" id="editTitle" name="">
+                      </div>
+                      <div class="col-sm-6">
+                          Description:
 
-                          <br> <hr><br>
+                          <!-- <textarea id="editNoise" name="noise" class="widgEditor nothing"></textarea> -->
+                          <!-- <textarea id="editSummernote"></textarea> -->
+                           <div class="page-wrapper1 box-content">
+
+                              <textarea class="content2" name="example"></textarea>
+
+                          </div>
+
+                          <br>
                           Publish:
-                          <select class="form-control mt-3" id="newsStatus" name="newsStatus" style="width:60% !important;">
+                          <select class="form-control mt-3" name="newsStatus" id="newsStatus" style="width:60% !important;">
                             <option value="published" style="background-color: seagreen !important; color:white;">Publish <i class="fa fa-check"></i></option>
                             <option value="draft" style="background-color: red !important; color:white;">Draft <i class="fa fa-times"></i></option>
                           </select>
                       </div>
-                      <div class="col-sm-6">
-                          Description:
-                           <div class="page-wrapper1 box-content">
-
-                            <textarea class="content2" name="editDesc"></textarea>
-
-                          </div>
-                      </div>
                     </div>
 
-                    <input type="text" id="newsId" name="newsId" style="display: none;">
-                    <input type="text" id="imageStatus" name="imageStatus" style="display: none;">
-                    <input type="text" id="oldDesc" name="oldDesc" style="display: none;">
 
                   </div><!-- <div class="modal-body"> -->
 
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-warning" data-dismiss="modal">Close <i class="fas fa-times"></i></button>
-                  <button type="submit" class="btn btn-success">Update <i class="fas fa-sync-alt"></i></button>
-                  <!-- <button type="button" class="btn btn-success" id="btnUpdateNews">Update <i class="fas fa-sync-alt"></i></button> -->
+                  <button type="button" class="btn btn-success" id="btnUpdateNews">Update <i class="fas fa-sync-alt"></i></button>
                   <!-- <input type="submit" value="Check the submitted code" /> -->
                 </div>
               </div>
 
-            </form>
+            <!-- </form> -->
 
           </div>
         </div>

@@ -1,46 +1,41 @@
 <?php 
 include ('conn.php');
 
-$newsId= $_POST["newsId"];
-$title= $_POST["editTitle"];
+$newsId= $_GET["newsId"];
+$title= $_GET["editTitle"];
 
-$description= $_POST["editDesc"];
-$oldDesc= $_POST["oldDesc"];
+$description= $_GET["editNoise"];
 
+$author= $_GET["editAuthor"];
+$image_status= $_GET["image_status"];
+$newsStatus= $_GET["newsStatus"];
 
-if ($description != '<div><br></div>') 
-{
-	$newDesc = $description;
-}
-else
-{
-	$newDesc = $oldDesc;
-}
+$description= str_replace("#","(hashtag)",$description);
 
-$newDesc = htmlentities($newDesc);	
-$author= $_POST["editAuthor"];
-$image_status= $_POST["imageStatus"];
-$newsStatus= $_POST["newsStatus"];
+$description= str_replace('"','\"',$description);
 
 
-$newDesc = str_replace("'", '&quot;', $newDesc);
 
-
-$sqlUpdate = ' UPDATE `tbl_news` SET `title` = "'.$title.'", `description` = "'.$newDesc.'", `status` = "'.$newsStatus.'", `author` = "'.$author.'"  WHERE `id` = "'.$newsId.'"  ';
+$sqlUpdate = ' UPDATE `tbl_news` SET `title` = "'.$title.'", `description` = "'.$description.'", `status` = "'.$newsStatus.'", `author` = "'.$author.'"  WHERE `id` = "'.$newsId.'"  ';
 // $sql = ' UPDATE `tbl_news` SET `title` = "'.$title.'", `status` = "'.$newsStatus.'", `author` = "'.$author.'"  WHERE `id` = "'.$newsId.'" ';
 
 $conn->query($sqlUpdate);
 
 if ($image_status == 'new') 
 {
+// 	$conn->query($sql);
+// }
+// else
+// {
+
+
 	$sqlSelect = ' SELECT `imageName` FROM `tbl_news` WHERE `id` = "'.$newsId.'" ';
 	$exec = $conn->query($sqlSelect);
 	$res = $exec->fetch_assoc();
 	unlink('../../images/news/'.$res['imageName']);
 
 
- 	// $image_name= $_POST["image_name"];
-	$image_name= basename($_FILES["file_updateProfile"]["name"]);
+ 	$image_name= $_GET["image_name"];
 	echo "Success!";
 	$last_id = $conn->insert_id; 
 
@@ -58,5 +53,4 @@ if ($image_status == 'new')
 }
 
 
-header('location: ../news.php');
  ?>

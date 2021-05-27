@@ -514,7 +514,8 @@ include 'function php/conn.php';
         {
 
          $id = strip_tags($res['id']);
-         $string = strip_tags($res['description']);
+         $string = html_entity_decode($res['description']);
+         $string = strip_tags($string);
           $newDate = date("M d-Y | h:i:s A", strtotime($res['dateUploaded']));
           if (strlen($string) > 100) 
           {
@@ -974,7 +975,7 @@ include 'function php/conn.php';
 
                  success:function(data){  
                   swal.close();
-                  // alert(data); 
+                  // alert(data);
                   if (data == 'error') 
                   {
                     swal('Error','Username and Email do not Match!','error');
