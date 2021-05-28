@@ -45,7 +45,7 @@
 
             <div class="row">
                 <div class="col-md-12 mt-2">
-                    <button class="btn btn-success float-right" data-toggle="modal" data-target="#modalAddProduct">Add MSAC Member <i class="fas fa-plus"></i></button>
+                    <!-- <button class="btn btn-success float-right" data-toggle="modal" data-target="#modalAddProduct">Add MSAC Member <i class="fas fa-plus"></i></button> -->
                     <center><h2>Images and Quotations Content</h2></center>
                     <br>
                      <div class="card mb-3">
