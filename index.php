@@ -50,9 +50,10 @@ include 'function php/conn.php';
               <div class="col-lg-7 mb-4 text-white">
                 <!-- <header class="py-5 mt-5"> -->
                 <header>
-                    <h1 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC)</h1>
-                    <p class="lead mb-0 text-muted">Builds learning communities that pursue local governance excellence through knowledge sharing.</p>
-                    <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo">Who Are We</a>
+                    <h1 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC) CALABARZON</h1>
+                    <p class="lead mb-0" style="font-family: 'centuryGothic'; font-size:17px; color:#e8e7e7;">Building learning communities in the whole CALABARZON Region that pursue local governance excellence through knowledge sharing</p>
+                    <!-- <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo">Who Are We</a> -->
+                    <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo" style="background-color: #c30718; border-color:#ad0735;">Who Are We</a>
                 </header>
               </div>
               <div class="col-md-5">
@@ -313,7 +314,7 @@ include 'function php/conn.php';
                         <input type="password" class="form-control" placeholder="Password" id="password">
                       </div>
                       <div class="form-group" align="center">
-                        <input type="submit" class="btn btn-primary btn-pill" value="Login" id="btnLogin"><br><br>
+                        <input type="submit" class="btn btn-primary btn-pill" value="Login" id="btnLogin" style="background-color: #c30718; border-color:#ad0735;"><br><br>
                         <button onclick="modalRegister();" style="background-color: transparent; border:0px; color: blue; cursor: pointer;"><i>Register new account</i></button>
                      
                       </div>
@@ -372,10 +373,10 @@ include 'function php/conn.php';
       <div class="parallax bgIndex"><br><br>
 
 
-        <div class="row" style="background-color: rgb(139 137 56 / 30%); padding: 50px;">
+        <div class="row" style=" padding: 50px;">
 
 
-          <div class="col-lg-6 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px;">
+          <div class="col-lg-6 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
             <div class="row justify-content-center align-items-center">
               <div class="col-md-12 text-center testimony">
               
@@ -385,20 +386,23 @@ include 'function php/conn.php';
                 $res = $exec->fetch_assoc();
 
                  ?>
-
-                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
-                <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
-                <h6 class="mb-4">Regional Director</h6>
+            
                 <blockquote>
-                <p style="font-size: 17px; text-indent: 50px; text-align: justify;"><i><?php echo $res['quotation']; ?></i></p>
+                  <p style="text-align: justify;text-justify: inter-word;">
+                    <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
+                    <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                    <h6 class="mb-4">Regional Director</h6>
+                    <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
+                  </p>
                 </blockquote>
+
               </div>
             </div>
           </div>
 
           <div class="col-lg-1"></div>
           
-          <div class="col-lg-5 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px;">
+          <div class="col-lg-5 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
             <div class="row justify-content-center align-items-center">
               <div class="col-md-12 text-center testimony">
               
@@ -409,12 +413,15 @@ include 'function php/conn.php';
 
                  ?>    
 
-                <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid mb-4" style="border-radius: 8px; width: 200px;">
-                <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
-                <h6 class="mb-4">Assistant Regional Director</h6>
                 <blockquote>
-                <p style="font-size: 17px; text-indent: 50px; text-align: justify;"><i><?php echo $res['quotation']; ?></i></p>
+                  <p style=" text-indent: 50px; text-align: justify;">
+                    <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
+                    <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                    <h6 class="mb-4">Assistant Regional Director</h6>
+                    <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
+                  </p>
                 </blockquote>
+
               </div>
             </div>
           </div>

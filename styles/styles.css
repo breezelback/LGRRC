@@ -406,14 +406,14 @@ margin-top: 40px;
 
 .newsList:hover
 {
-  background-color: #c1c7d9 !important;
-  /*background-color: #192f72;*/
-  color: black !important;
+  /*background-color: #c1c7d9 !important;*/
+  background-color: #031e71 !important;;
+  color: #fff !important;
 }
 
 .directorText
 {
-  font-size: 15px;
+  font-size: 20px;
   /*text-decoration: underline;*/
 }
 

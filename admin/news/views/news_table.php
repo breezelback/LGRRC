@@ -7,8 +7,8 @@
     <thead>
       <tr>
         <th>IMAGE</th>
-        <th>TITLE</th>
         <th>AUTHOR</th>
+        <th>TITLE</th>
         <th>DESCRIPTION</th>
         <th>DATE</th>
         <th>STATUS</th>

@@ -67,7 +67,7 @@ include 'function php/conn.php';
             <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-duration="1500">
               <div class="card" style="height: 290px !important;">
                 <center>
-                <div class="card-header">
+                <div class="card-header" style="background-color: #921720;">
                     <a title="DILG IV-A" href="msac_profile.php?id=<?php echo $result['id']; ?>"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px;"></a>
                 </div>
                   <div class="card-body">

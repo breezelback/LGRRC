@@ -100,7 +100,7 @@ else
 
         <div class="col-md-8" style="border: 3px solid #6c6c9c; padding:20px; border-radius:10px;" id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
 
-        <div class="col-md-8" style="border: 3px solid #6c6c9c; padding:50px; border-radius:10px;" id="newsOutput">
+        <div class="col-md-8" style="border: 3px solid #6c6c9c; padding:50px; border-radius:10px; text-indent: 50px;" id="newsOutput">
           
           <!-- newsoutput -->
 
