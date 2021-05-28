@@ -545,7 +545,7 @@ include 'function php/conn.php';
           
           <div class="card">
               <img class="card-img-top img-fluid" src="images/news/<?php echo $res['imageName']; ?>" alt="Card image cap" style="height: 300px;">
-              <div class="card-body">
+              <div class="card-body" style="overflow-y: scroll !important; height: 270px !important;">
                 <center>  
                     <h4 class="card-title"><b><?php echo $res['title']; ?></b></h4>
                     <h6><?php echo $res['author']; ?></h6>
