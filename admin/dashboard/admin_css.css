@@ -476,3 +476,19 @@ footer.sticky-footer {
     width: calc(100% - 55px);
   }
 }
+
+#result1_filter
+{
+  margin-bottom: 5px;
+}
+div.dataTables_wrapper div.dataTables_filter input
+{
+  margin-bottom: 5px; 
+}
+
+@media (min-width: 768px) {
+  .modal-xl {
+    width: 90%;
+   max-width:1200px;
+  }
+}

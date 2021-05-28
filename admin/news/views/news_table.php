@@ -87,7 +87,7 @@
 
 <!---------------------------------------------------- MODAL ADD------------------------------------------------------------------ -->
           <div id="modalAddProduct" class="modal fade" role="dialog">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-xl">
 
               <!-- <form action="" onsubmit="insertData(); return false;"> -->
               <form action="function php/insertNews.php" method="post" enctype="multipart/form-data">
@@ -101,7 +101,7 @@
                   <div class="row">
                     <div class="col-md-6">
                      <center>
-                        <img class="ml-2" src="../images/news.png" style="width: 343px; height: 208px;" id="image_editProfile"><br>
+                        <img class="ml-2" src="../images/newsBg.jpg" style="width: 343px; height: 208px; border: 2px solid gray;" id="image_editProfile"><br>
                         <label class="btn btn-primary btn mt-2" style="width:150px;">
                         <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_editProfile" name="file_editProfile">
                         </label>
@@ -129,7 +129,7 @@
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close <i class="fas fa-times"></i></button>
-                    <button type="submit" class="btn btn-success" id="btnInserNews">Save <i class="fas fa-check"></i></button>
+                    <button type="submit" class="btn btn-success" id="btnInserNews">Upload <i class="fas fa-check"></i></button>
                     <!-- <input type="submit" value="Check the submitted code" /> -->
                   </div>
                 </div>
@@ -145,7 +145,7 @@
 
 <!--------------------------------------------------- MODAL EDIT------------------------------------------------------------------ -->
        <div id="modalEditProduct" class="modal fade" role="dialog">
-          <div class="modal-dialog modal-lg">
+          <div class="modal-dialog modal-xl">
 
           <!-- <form action="" onsubmit="updateData(); return false;"> -->
           <form action="function php/updateNews.php" method="post"  enctype="multipart/form-data">
@@ -159,15 +159,15 @@
                     <div class="row">
                       <div class="col-sm-6">
                          <center>
-                            <img class="ml-2" src="../images/news.png" style="width: 343px; height: 208px;" id="image_updateProfile"><br>
+                            <img class="ml-2" src="../images/newsBg.jpg" style="width: 343px; height: 208px; border: 2px solid gray;" id="image_updateProfile"><br>
                             <label class="btn btn-primary btn mt-2" style="width:150px;">
                             <span class="fa fa-picture"></span>&nbsp&nbspBrowse Image<input type="file" style="display: none;" id="file_updateProfile" name="file_updateProfile">
                             </label>
                           </center>
                           Author:
-                          <input type="text" class="form-control" id="editAuthor" name="editAuthor">
+                          <input type="text" class="form-control" id="editAuthor" name="editAuthor" required="">
                           Title:
-                          <input type="text" class="form-control" id="editTitle" name="editTitle">
+                          <input type="text" class="form-control" id="editTitle" name="editTitle" required="">
 
                           <br> <hr><br>
                           Publish:

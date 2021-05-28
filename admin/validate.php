@@ -13,7 +13,7 @@ else
 
         if ($_SESSION['usertype'] != 'admin') 
         {
-            header('location: admin-login.php');
+            header('location: ../index.php;');
         }
     }
     
