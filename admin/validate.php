@@ -3,17 +3,17 @@ session_start();
 
 if (!isset($_SESSION)) 
 {
-    header('location: admin-login.php');
+    header('location: ../index.php');
 }
 else
 {
     if (!isset($_SESSION['usertype'])) 
     {
-        header('location: admin-login.php');
+        header('location: ../index.php');
 
         if ($_SESSION['usertype'] != 'admin') 
         {
-            header('location: ../index.php;');
+            header('location: ../index.php');
         }
     }
     
