@@ -130,7 +130,7 @@ else
 
              ?>
               <a onclick="fetchNews(<?php echo $res['id']; ?>);" class="list-group-item list-group-item-action newsList" style="border:1px solid seagreen;">
-                <?php echo $res['title']; ?> 
+                <b><?php echo $res['title']; ?> </b>
                 <p class="float-right "><?php echo date("d-M-Y", strtotime($res['dateUploaded'])); ?></p>
                 <p style="font-size: 12px;"><?php echo $string; ?></p>
                 <!-- <p style="font-size: 10px;"></p> -->
