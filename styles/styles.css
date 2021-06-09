@@ -95,6 +95,18 @@
 
 }
 
+.bgImageSmall
+{
+  background-image: url(../images/LGRC_Static.png) !important; 
+  background-position: 50% -25px;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-animation: slide 30s linear infinite;
+  height: 13% !important;
+
+}
 
 
 

@@ -46,11 +46,11 @@ include 'function php/conn.php';
     </style>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+    <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
      <!-- Navbar-->
-     <?php include 'includes/header.php'; ?>
+      <?php include 'includes/header.php'; ?>
 
-<br><br><br>
+     <!--  <br><br><br>
       <div class="container">
 
           <div class="pt-5">
@@ -60,7 +60,6 @@ include 'function php/conn.php';
               <div class="col-lg-12 mb-4 text-white headingContent">
                 <header class="py-5 mt-5">
                     <h1 class="display-6 headingText">About LGRRC</h1>
-                    <!-- <p class="lead mb-0 text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p> -->
                     <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
                 </header>
               </div>
@@ -68,10 +67,9 @@ include 'function php/conn.php';
 
 
             </div>
-            <!-- <div class="row"> -->
           </div>
       </div>
-      <span id="page2"></span>
+      <span id="page2"></span> -->
 
     </div>
     <!-- bgImage -->

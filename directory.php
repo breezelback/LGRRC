@@ -64,11 +64,11 @@ include 'function php/conn.php';
       </style>    
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+  <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
 
-<br><br><br>
+<!--       <br><br><br>
       <div class="container">
 
           <div class="pt-5">
@@ -86,10 +86,9 @@ include 'function php/conn.php';
 
 
             </div>
-            <!-- <div class="row"> -->
           </div>
       </div>
-      <span id="page2"></span>
+      <span id="page2"></span> -->
 
     </div>
     <!-- bgImage -->
