@@ -50,8 +50,8 @@ include 'function php/conn.php';
               <div class="col-lg-7 mb-4 text-white">
                 <!-- <header class="py-5 mt-5"> -->
                 <header>
-                    <h1 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC) CALABARZON</h1>
-                    <h2><b>E-LIBRARY SYSTEM</b></h2>
+                    <h2 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC) CALABARZON</h2>
+                    <h1><b>E-LIBRARY SYSTEM</b></h1>
                     <p class="lead mb-0" style="font-family: 'centuryGothic'; font-size:17px; color:#e8e7e7;">Building learning communities in the whole CALABARZON Region that pursue local governance excellence through knowledge sharing</p>
                     <!-- <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo">Who Are We</a> -->
                     <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo" style="background-color: #c30718; border-color:#ad0735;">Who Are We</a>
