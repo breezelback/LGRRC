@@ -24,8 +24,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navVideos">CT Panel</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="linawin-natin.php">Videos</a>
-                            <a class="dropdown-item" href="sagisag-ng-pagasa.php">Documents</a>
+                            <a class="dropdown-item" href="ct-videos.php">Videos</a>
+                            <a class="dropdown-item" href="ct-documents.php">Documents</a>
                         </div>
                     </li> 
 

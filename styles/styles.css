@@ -747,9 +747,46 @@ ul {
 }
 
 
+.navPill {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: #192f72;
+  color: white;
+
+} 
+.navPill:hover {
+  color: white;
+}
+
+.nav-pills .nav-link {
+    border: 1px solid #0056b3 !important;
+}
 
 
 
+/* change border radius for the tab , apply corners on top*/
+#exTab3
+{
+  padding: 10px;
+}
+#exTab3 .nav-item{
+  padding: 10px;
+  border-radius: 4px 4px 0 0 ;
+  border: 1px solid #a09a9a;
+  /*cursor: pointer;*/
+}
+
+#exTab3 .tab-content {
+/*  color : white;
+  background-color: #428bca;*/
+  padding : 5px 15px;
+}
+.activeTab
+{
+  text-decoration: underline;
+  color:#031f49;
+  font-size: 18px;
+}
 
 
 
