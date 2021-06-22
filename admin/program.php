@@ -1,5 +1,5 @@
 <?php include 'function php/conn.php'; ?>
-<?php include 'validate.php'; ?>
+<!-- <?php include 'validate.php'; ?> -->
 
 <!DOCTYPE html>
 <html lang="en">
