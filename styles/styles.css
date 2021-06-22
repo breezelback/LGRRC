@@ -787,6 +787,37 @@ ul {
   color:#031f49;
   font-size: 18px;
 }
+.btnExam
+{
+  font-size: 15px;
+  border: 1px solid #857e7e;
+  padding: 10px;
+  border-radius: 5px;
+}
+.btnExam:hover
+{
+  color: white !important;
+  background-color: #857e7e;
+  cursor: pointer;
+}
+
+.btnDownload
+{
+  font-size: 18px;
+  border: 1px solid #857e7e;
+  padding: 5px;
+  border-radius: 7px;
+  color: #857e7e;
+}
+.btnDownload:hover
+{
+  color: white !important;
+  background-color: #857e7e;
+  cursor: pointer;
+}
+
+
+
 
 
 
@@ -802,8 +833,6 @@ ul {
     width: 80%;
     height: 180px
   }
-
-
 
 
 }

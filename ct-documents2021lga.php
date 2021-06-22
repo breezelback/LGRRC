@@ -140,11 +140,11 @@ else
                       <div class="card">
                         <div class="card-header" id="headingOne">
                           <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1x5Hebo0Cju0-nP4jWWs4hb0fODXwj1id/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
                             <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                               [CT] COVID Situationer_1621302963.pdf
-
-                              <div class="btnExam">Take Exam</div>
                             </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
                           </h2>
                         </div>
 
@@ -157,28 +157,16 @@ else
                       <div class="card">
                         <div class="card-header" id="headingTwo">
                           <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1FwZ_124Am93_Y4T0kjIovh0Rs5IMyNBE/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
                             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                              Collapsible Group Item #2
+                              Revised Omnibus Guidelines on PDITR for Covid 19.pdf
                             </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
                           </h2>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                           <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-header" id="headingThree">
-                          <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                              Collapsible Group Item #3
-                            </button>
-                          </h2>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                          <div class="card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            <iframe src="https://drive.google.com/file/d/1QXWxr5-zvi2XfSOggGV4hvgUVE68D9nr/preview" width="100%" height="480" allow="autoplay"></iframe>
                           </div>
                         </div>
                       </div>
@@ -191,19 +179,321 @@ else
 
               </div>
               <div class="tab-pane" id="2b">
-                <h3>Contact Tracing_A Review</h3>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <center>
+                      <h3>Contact Tracing_A Review</h3>
+                    </center>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOneA">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1swwljkJXxIv6RxpyqCz1XsQ9YuxW6LqB/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneA" aria-expanded="true" aria-controls="collapseOneA">
+                              CT-Handbook.pdf
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOneA" class="collapse show" aria-labelledby="headingOneA" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://drive.google.com/file/d/1swwljkJXxIv6RxpyqCz1XsQ9YuxW6LqB/preview" width="100%" height="480" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwoA">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1XJG3i5ZqOje7_j-mBxVIH0fLhFGlLB2s/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoA" aria-expanded="false" aria-controls="collapseTwoA">
+                              LINKS TO CONTACT TRACING VIDEOS.docx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseTwoA" class="collapse" aria-labelledby="headingTwoA" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/document/d/e/2PACX-1vTreX5OukC4eOoMGeuNFBIQtZUx-lx123yq4SNH84Hbiw0hK4bieJ_70f6lSW-ksA/pub?embedded=true" width="100%" height="480"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThreeA">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1bN1m15zBP4ZljXSv1JGU6dbzSXfgH1I1/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeA" aria-expanded="false" aria-controls="collapseThreeA">
+                              Session 2.1 Contact Tracing for COVID 19 (CT Handbook).pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseThreeA" class="collapse" aria-labelledby="headingThreeA" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vShn2tbqlb_ioacMZOCcaYQ8_N_J65gVMr796kmeoSTQXQdYpRgKw72-Ct2WjWofw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFourA">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1GT8xqK7v570ruf0uahuMqwOjPC-MNwV-/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourA" aria-expanded="false" aria-controls="collapseFourA">
+                              Session 2.2 LGU Practice-Baguio City Contact Tracing System.pdf
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseFourA" class="collapse" aria-labelledby="headingFourA" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://drive.google.com/file/d/1GT8xqK7v570ruf0uahuMqwOjPC-MNwV-/preview" width="100%" height="480" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingFiveA">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1pa4dFVA1jKJeMRVslN7UcjEUH7MRfs_r/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFiveA" aria-expanded="false" aria-controls="collapseFiveA">
+                              Session 2.2a LGU Practice-Baguio City Contact Tracing System.pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseFiveA" class="collapse" aria-labelledby="headingFiveA" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRSiVnOGoKahJ07tbpV08XDzOUDSMZoKzmo_OIybdcJOR5AndoFTieRDv7og2A-nA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+
+
               </div>
               <div class="tab-pane" id="3b">
-                <h3>Cognitive Interviewing</h3>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <center>
+                      <h3>Cognitive Interviewing</h3>
+                    </center>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOneB">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1qscCQ0Tsk-1uhO0Yb7f4t5PR6851LkWa/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneB" aria-expanded="true" aria-controls="collapseOneB">
+                              Session 3- Cognitive Interviewing.pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOneB" class="collapse show" aria-labelledby="headingOneB" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRYvy1HqiRlWLtxa577H5Zpidpa8Nu9NIstEs6EJS4ONw8cNt8z58NECO1Z-fQlKg/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
               </div>
               <div class="tab-pane" id="4b">
-                <h3>Contact Tracing Data Analytics _ Mapping</h3>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <center>
+                      <h3>Contact Tracing Data Analytics _ Mapping</h3>
+                    </center>
+                    <div class="accordion" id="accordionExample">
+
+                      <div class="card">
+                        <div class="card-header" id="headingOneC">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1BoXmSYB-iQ5gCbn-nHnSluI3JkJusGNz/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneC" aria-expanded="true" aria-controls="collapseOneC">
+                              LINKS TO VIDEO TUTORIALS.docx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseOneC" class="collapse show" aria-labelledby="headingOneC" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/document/d/e/2PACX-1vRdVJOGhkmyImDGJN0CyYOcZVmp-NGFN14MlSqgRKb6qZvzqa3obA4T0GSHaAVpyw/pub?embedded=true" width="100%" height="480"></iframe>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" id="headingTwoC">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1c6hWkVg1VZC0-RtVHfAtKX0KWDtFrPtJ/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoC" aria-expanded="false" aria-controls="collapseTwoC">
+                              Process Flow with Personnel v4-2_1621492473.pdf
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseTwoC" class="collapse" aria-labelledby="headingTwoC" data-parent="#accordionExample">
+                          <iframe src="https://drive.google.com/file/d/1c6hWkVg1VZC0-RtVHfAtKX0KWDtFrPtJ/preview" width="100%" height="480" allow="autoplay"></iframe>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header" id="headingThreeC">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1bZxR1WZ4yZ7UlALRRLc-RP44N1keQ-m1/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeC" aria-expanded="false" aria-controls="collapseThreeC">
+                              Session 4a Contact Tracing Data Analytics _ Mapping-Baguio City Experience.pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseThreeC" class="collapse" aria-labelledby="headingThreeC" data-parent="#accordionExample">
+                          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR4N8l04qOVROMjGYu4kqoP91t-2kcYpiaC1Muf3iAz5xaL4ozrecAZncnviY018A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                      </div>
+                      
+                      <div class="card">
+                        <div class="card-header" id="headingFourC">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1tV9i-eWZPe9LqV4dCnuBa1758dbMT7yc/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFourC" aria-expanded="false" aria-controls="collapseFourC">
+                              Session 4b Contact Tracing Data Analytics _ Mapping-Baguio City Experience.pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseFourC" class="collapse" aria-labelledby="headingFourC" data-parent="#accordionExample">
+                          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS0IiK4gItgS6gdRM29zYL3kQhECuFr-gypsA8Fnbn9gNKGB1E8R0BTQh_M6h4qKA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1280" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
               </div>
               <div class="tab-pane" id="5b">
-                <h3>Stay Safe</h3>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <center>
+                      <h3>Stay Safe</h3>
+                    </center>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOneD">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1agqrKECuLGjqh-3uQr0EjFvuATCZRfjp/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneD" aria-expanded="true" aria-controls="collapseOneD">
+                              FIL StaySafePH COVID19 Mitigation System w advanced contact tracing social distancing features.mp4
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOneD" class="collapse show" aria-labelledby="headingOneD" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://drive.google.com/file/d/1agqrKECuLGjqh-3uQr0EjFvuATCZRfjp/preview" width="100%" height="480" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwoD">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/10tkbmNO-OKoBP6kAu4__VcipY16bxTWe/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoD" aria-expanded="false" aria-controls="collapseTwoD">
+                              Session 5-Stay Safe (Citizens and Establishment).pdf
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseTwoD" class="collapse" aria-labelledby="headingTwoD" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://drive.google.com/file/d/10tkbmNO-OKoBP6kAu4__VcipY16bxTWe/preview" width="100%" height="480" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingThreeD">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1MH1EtyBroxoY1rFNnSW3hKFWmd277kTc/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThreeD" aria-expanded="false" aria-controls="collapseThreeD">
+                              Stay Safe PH AVP May 2020.mp4
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseThreeD" class="collapse" aria-labelledby="headingThreeD" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://drive.google.com/file/d/1MH1EtyBroxoY1rFNnSW3hKFWmd277kTc/preview" width="100%" height="480" allow="autoplay"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+
               </div>
               <div class="tab-pane" id="6b">
-                <h3>Conversation Cafe</h3>
+                <div class="row">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-10">
+                    <center>
+                      <h3>Conversation Cafe</h3>
+                    </center>
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOneE">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1FGFFz7wmRae9PFU1N-ES0zV7-_mcwPvn/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOneE" aria-expanded="true" aria-controls="collapseOneE">
+                              CT_Workshop Mechanics.pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOneE" class="collapse show" aria-labelledby="headingOneE" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTvNfWl1eVwVH24-bQXLbpJYdttVx4vSK4VRJ_oNn2KxvGGpvc0BiGo0eVI-WCDdw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header" id="headingTwoE">
+                          <h2 class="mb-0">
+                            <a href="https://drive.google.com/file/d/1tQAylx0RdgDol-SwCmeDPTdKkN7eCCqo/view?usp=sharing" target="_blank" class="btn btn-primary btnDownload" title="Download"><i class="fa fa-chevron-circle-down"></i></a>
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwoE" aria-expanded="false" aria-controls="collapseTwoE">
+                              Workshop Output CT_[Group No.].pptx
+                            </button>
+                              <a class="float-right btnExam" onclick="alert('Redirect to google form');">Take Exam <i class="fa fa-link"></i></a>
+                          </h2>
+                        </div>
+                        <div id="collapseTwoE" class="collapse" aria-labelledby="headingTwoE" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTckhDjViNWNiwJlnPhtLlCWMx_f2SAKAezTTxoxClzrS1wxhBOTHmT9qApukRT-A/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="480" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-md-1"></div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -228,6 +518,7 @@ else
       });
 
       $('.tab1').addClass( "activeTab" );
+
 
     </script>
 

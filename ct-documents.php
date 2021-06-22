@@ -112,6 +112,7 @@ else
             <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSGr5G1j-i8kOOnTiXwnRErH2VF9yCuZSht8gEV94C7YMSUXX1PkwnC7Hnu6Ekutw/embed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" height="500" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
             <div class="card-body">
               <p class="card-text"><b>Contact Tracing Module 1 Lesson 1_ Overview of National Health Emergency Strategic Response</b></p>
+              <p class="card-text"><a href="https://drive.google.com/file/d/1HO0OzoIDKfafwpF5wxS2cKwzfkHSkiDL/view?usp=sharing" target="_blank">Download <i class="fa fa-chevron-circle-down"></i></a></p>
               <p class="card-text"><a href="">Google Form Question Link</a></p>
             </div>
           </div>
