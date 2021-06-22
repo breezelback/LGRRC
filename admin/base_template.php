@@ -1,5 +1,5 @@
 <?php require_once 'assets/phpti-master/src/ti.php'; ?>
-
+<?php require_once 'validate.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
