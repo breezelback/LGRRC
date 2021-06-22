@@ -1,7 +1,7 @@
 <?php include 'base_template.php'; ?>
 
 <?php startblock('title'); ?>
-  Directory of Experts
+  Content Manager
 <?php endblock('title'); ?>
 
 <?php startblock('content'); ?>
