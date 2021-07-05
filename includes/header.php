@@ -21,13 +21,15 @@
                     <li class="nav-item"><a href="directory.php" class="nav-link"  id="navDir">Directory</a></li>
                     <li class="nav-item"><a href="faq.php" class="nav-link"  id="navFaq">FAQ</a></li>
 
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navVideos">CT Panel</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="ct-videos.php">Videos</a>
                             <a class="dropdown-item" href="ct-documents.php">Documents</a>
                         </div>
-                    </li> 
+                    </li>  -->
+                    <li class="nav-item"><a href="ct-module.php" class="nav-link"  id="navCt">CT Panel</a></li>
+
 
                     <li class="nav-item ml-2">
                         <form action="search-result.php" method="post">
