@@ -18,7 +18,7 @@ else
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="LGRRC Website">
-    <meta name="keywords" content="dilg, calabarzon, lgrrc, lgrc">
+    <meta name="keywords" content="dilg,lgrc calabarzon,lgrrc calabarzon,lgrrc,lgrc, calabarzon, dilg calabarzon">
     <meta name="author" content="Jeck Castillo">
     <link rel="icon" type="image/png" href="images/lgrc_logo.png">
     <?php include 'includes/css_includes.php'; ?>
@@ -26,7 +26,7 @@ else
     <title>LGRRC</title>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-positio n: 50% -25px;">
+  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
 

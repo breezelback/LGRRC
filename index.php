@@ -19,7 +19,7 @@ include 'function php/conn.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="LGRRC Website">
-    <meta name="keywords" content="dilg,lgrc calabarzon,lgrrc calabarzon,lgrrc,lgrc">
+    <meta name="keywords" content="dilg,lgrc calabarzon,lgrrc calabarzon,lgrrc,lgrc, calabarzon, dilg calabarzon">
     <meta name="author" content="Jeck Castillo">
     <link rel="icon" type="image/png" href="images/lgrc_logo.png">
     <?php include 'includes/css_includes.php'; ?>
