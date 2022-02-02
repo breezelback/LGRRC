@@ -614,11 +614,8 @@ include 'function php/conn.php';
       </div>
 
       <div class="row justify-content-center btns">
-        <div class="col-md-12 text-center">
-
-          <button class="customNextBtn btn btn-primary m-1 " style="background-color: darkred;">Next</button>
-          <button class="customPreviousBtn btn btn-primary m-1 " style="background-color: darkred;">Prev</button>
-        </div>
+        <button class="customPreviousBtn btn btn-primary m-1 " style="background-color: darkred;">Prev</button>
+        <button class="customNextBtn btn btn-primary m-1 " style="background-color: darkred;">Next</button>
       </div>
       
     </div> 
@@ -763,6 +760,11 @@ include 'function php/conn.php';
     <?php include 'includes/js_includes.php'; ?>
 
     <script type="text/javascript">
+
+      
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
 
       $('#navHome').addClass('active');
 
