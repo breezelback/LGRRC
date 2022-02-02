@@ -1,7 +1,7 @@
 <div class="table-responsive" style="font-family: ui monospace;">
   <span style="background-color: #f7ff9f7d; padding: 21px 5px 5px 5px;">
     <span><b>DRAFT</b> <span style="background-color:#f3bcbc; border-radius: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span> &nbsp;|&nbsp;
-    <span><b>PUBLISHED</b> <span style="background-color:#93a9f5; border-radius: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+    <span><b>PUBLISHED</b> <span style="background-color:#c2def5; border-radius: 50px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
   </span>
   <table class="table table-bordered" id="table_news" width="100%" cellspacing="0" style="font-size: 15px;">
     <thead>
@@ -20,11 +20,11 @@
       <?php 
       if ($article['status'] == 'draft') 
       {
-        $style = ' style="background-color:#f9d3d3; border:3px solid red;" ';
+        $style = ' style="background-color:#f9d3d3;" ';
       }
       else
       {
-        $style = ' style="background-color:#b6c4f5;" ';
+        $style = ' style="background-color:#c2def5;" ';
       }
        ?>
        <tr <?php echo $style; ?>>
