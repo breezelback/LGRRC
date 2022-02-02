@@ -14,6 +14,7 @@
           </div>
           <div class="card-body">
             <?php include 'products_table.php'; ?>
+            <?php include 'modal.php'; ?>
           </div>
           <div class="card-footer small text-muted"></div>
         </div>

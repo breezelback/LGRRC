@@ -287,5 +287,85 @@
       // else
     });
 
+
+
+
+    // ------------------------------------------------------PERMANENT REMOVE------------------------------------------------------------
+    $(document).on('click', "#td_btn_remove", function(){
+     
+      var id=$(this).data("id_remove");
+       // alert(id);
+
+      //confirmation start
+      swal({
+      title: "Are you sure?",
+      text: "Permanently Delete User!",
+      type: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#5cb85c",
+      cancelButtonColor: "#d9534f",
+      confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
+      cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
+      confirmButtonClass: "btn",
+      cancelButtonClass: "btn"
+      }).then((result) => {
+      if (result.value) {
+            
+            //ajax start
+            $.ajax({  
+               url:"function php/removeUser.php?id="+id, 
+               method:"POST",  
+               //post:data  
+               contentType:false,
+               cache:false,
+               processData:false,
+
+               beforeSend:function() {
+
+                      swal({
+                      position: "top-end",
+                      type: "info",
+                      title: "Processing Data...",
+                      showConfirmButton: false,
+                      });
+
+              }, 
+
+               success:function(data){  
+                swal.close();
+                //alert(data); 
+                swal({
+                title: "User Successfully Deleted!",
+                text: data,
+                type: "success",
+                showCancelButton: false,
+                confirmButtonColor: "#5cb85c",
+                confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
+                confirmButtonClass: "btn"
+                }).then((result) => {
+                  if (result.value) {
+
+                      // fetch_users();
+                      //close modal
+                      location.reload();
+                  }
+                });
+
+                }
+                    
+            });  
+            //ajax end 
+      }
+      });
+      //confirmation end
+
+
+    });
+
+    // ------------------------------------------------------PERMANENT REMOVE------------------------------------------------------------
+
+
+
+
   }); //document ready
 </script>

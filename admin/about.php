@@ -449,9 +449,9 @@ $(document).on('click', "#td_btn_delete", function(){
           }).then((result) => {
             if (result.value) {
 
-                fetch_users();
+                // fetch_users();
                 //close modal
-                // location.reload();
+                location.reload();
             }
           });
 

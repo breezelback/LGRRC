@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12 mt-2">
             <!-- <button class="btn btn-success float-right" data-toggle="modal" data-target="#modalAddProduct">Add MSAC Member <i class="fas fa-plus"></i></button> -->
-            <center><h2>Images and Quotations Content</h2></center>
+            <center><h2>Images and Website Content</h2></center>
             <br>
              <div class="card mb-3">
               <div class="card-header">
@@ -17,7 +17,7 @@
                       <tr>
                         <th>IMAGE</th>
                         <th>NAME</th>
-                        <th>QUOTATION</th>
+                        <th>TEXT</th>
                         <th width="7%"><center>Action</center></th>
                       </tr>
                     </thead>

@@ -70,8 +70,10 @@
                                 <div class="cell-button btn-group">
                                   <button style="width:60px;" type="button" id="td_btn_edit" data-id_edit="<?php echo $user["id"]; ?>" data-toggle= "modal" data-target="#modalUpdate" class="btn btn-md btn-primary">
                                   <span class="fa fa-edit"></span></button>
-                                  <button style="width:60px;" type="button" id="td_btn_delete" data-id_delete="<?php echo $user["id"]; ?>" class="btn btn-md btn-danger" data-toggle="modal" data-target="#residentsModal">
+                                  <button style="width:60px;" type="button" id="td_btn_delete" data-id_delete="<?php echo $user["id"]; ?>" class="btn btn-md btn-warning" data-toggle="modal" data-target="#residentsModal">
                                   <span class="fa fa-times-circle"></span></button>
+                                  <button style="width:60px;" type="button" id="td_btn_remove" data-id_remove="<?php echo $user["id"]; ?>" class="btn btn-md btn-danger">
+                                  <span class="fa fa-trash"></span></button>
                                 </div>
                               </div>
                             </center>
@@ -85,6 +87,8 @@
                                   <span class="fa fa-check"></span></button>
                                   <button style="width:60px;" type="button" id="td_btn_edit" data-id_edit="<?php echo $user["id"]; ?>" data-toggle= "modal" data-target="#modalUpdate" class="btn btn-md btn-primary">
                                   <span class="fa fa-edit"></span></button>
+                                  <button style="width:60px;" type="button" id="td_btn_remove" data-id_remove="<?php echo $user["id"]; ?>" class="btn btn-md btn-danger">
+                                  <span class="fa fa-trash"></span></button>
                                 </div>
                               </div>
                             </center>

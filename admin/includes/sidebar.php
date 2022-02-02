@@ -98,7 +98,7 @@
                 <li class="">
                     <a href="content.php">
                         <i class="fa fa-images"></i>
-                        <span class="menu-text">Images and Quotations Content</span>
+                        <span class="menu-text">Images and Website Content</span>
                     </a>
                 </li>
 

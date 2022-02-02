@@ -18,12 +18,12 @@
           </div> 
         </td>
         <td>
-          <div id="td_title<?php echo $product['id'];?>" data-data1="<?php echo $product['title']; ?>">
+          <div id="td_title<?php echo $product['id'];?>" data-data2="<?php echo $product['title']; ?>">
             <?php echo $product['title']; ?>
           </div>
         </td>
         <td>
-          <div id="td_status<?php echo $product['id'];?>" data-data1="<?php echo $product['status']; ?>">
+          <div id="td_status<?php echo $product['id'];?>" data-data3="<?php echo $product['status']; ?>">
             <?php echo $product['status']; ?>
           </div>
         </td>
