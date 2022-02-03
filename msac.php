@@ -51,7 +51,7 @@ include 'function php/conn.php';
               <div class="card" style="height: 310px !important;">
                 <center>
                 <div class="card-header" style="background-color: #921720;">
-                    <a title="DILG IV-A" href="<?php echo $result['email']; ?>" target="_blank"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px;"></a>
+                    <a title="DILG IV-A" href="<?php echo $result['email']; ?>" target="_blank"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px; height: 100px;"></a>
                 </div>
                   <div class="card-body msacBody">
                     <h3 class="card-title" style="font-size: 13px;"><b><?php echo $result['agencyName']; ?></b></h3>
