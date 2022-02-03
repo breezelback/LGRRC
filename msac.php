@@ -1,7 +1,7 @@
 <?php 
 include 'function php/conn.php';
  ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -12,7 +12,13 @@ include 'function php/conn.php';
     <meta name="author" content="Jeck Castillo">
     <link rel="icon" type="image/png" href="images/lgrc_logo.png">
     <?php include 'includes/css_includes.php'; ?>
-
+    <style type="text/css">
+      .msacBody
+      {
+        height: 180px !important;
+        overflow-y: scroll;
+      }
+    </style>
     <title>LGRRC</title>
   </head>
   <body>
@@ -42,12 +48,12 @@ include 'function php/conn.php';
            ?>
 
             <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-duration="1500">
-              <div class="card" style="height: 290px !important;">
+              <div class="card" style="height: 310px !important;">
                 <center>
                 <div class="card-header" style="background-color: #921720;">
                     <a title="DILG IV-A" href="https://<?php echo $result['email']; ?>" target="_blank"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px;"></a>
                 </div>
-                  <div class="card-body">
+                  <div class="card-body msacBody">
                     <h3 class="card-title" style="font-size: 13px;"><b><?php echo $result['agencyName']; ?></b></h3>
                     <p class="card-text" style="font-size: 15px;" ><?php echo $result['address']; ?></p>
                     <p class="card-text" style="font-size: 15px;" ><?php echo $result['contactNumber'].' / <a href="https://'.$result['email'].'" target="_blank">'.$result['email'].'</a>'; ?></p>
