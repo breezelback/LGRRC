@@ -53,8 +53,7 @@ include 'function php/conn.php';
                     <h2 class="display-6 headingText">Local Governance Regional Resource Center (LGRRC) CALABARZON</h2>
                     <h1><b>E-LIBRARY SYSTEM</b></h1>
                     <p class="lead mb-0" style="font-family: 'centuryGothic'; font-size:17px; color:#e8e7e7;">Building learning communities in the whole CALABARZON Region that pursue local governance excellence through knowledge sharing</p>
-                    <!-- <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo">Who Are We</a> -->
-                    <a href="#facilitiesId" class="btn btn-primary btn-lg mt-3 scrollTo" style="background-color: #c30718; border-color:#ad0735;">Who Are We</a>
+                    <a href="about.php" class="btn btn-primary btn-lg mt-3 scrollTo" style="background-color: #c30718; border-color:#ad0735;">Who Are We</a>
                 </header>
               </div>
               <div class="col-md-5">
@@ -69,8 +68,6 @@ include 'function php/conn.php';
                       $resUser = $execUser->fetch_assoc();
 
                       ?>
-                      <!-- Welcome<br> -->
-                      <!-- <marquee behavior="" direction=""><span style="font-family:monospace; font-size:30px;">Welcome</span></marquee> -->
                      <span style="font-family:monospace; font-size:20px;">Welcome</span><br>
                       <img src="images/attachedagency_dilgcentral.png" alt="" width="70">
                       <p>User ID: <b style="color:red;"><?php echo $resUser['borrowerId']; ?></b></p>
@@ -150,7 +147,7 @@ include 'function php/conn.php';
                                 <div class="col-sm-6">
                                   Birthday:
                                   <?php 
-                                  $phpdate = strtotime( $resUser['password'] );
+                                  $phpdate = strtotime( $resUser['birthday'] );
                                   $mysqldate = date( 'Y-m-d', $phpdate );
                                    ?>
                                   <input type="date" class="form-control" id="updateBirthday" value="<?php echo $mysqldate; ?>">
@@ -263,13 +260,14 @@ include 'function php/conn.php';
                                   <tr>
                                     <th>#</th>
                                     <th>Expert</th>
+                                    <th>Requested Expertise</th>
                                     <th>Remarks</th>
                                     <th>Date Requested</th>
                                   </tr>
                                 </thead>
                                 <?php 
                                 $x = 1;
-                                $selectRequest = ' SELECT `id`, `expertId`, `expertName`, `expertExpertise`, `requestorId`, `requestorName`, `requestorAddress`, `dateRequested`, `reason` FROM `tbl_request` WHERE `requestorId` = "'.$_SESSION['id'].'" ORDER BY `dateRequested` DESC ';
+                                $selectRequest = ' SELECT `id`, `expertId`, `expertName`, `expertExpertise`, `requestorId`, `requestorName`, `requestorAddress`, `dateRequested`, `reason`, `requested_expertise` FROM `tbl_request` WHERE `requestorId` = "'.$_SESSION['id'].'" ORDER BY `dateRequested` DESC ';
                                 $execRequest = $conn->query($selectRequest);
                                 while ($resRequest = $execRequest->fetch_assoc()) 
                                 {
@@ -280,7 +278,8 @@ include 'function php/conn.php';
                                  <tbody>
                                    <tr>
                                      <td><?php echo $x; ?></td>
-                                     <td><?php echo $resRequest['expertName'].'<br><span style="font-size:10px;">'.$resRequest['expertExpertise'].'</span>'; ?></td>
+                                     <td><?php echo $resRequest['expertName'].'<br><span style="font-size:11px;">'.$resRequest['expertExpertise'].'</span>'; ?></td>
+                                     <td><?php echo $resRequest['requested_expertise']; ?></td>
                                      <td><?php echo $resRequest['reason']; ?></td>
                                      <td><?php echo $mysqldate; ?></td>
                                    </tr>
@@ -364,394 +363,7 @@ include 'function php/conn.php';
       </div>
 
     </div>
-      <span id="facilitiesId"></span>
-    <!-- bgImage -->
-    <hr>
-
-    <!-- PROGRAM FACILITIES -->
-    <div class="container-fluid">
-
-      <div class="parallax bgIndex"><br><br>
-
-
-        <div class="row" style=" padding: 50px;">
-
-
-          <div class="col-lg-6 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-12 text-center testimony">
-              
-                <?php 
-                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 2 ';
-                $exec = $conn->query($sql);
-                $res = $exec->fetch_assoc();
-
-                 ?>
-            
-                <blockquote>
-                  <p style="text-align: justify;text-justify: inter-word;">
-                    <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
-                    <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
-                    <h6 class="mb-4">Regional Director</h6>
-                    <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
-                  </p>
-                </blockquote>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-1"></div>
-          
-          <div class="col-lg-5 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-12 text-center testimony">
-              
-                <?php 
-                $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 3 ';
-                $exec = $conn->query($sql);
-                $res = $exec->fetch_assoc();
-
-                 ?>    
-
-                <blockquote>
-                  <p style=" text-indent: 50px; text-align: justify;">
-                    <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
-                    <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
-                    <h6 class="mb-4">Assistant Regional Director</h6>
-                    <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
-                  </p>
-                </blockquote>
-
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-
-        <br>
-
-        <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px; ">
-          <!-- <div class="col-lg-2"></div> -->
-          <div class="col-lg-12" style="border:1px solid whitesmoke; padding-top: 50px; border-radius:5px;">
-            <div class="row mb-5 justify-content-center">
-              <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: darkred;">
-                <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
-                <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
-                <!-- <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p> -->
-              </div>
-            </div>
-            <div class="row mb-5 align-items-center">
-
-             <!--  <div class="col-lg-6 mb-4 aos-init" data-aos="fade-up"  data-aos-duration="1500">
-                 <?php 
-                  $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "mainImage" ');
-                  $result = $exec->fetch_assoc();
-                   ?>
-                <img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid" style="margin-left: 10px;">
-              </div>
- -->
-              <div class="col-lg-12 ml-auto aos-init" data-aos="fade-up"  data-aos-duration="1500">
-                
-                <div class="row">
-                  <div class="col-sm-3 mb-4">
-                      <?php 
-                      $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage1" ');
-                      $result = $exec->fetch_assoc();
-                       ?>
-                    <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
-                  </div>
-                  <div class="col-sm-3 mb-4">
-                      <?php 
-                      $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage2" ');
-                      $result = $exec->fetch_assoc();
-                       ?>
-                    <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
-                  </div>
-                <!-- </div>
-                <div class="row"> -->
-                  <div class="col-sm-3 mb-4">
-                      <?php 
-                      $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage3" ');
-                      $result = $exec->fetch_assoc();
-                       ?>
-                    <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
-                  </div>
-                  <div class="col-sm-3 mb-4">
-                      <?php 
-                      $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage4" ');
-                      $result = $exec->fetch_assoc();
-                       ?>
-                    <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
-                  </div>
-                </div>
-
-              </div>
-            </div>  
-          </div> 
-          <!-- <div class="col-lg-2"></div> -->
-        </div>
-
-
-
-      </div>
-      <!-- parallax -->
-
-    </div>
-    <!-- container -->
-    <br><br>
-
-
-    <!-- LATEST NEWS -->
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <center>
-            <h2 class="section-title">Latest News</h2>
-          </center>
-        </div>
-      </div>
-
-      <div class="row aos-init" data-aos="fade-up"  data-aos-duration="1500" data-aos-duration="2000">
-
-        <?php
-        $sql = ' SELECT `id`, `title`, `description`, `imageName`, `status`, `dateUploaded`, `author` FROM `tbl_news` WHERE `status` = "published" ORDER BY `dateUploaded` DESC LIMIT 3 ';
-        $exec = $conn->query($sql);
-        while ($res = $exec->fetch_assoc()) 
-        {
-
-         $id = strip_tags($res['id']);
-         $string = html_entity_decode($res['description']);
-         $string = strip_tags($string);
-          $newDate = date("M d-Y | h:i:s A", strtotime($res['dateUploaded']));
-          if (strlen($string) > 100) 
-          {
-
-              // truncate string
-              $stringCut = substr($string, 0, 100);
-              $endPoint = strrpos($stringCut, ' ');
-
-              //if the string doesn't contain any space then it will cut without word basis.
-              $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
-              $string .= '......<a href="news.php?id='.$id.'">more</a>';
-          }
-
-
-         ?>
-
-
-      
-        <div class="col-md-4">
-          
-          <div class="card">
-              <img class="card-img-top img-fluid" src="images/news/<?php echo $res['imageName']; ?>" alt="Card image cap" style="height: 300px;">
-              <div class="card-body" style="overflow-y: scroll !important; height: 270px !important;">
-                <center>  
-                    <h4 class="card-title"><b><?php echo $res['title']; ?></b></h4>
-                    <h6><?php echo $res['author']; ?></h6>
-                    <p><?php echo $newDate; ?></p>
-                </center><br>  
-                <p class="card-text"><?php echo $string; ?> </p>
-
-              </div>
-            </div>
-
-            <div class="card p-3 card-outline-primary">
-              <blockquote class="card-block card-blockquote">
-                <footer>
-                <center><a href="<?php echo 'news.php?id='.$id; ?>" class="btn btn-warning">View</a></center>
-                  <small class="text-muted">
-                    <!-- <?php echo $res['dateUploaded']; ?>              -->
-                  </small>
-                </footer>
-              </blockquote>
-            </div>
-
-        </div>
-        <!-- <div class="col-md-4"> -->
-        <?php } ?>
-
-      </div>
-    </div>
-
-    <br><hr>
-    
-    <!-- MSAC -->
-    <div class="site-section courses-title">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-lg-7 text-center">
-            <h2 class="section-title">MSAC MEMBERS</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row">
-
-        <!-- <div class="owl-carousel owl-theme col-12 nonloop-block-14 owl-loaded owl-drag aos-init" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500"> -->
-        <div class="owl-carousel owl-theme col-12 nonloop-block-14 aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500">
-           <?php 
-            $sql = " SELECT `id`, `agencyName`, `address`, `contactNumber`, `email`, `imageName`, `dateUploaded` FROM `tbl_msac` ORDER BY `agencyName` ASC ";
-            $exec = $conn->query($sql);
-            while ($result = $exec->fetch_assoc())
-            {
-            ?>
-            <div class="item">
-                <div class="course bg-white h-100 align-self-stretch">
-                    <figure class="m-2">
-                    <a title="<?php echo $result['agencyName']; ?>" href="msac_profile.php?id=<?php echo $result['id']; ?>"><img src="images/msac/<?php echo $result['imageName']; ?>" alt="<?php echo $result['agencyName']; ?>" class="msacImages"></a>
-                  </figure>
-                </div>
-            </div>
-
-            <?php } ?>
-        </div>
-
-
-      </div>
-
-      <div class="row justify-content-center btns">
-        <button class="customPreviousBtn btn btn-primary m-1 " style="background-color: darkred;">Prev</button>
-        <button class="customNextBtn btn btn-primary m-1 " style="background-color: darkred;">Next</button>
-      </div>
-      
-    </div> 
-    <!-- <div class="container"> -->
-
-
-<br>  <hr>  
-
-<!-- FEATURED BOOKS -->
-<div class="site-section courses-title" id="teachers-section" style="background-color: #f2a51a;">
-    <div class="container">
-      <div class="row mb-5 justify-content-center">
-        <div class="col-lg-7 text-center aos-init aos-animate" data-aos="fade-up" data-aos-duration="1500" >
-          <h2 class="section-title">FEATURED KNOWLEDGE PRODUCT</h2>
-          <!-- <p class="mb-5 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam repellat aut neque! Doloribus sunt non aut reiciendis, vel recusandae obcaecati hic dicta repudiandae in quas quibusdam ullam, illum sed veniam!</p> -->
-        </div>
-      </div>
-    </div>
-</div>
-<div id="teachers-section" class="site-section courses-entry-wrap">
-    <div class="container">
-      <!-- <div class="row mb-5 justify-content-center">
-      <div class="col-lg-7 mb-5 text-center" data-aos="fade-up" data-aos-delay="" style="border:1px solid #c0e218; padding: 10px; border-radius:10px; background-color: #f2a51a;">
-      <h2 class="section-title text-white">Featured E-Books</h2>
-      
-      </div>
-      </div> -->
-      <div class="row">
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
-
-       <?php 
-       $i = 1;
-       $sql = ' SELECT `id`, `filename`, `title`, `status`, `dateUploaded` FROM `tbl_knowledge_products` ORDER BY `id` DESC LIMIT 4 ';
-       $exec = $conn->query($sql);
-       while ($res = $exec->fetch_assoc()) 
-       {
-        $phpdate = strtotime( $res['dateUploaded'] );
-        $mysqldate = date( 'M d, Y', $phpdate );
-        ?>
-
-
-        <div class="col-md-6 col-lg-3 mb-4 aos-init aos-animate productView" data-aos="fade-up" data-aos-duration="1500" >
-          <div class="teacher text-center">
-            <a href="knowledge-products.php?id=<?php echo $res['id']; ?>" style="text-decoration: none; color:black;">
-              <!-- <img src="images/book1.jpg" alt="Image" class="img-fluid w-60 mx-auto mb-4"> -->
-              <canvas id="pdf_renderer<?php echo $i; ?>" class="img-fluid mx-auto" style="height: 320px;"></canvas>
-              <div class="py-5">
-                <h6 class="text-black"><?php echo $res['title']; ?></h6>
-                <p class="position"><?php echo $mysqldate; ?></p>
-                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eius suscipit delectus enim iusto tempora, adipisci at provident.</p> -->
-              </div>
-            </a>
-          </div>
-        </div>
-
-
-
-        
-         
-
-
-        <script>
-
-
-            var myState = {
-                pdf: null,
-                currentPage: 1,
-                zoom: 0.5
-            }
-          
-        
-     
-            function render<?php echo $i; ?>() {
-                myState.pdf.getPage(myState.currentPage).then((page) => {
-              
-                    var canvas = document.getElementById("pdf_renderer<?php echo $i; ?>");
-                    // alert(canvas);
-                    var ctx = canvas.getContext('2d');
-          
-                    var viewport = page.getViewport(myState.zoom);
-     
-                    canvas.width = viewport.width;
-                    canvas.height = viewport.height;
-              
-                    page.render({
-                        canvasContext: ctx,
-                        viewport: viewport
-                    });
-                });
-            }
-
-            pdfjsLib.getDocument('products/<?php echo $res['filename']; ?>').then((pdf) => {
-
-              myState.pdf = pdf;
-              render<?php echo $i; ?>();
-
-            });
-
-        </script>
-
-      <?php $i++; } ?>
-      </div>
-    </div>
-</div>
-
-
-<!-- QUOTATION -->
-<!--     <div class="container-fluid">
-
-      <div class="parallax"><br><br>
-
-        <?php 
-          $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 4 ';
-          $exec = $conn->query($sql);
-          $res = $exec->fetch_assoc();
-
-        ?>
-
-
-        <div class="row justify-content-center align-items-center text-white">
-          <div class="col-md-8 text-center testimony">
-          <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
-          <h3 class="mb-4"><?php echo $res['name']; ?></h3>
-          <blockquote>
-          <p><i><?php echo $res['quotation']; ?></i></p>
-          </blockquote>
-          </div>
-        </div>
-
-      </div>
-    </div> -->
-
-    <!-- container -->
-    <br><br>
-    <hr>
+      <hr>
 
     <?php include 'includes/footer.php'; ?>
 

@@ -215,13 +215,13 @@
 
     $(document).on('click', "#td_btn_edit", function(){
 
-      let id=$(this).data("id_edit");
-      let updateImage=$("#td_image"+id).data("data0")
-      let updateAgencyName=$("#td_msacName"+id).data("data1");
+      id=$(this).data("id_edit");
+      var updateImage=$("#td_image"+id).data("data0")
+      var updateAgencyName=$("#td_msacName"+id).data("data1");
       oldImagename = updateImage;
-      let updateAddress=$("#td_msacAddress"+id).data("data2");
-      let updateContactNumber=$("#td_msacContactNumber"+id).data("data3");
-      let updateEmail=$("#td_msacEmail"+id).data("data4");
+      var updateAddress=$("#td_msacAddress"+id).data("data2");
+      var updateContactNumber=$("#td_msacContactNumber"+id).data("data3");
+      var updateEmail=$("#td_msacEmail"+id).data("data4");
 
       $('#updateAgencyName').val(updateAgencyName);
       $('#updateAddress').val(updateAddress);
@@ -300,7 +300,6 @@
         var updateEmail = document.getElementById("updateEmail").value;
         var file = document.getElementById("file_updateMsac").value;
 
-
         //alert if incomplete start
         if(updateAgencyName=="" || updateAddress=="" || updateContactNumber=="" || updateEmail=="" ) 
         {
@@ -344,7 +343,8 @@
                     var form_data = new FormData();
                     form_data.append("file_updateMsac",file_property);
                     var other_data = 'id='+id+'&updateAgencyName='+updateAgencyName+'&updateAddress='+updateAddress+'&updateContactNumber='+updateContactNumber+'&updateEmail='+updateEmail+'&image_status='+image_status+'&oldImagename='+oldImagename+"&image_name="+new Date().getTime();
-
+                    // alert(other_data);
+                    
                     //ajax start
                     $.ajax({  
                        url:"function php/updateMsac.php?"+other_data, 
@@ -379,10 +379,6 @@
                         confirmButtonClass: "btn"
                         }).then((result) => {
                           if (result.value) {
-
-                              //fetch_data();
-                              //close modal
-                              //$("#add_data_modal").modal("hide");
                               location.reload();
                           }
                         });

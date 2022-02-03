@@ -42,6 +42,11 @@ if ($execSelectUsername->num_rows > 0)
 			echo "success";
 		}
 
+
+		//insert to log
+		$sql = ' INSERT INTO `tbl_log`(`login_id`, `login_date`) VALUES ('.$result['id'].', NOW()) ';
+		$conn->query($sql);
+
 	}
 	else 
 	{

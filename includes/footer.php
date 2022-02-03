@@ -7,13 +7,13 @@
                             <div class="row">
                                 <div class="col-sm-4">
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="images/lgrc_logo.png" class="img-fluid" alt="logo"></a>
+                                        <a href="index.php"><img src="images/lgrc_logo.png" class="img-fluid" alt="logo"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-2"></div>
                                 <div class="col-sm-4">
                                     <div class="footer-logo">
-                                        <a href="index.html"><img src="images/attachedagency_dilgcentral.png" class="img-fluid mt-4" alt="logo" width="150"></a>
+                                        <a href="index.php"><img src="images/attachedagency_dilgcentral.png" class="img-fluid mt-4" alt="logo" width="150"></a>
                                     </div>
                                 </div>
                                 <div class="col-sm-2"></div>

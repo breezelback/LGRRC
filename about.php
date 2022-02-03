@@ -50,27 +50,6 @@ include 'function php/conn.php';
      <!-- Navbar-->
       <?php include 'includes/header.php'; ?>
 
-     <!--  <br><br><br>
-      <div class="container">
-
-          <div class="pt-5">
-
-            <div class="row align-items-center">
-
-              <div class="col-lg-12 mb-4 text-white headingContent">
-                <header class="py-5 mt-5">
-                    <h1 class="display-6 headingText">About LGRRC</h1>
-                    <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
-                </header>
-              </div>
-
-
-
-            </div>
-          </div>
-      </div>
-      <span id="page2"></span> -->
-
     </div>
     <!-- bgImage -->
 
@@ -136,6 +115,135 @@ include 'function php/conn.php';
       </div>
       <!--container-->
 
+
+
+      <br><hr>
+      
+      <div class="container-fluid">
+
+        <!-- <div class="parallax bgIndex"> -->
+
+          <div class="row" style=" padding: 50px;">
+
+            <div class="col-lg-6 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 text-center testimony">
+                
+                  <?php 
+                  $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 2 ';
+                  $exec = $conn->query($sql);
+                  $res = $exec->fetch_assoc();
+
+                   ?>
+              
+                  <blockquote>
+                    <p style="text-align: justify;text-justify: inter-word;">
+                      <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
+                      <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                      <h6 class="mb-4">Regional Director</h6>
+                      <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
+                    </p>
+                  </blockquote>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-1"></div>
+            
+            <div class="col-lg-5 text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="padding: 25px; border: 1px solid whitesmoke; border-radius: 5px; background-color: #8a0d0dbd;">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-12 text-center testimony">
+                
+                  <?php 
+                  $sql = ' SELECT `id`, `name`, `imageName`, `quotation` FROM `tbl_quotations` WHERE `id` = 3 ';
+                  $exec = $conn->query($sql);
+                  $res = $exec->fetch_assoc();
+
+                   ?>    
+
+                  <blockquote>
+                    <p style=" text-indent: 50px; text-align: justify;">
+                      <img src="images/main/<?php echo $res['imageName']; ?>" alt="Image" class="img-fluid" style="border-radius: 8px; width: 200px; float: left; margin-right: 10px;">
+                      <h4 class="mb-1 directorText"><?php echo $res['name']; ?></h4>
+                      <h6 class="mb-4">Assistant Regional Director</h6>
+                      <span style="font-size: 14px;"><?php echo $res['quotation']; ?></span>
+                    </p>
+                  </blockquote>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+
+      <div class="container">
+
+          <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px; ">
+            <!-- <div class="col-lg-2"></div> -->
+            <div class="col-lg-12" style="border:1px solid whitesmoke; padding-top: 50px; border-radius:5px;">
+              <div class="row mb-5 justify-content-center">
+                <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: darkred;">
+                  <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
+                  <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
+                  <!-- <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p> -->
+                </div>
+              </div>
+              <div class="row mb-5 align-items-center">
+
+               <!--  <div class="col-lg-6 mb-4 aos-init" data-aos="fade-up"  data-aos-duration="1500">
+                   <?php 
+                    $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "mainImage" ');
+                    $result = $exec->fetch_assoc();
+                     ?>
+                  <img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid" style="margin-left: 10px;">
+                </div>-->
+                <div class="col-lg-12 ml-auto aos-init" data-aos="fade-up"  data-aos-duration="1500">
+                  
+                  <div class="row">
+                    <div class="col-sm-3 mb-4">
+                        <?php 
+                        $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage1" ');
+                        $result = $exec->fetch_assoc();
+                         ?>
+                      <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
+                    </div>
+                    <div class="col-sm-3 mb-4">
+                        <?php 
+                        $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage2" ');
+                        $result = $exec->fetch_assoc();
+                         ?>
+                      <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
+                    </div>
+                  <!-- </div>
+                  <div class="row"> -->
+                    <div class="col-sm-3 mb-4">
+                        <?php 
+                        $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage3" ');
+                        $result = $exec->fetch_assoc();
+                         ?>
+                      <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
+                    </div>
+                    <div class="col-sm-3 mb-4">
+                        <?php 
+                        $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage4" ');
+                        $result = $exec->fetch_assoc();
+                         ?>
+                      <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
+                    </div>
+                  </div>
+
+                </div>
+              </div>  
+            </div> 
+            <!-- <div class="col-lg-2"></div> -->
+          </div>
+
+        <!-- </div> -->
+        <!-- parallax -->
+
+      </div>  
 
   <br><br><br>
 

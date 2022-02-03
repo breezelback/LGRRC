@@ -16,6 +16,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="linawin-natin.php">Linawin Natin</a>
                             <a class="dropdown-item" href="sagisag-ng-pagasa.php">Sagisag ng Pag-asa</a>
+                            <a class="dropdown-item" href="ct-module.php">CT Panel</a>
                         </div>
                     </li> 
                     <li class="nav-item"><a href="directory.php" class="nav-link"  id="navDir">Directory</a></li>
@@ -28,7 +29,7 @@
                             <a class="dropdown-item" href="ct-documents.php">Documents</a>
                         </div>
                     </li>  -->
-                    <li class="nav-item"><a href="ct-module.php" class="nav-link"  id="navCt">CT Panel</a></li>
+                    <!-- <li class="nav-item"><a href="ct-module.php" class="nav-link"  id="navCt">CT Panel</a></li> -->
 
 
                     <li class="nav-item ml-2">

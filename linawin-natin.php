@@ -39,39 +39,12 @@ include 'function php/conn.php';
     </style>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
-     <!-- Navbar-->
-     <?php include 'includes/header.php'; ?>
+  <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+    <!-- Navbar-->
+    <?php include 'includes/header.php'; ?>
 
-<br><br><br>
-      <div class="container">
-
-          <div class="pt-5">
-
-            <div class="row align-items-center">
-
-              <div class="col-lg-12 mb-4 text-white headingContent">
-                <header class="py-5 mt-5">
-                    <h1 class="display-6 headingText">Linawin Natin</h1>
-                    <p class="lead mb-0 headingDesc">Linawin Natin is an online segment of the DILG IV-A aired live at its official Facebook page. It was conceptualized during the height of the enhanced community quarantine when there were a lot of questions and confusion from the communities on various COVID-related concerns such as the Social Amelioration Program, quarantine protocols, contact tracing, and a lot more. This confusion was even stirred because of the proliferation of fake news from unverified sources of information. To help combat this, the DILG IV-A thought of an initiative to address the most frequently asked questions of citizens on various topics. 
-                    To ensure that the Department will be giving away credible information, the episodes of the segment feature a representative of an agency that is most suited to answer the consolidated FAQs on a related and relevant topic. The live viewers can also ask questions via the comment section. These questions will be later addressed by the guest after all the previously prepared questions are answered. 
-                    The first segment aired on May 28, 2021 and tackled the topic on locally-stranded individuals with a representative from the Local Government Monitoring and Evaluation Division of DILG IV-A.
-                    Linawin Natin is now in its second season with a modified name – Linawin Natin: Pagsulong. The segment is still ongoing and is being aired every other Thursday.
-                    </p>
-                    <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
-                </header>
-              </div>
-
-
-
-            </div>  
-            <!-- <div class="row"> -->
-          </div>
-      </div>
-
-      <span id="page2"></span>
-    </div>
-    <!-- bgImage -->
+  </div>
+  <!-- bgImage -->
 
 
     <hr>
@@ -82,20 +55,6 @@ include 'function php/conn.php';
 
       <div class="row">
         <div class="col-md-12">
-          <form action="" method="post">
-
-            <select name="videoSeason" id="videoSeason" class="form-control float-right" style="width: 10%;" onchange="this.form.submit();">
-              <option selected disabled>Select Season</option>
-              <?php 
-              $sqlSeason = ' SELECT DISTINCT(`videoSeason`) FROM `tbl_videos` WHERE `category` = "linawin natin" ORDER BY `videoSeason` ';
-              $exec = $conn->query($sqlSeason);
-              while ($season = $exec->fetch_assoc()) {
-               ?>
-                <option value="<?php echo $season['videoSeason']; ?>">Season <?php echo $season['videoSeason']; ?></option>
-              <?php } ?>
-            </select>
-
-          </form>
         </div>
       </div>
 
@@ -114,34 +73,26 @@ include 'function php/conn.php';
         $titleAdd = '';
       }
        ?>
-      <center><h3>Linawin Natin Videos</h3></center>
-      <center><h4><?php echo $titleAdd; ?></h4></center>
-
-
-      <!-- FOR BUTTON SEARCHING -->
-
-  <!--     <div class="row">
-        <div class="col-md-12">
+      <center>
+        <h3>Linawin Natin</h3>
+        <h6>Linawin Natin is an interview segment being aired live on DILG IV-A Facebook page that aims to answer questions on relevant local governance topics.</h6>
+        <h4>Videos</h4>
           <form action="" method="post">
 
-            <center>
-             <button>Show All</button>
+            <select name="videoSeason" id="videoSeason" class="form-control" style="width: 10%;" onchange="this.form.submit();">
+              <option selected disabled>Select Season</option>
               <?php 
               $sqlSeason = ' SELECT DISTINCT(`videoSeason`) FROM `tbl_videos` WHERE `category` = "linawin natin" ORDER BY `videoSeason` ';
               $exec = $conn->query($sqlSeason);
               while ($season = $exec->fetch_assoc()) {
                ?>
-               <button>Season <?php echo $season['videoSeason']; ?></button>
+                <option value="<?php echo $season['videoSeason']; ?>">Season <?php echo $season['videoSeason']; ?></option>
               <?php } ?>
-            </center>
+            </select>
 
           </form>
-        </div>
-      </div> -->
-
-      <!-- FOR BUTTON SEARCHING -->
-
-
+        <h5 class="mt-2"><?php echo $titleAdd; ?></h5>
+      </center>
 
       <br><hr>
       <div class="row">

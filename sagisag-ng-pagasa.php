@@ -39,35 +39,12 @@ include 'function php/conn.php';
     </style>
   </head>
   <body>
-  <div class="bgImage" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
-     <!-- Navbar-->
-     <?php include 'includes/header.php'; ?>
+  <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+    <!-- Navbar-->
+    <?php include 'includes/header.php'; ?>
 
-<br><br><br>
-      <div class="container">
-
-          <div class="pt-5">
-
-            <div class="row align-items-center">
-
-              <div class="col-lg-12 mb-4 text-white headingContent">
-                <header class="py-5 mt-5">
-                    <h1 class="display-6 headingText">Sagisag ng Pag-asa</h1>
-                    <p class="lead mb-0 headingDesc">Sagisag ng Pag-Asa is a documentation of the COVID-19 best responses and practices of Local Government Units within the CALABARZON Region. During the onset of the enhanced community quarantine, the local government’s adaptability towards the raging pandemic was put to the test. But because of this, the LGUs’ excellence in governance also stood out and Sagisag ng Pag-Asa became a platform where LGUs can showcase their locality’s innovative programs. This initiative of DILG CALABARZON was a way to broadcast these outstanding programs to other LGUs and communities, ultimately promoting knowledge sharing so that it may be replicated to other localities that have similar contexts. It also aims to stimulate design-thinking and come up with relevant and appropriate solutions to the communities’ differing needs. True to its name, this program aspires to be a symbol of hope to everyone. We see hope when we see how our local leaders are responding to the pandemic. We see hope when we see local leaders imitating and replicating each other’s best practices. We see hope when we instigate a community that sets aside personal agenda for the betterment of every Juan/Juana’s life. </p>
-                    <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
-                </header>
-              </div>
-
-
-
-            </div>
-            <!-- <div class="row"> -->
-          </div>
-      </div>
-      <span id="page2"></span>
-
-    </div>
-    <!-- bgImage -->
+  </div>
+  <!-- bgImage -->
 
 
     <hr>
@@ -77,18 +54,6 @@ include 'function php/conn.php';
      <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <form action="" method="post">
-            <select name="videoSeason" id="videoSeason" class="form-control float-right" style="width: 10%;" onchange="this.form.submit();">
-              <option selected disabled>Select Season</option>
-              <?php 
-              $sqlSeason = ' SELECT DISTINCT(`videoSeason`) FROM `tbl_videos` WHERE `category` = "sagisag ng pagasa" ORDER BY `videoSeason` ';
-              $exec = $conn->query($sqlSeason);
-              while ($season = $exec->fetch_assoc()) {
-               ?>
-                <option value="<?php echo $season['videoSeason']; ?>">Season <?php echo $season['videoSeason']; ?></option>
-              <?php } ?>
-            </select>
-          </form>
         </div>
       </div>
       <?php 
@@ -104,8 +69,24 @@ include 'function php/conn.php';
         $titleAdd = '';
       }
        ?>
-      <center><h3>Sagisag ng Pag-asa Videos</h3></center>
-      <center><h4><?php echo $titleAdd; ?></h4></center>
+      <center>
+        <h3>Sagisag ng Pagasa</h3>
+        <h6>Sagisag ng Pag-Asa One Liner: Sagisag ng Pag-Asa is a documentation of local governance best practices of LGUs.</h6>
+        <h4>Videos</h4>
+        <form action="" method="post">
+          <select name="videoSeason" id="videoSeason" class="form-control" style="width: 10%;" onchange="this.form.submit();">
+            <option selected disabled>Select Season</option>
+            <?php 
+            $sqlSeason = ' SELECT DISTINCT(`videoSeason`) FROM `tbl_videos` WHERE `category` = "sagisag ng pagasa" ORDER BY `videoSeason` ';
+            $exec = $conn->query($sqlSeason);
+            while ($season = $exec->fetch_assoc()) {
+             ?>
+              <option value="<?php echo $season['videoSeason']; ?>">Season <?php echo $season['videoSeason']; ?></option>
+            <?php } ?>
+          </select>
+        </form>
+        <h5 class="mt-2"><?php echo $titleAdd; ?></h5>
+      </center>
       <br><hr>
       <div class="row">
         

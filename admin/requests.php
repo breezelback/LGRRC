@@ -1,4 +1,5 @@
 
+<?php include 'function php/conn.php'; ?>
 <?php include 'validate.php'; ?>
 
  <!DOCTYPE html>
@@ -59,12 +60,56 @@
                             <thead>
                               <tr>
                                 <th>#</th>
-                                <th>Expert Name</th>
+                                <th><center>Expert Name</center></th>
+                                <th>Requested Expertise</th>
+                                <th>Purpose/Reason</th>
                                 <th>Requestor Name</th>
                                 <th>Date Requested</th>
                                 <!-- <th width="7%"><center>Action</center></th> -->
                               </tr>
                             </thead>
+                            <tbody>
+                              <?php 
+                                $x = 1;
+                                $sql = ' SELECT `id`, `expertId`, `expertName`, `expertExpertise`, `requestorId`, `requestorName`, `requestorAddress`, DATE_FORMAT(`dateRequested`, "%M %d, %Y") AS dateRequested, `reason`, `requested_expertise` FROM `tbl_request` ';
+                                $exec = $conn->query($sql);
+
+                                while ($row = $exec->fetch_assoc()) { 
+
+                                  $selectExpert = ' SELECT `name` FROM `tbl_expert` WHERE `id` = '.$row['expertId'].' ';
+                                  $execExpert = $conn->query($selectExpert);
+                                  $expertName = $execExpert->fetch_assoc();
+
+                                  $selectRequestor = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `mobile`, `email` FROM `tbl_user` WHERE `id` = '.$row['requestorId'].' ';
+                                  $execRequestor = $conn->query($selectRequestor);
+                                  $requestor = $execRequestor->fetch_assoc();
+                                  $requestorName = $requestor['firstname'].' '.$requestor['lastname'];
+                                  $mobile_number = '';
+                                  $email = '';
+
+                                  if (!empty($requestor['mobile'])) {
+                                    $mobile_number = ' / '.$requestor['mobile'];
+                                  }
+
+                                  if (!empty($requestor['email'])) {
+                                    $email = ' / '.$requestor['email'];
+                                  }
+
+
+
+                                  ?>
+                                  <tr>
+                                    <td><?php echo $x; ?></td>
+                                    <td><center><?php echo $expertName["name"] ?><br> <span style="font-size:12px; font-family: segoe UI;">Expertise: <b><?php echo $row["expertExpertise"]; ?></b></span></center></td>
+                                    <td><?php echo $row['requested_expertise']; ?></td>
+                                    <td><?php echo $row['reason']; ?></td>
+                                    <td><?php echo $requestorName.$mobile_number.$email; ?></td>
+                                    <td><?php echo $row['dateRequested']; ?></td>
+                                  </tr>
+
+                                <?php $x++; } ?>
+
+                            </tbody>
                           </table>
                         </div>
                       </div>
@@ -86,189 +131,7 @@
     <!-- using local scripts -->
 <?php include 'includes/js_includes.php' ?>
 <script type="text/javascript">
-    //-----------------------------------------------------FETCH USER-----------------------------------------------------------------------
- function fetch_users() {
-   $('#result1').DataTable().destroy();
-
-   var dataTable = $('#result1').DataTable({
-    "sDom": '<"row view-filter"<"col-sm-12"<"pull-left"l><"pull-right"f><"clearfix">>>t<"row view-pager"<"col-sm-12"<"text-center"ip>>>',
-    "processing" : true,
-    "bStateSave": true, //stay on this page
-    responsive: true,
-    "serverSide" : true,
-    "order" : [],
-    "drawCallback": function(settings) {
-    // console.log(settings.json);
     
-   
-    },
-    "ajax" : {
-     url:"function php/fetchRequests.php",
-     type:"POST",
-     cache:false,
-
-    },
-    "autoWidth" : false
-   });
-
-  }
-
-fetch_users();
-
-//----------------------------------------------------------FETCH USER-----------------------------------------------------------------------
-
-
-
-//-----------------------------------------------------DELETE USER-----------------------------------------------------------------------
-$(document).on('click', "#td_btn_delete", function(){
- 
-  var id=$(this).data("id_delete");
-   // alert(id);
-
-  //confirmation start
-  swal({
-  title: "Are you sure?",
-  text: "Block User!",
-  type: "question",
-  showCancelButton: true,
-  confirmButtonColor: "#5cb85c",
-  cancelButtonColor: "#d9534f",
-  confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-  cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
-  confirmButtonClass: "btn",
-  cancelButtonClass: "btn"
-  }).then((result) => {
-  if (result.value) {
-        
-        //ajax start
-        $.ajax({  
-           url:"function php/deleteUser.php?id="+id, 
-           method:"POST",  
-           //post:data  
-           contentType:false,
-           cache:false,
-           processData:false,
-
-           beforeSend:function() {
-
-                  swal({
-                  position: "top-end",
-                  type: "info",
-                  title: "Processing Data...",
-                  showConfirmButton: false,
-                  });
-
-          }, 
-
-           success:function(data){  
-            swal.close();
-            //alert(data); 
-            swal({
-            title: "User Successfully Blocked!",
-            text: data,
-            type: "success",
-            showCancelButton: false,
-            confirmButtonColor: "#5cb85c",
-            confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-            confirmButtonClass: "btn"
-            }).then((result) => {
-              if (result.value) {
-
-                  fetch_users();
-                  //close modal
-                  // location.reload();
-              }
-            });
-
-            }
-                
-        });  
-        //ajax end 
-  }
-  });
-  //confirmation end
-
-
-});
-
-//-----------------------------------------------------DELETE USER-----------------------------------------------------------------------
-
-
-//-----------------------------------------------------APPROVE USER-----------------------------------------------------------------------
-$(document).on('click', "#td_btn_approve", function(){
- 
-  var id=$(this).data("id_approve");
-   // alert(id);
-
-  //confirmation start
-  swal({
-  title: "Are you sure?",
-  text: "Unblock User!",
-  type: "question",
-  showCancelButton: true,
-  confirmButtonColor: "#5cb85c",
-  cancelButtonColor: "#d9534f",
-  confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-  cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
-  confirmButtonClass: "btn",
-  cancelButtonClass: "btn"
-  }).then((result) => {
-  if (result.value) {
-        
-        //ajax start
-        $.ajax({  
-           url:"function php/unblockUser.php?id="+id, 
-           method:"POST",  
-           //post:data  
-           contentType:false,
-           cache:false,
-           processData:false,
-
-           beforeSend:function() {
-
-                  swal({
-                  position: "top-end",
-                  type: "info",
-                  title: "Processing Data...",
-                  showConfirmButton: false,
-                  });
-
-          }, 
-
-           success:function(data){  
-            swal.close();
-            //alert(data); 
-            swal({
-            title: "User Successfully Unblock!",
-            text: data,
-            type: "success",
-            showCancelButton: false,
-            confirmButtonColor: "#5cb85c",
-            confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
-            confirmButtonClass: "btn"
-            }).then((result) => {
-              if (result.value) {
-
-                  fetch_users();
-                  //close modal
-                  // location.reload();
-              }
-            });
-
-            }
-                
-        });  
-        //ajax end 
-  }
-  });
-  //confirmation end
-
-});
-
-//-----------------------------------------------------APPROVE USER-----------------------------------------------------------------------
-
-
-
 
 </script>
 </body>
