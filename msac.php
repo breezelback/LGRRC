@@ -51,12 +51,12 @@ include 'function php/conn.php';
               <div class="card" style="height: 310px !important;">
                 <center>
                 <div class="card-header" style="background-color: #921720;">
-                    <a title="DILG IV-A" href="https://<?php echo $result['email']; ?>" target="_blank"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px;"></a>
+                    <a title="DILG IV-A" href="<?php echo $result['email']; ?>" target="_blank"><img class="card-img-top bg-white rounded-circle" src="images/msac/<?php echo $result['imageName']; ?>" alt="Card image cap" style="width: 100px;"></a>
                 </div>
                   <div class="card-body msacBody">
                     <h3 class="card-title" style="font-size: 13px;"><b><?php echo $result['agencyName']; ?></b></h3>
                     <p class="card-text" style="font-size: 15px;" ><?php echo $result['address']; ?></p>
-                    <p class="card-text" style="font-size: 15px;" ><?php echo $result['contactNumber'].' / <a href="https://'.$result['email'].'" target="_blank">'.$result['email'].'</a>'; ?></p>
+                    <p class="card-text" style="font-size: 15px;" ><?php echo $result['contactNumber'].' / <a href="'.$result['email'].'" target="_blank">'.$result['email'].'</a>'; ?></p>
                   </div>
                 </center>
               </div>
