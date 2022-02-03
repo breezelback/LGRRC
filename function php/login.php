@@ -26,6 +26,7 @@ if ($execSelectUsername->num_rows > 0)
 
 		if ($result['usertype'] == 'admin') 
 		{
+			$_SESSION['id'] = $result['id'];
 			$_SESSION['usertype'] = $result['usertype'];
 			echo "admin";
 		}
