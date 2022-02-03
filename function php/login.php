@@ -1,6 +1,9 @@
 <?php 
+date_default_timezone_set('Asia/Manila');
 session_start();
 include ('conn.php');
+$login_ip = $_SERVER['REMOTE_ADDR'];
+
 
 
 $username = $conn -> real_escape_string($_GET['username']);
@@ -44,7 +47,7 @@ if ($execSelectUsername->num_rows > 0)
 
 
 		//insert to log
-		$sql = ' INSERT INTO `tbl_log`(`login_id`, `login_date`) VALUES ('.$result['id'].', NOW()) ';
+		$sql = ' INSERT INTO `tbl_log`(`login_id`, `login_ip`, `login_date`) VALUES ('.$result['id'].', "'.$login_ip.'", NOW()) ';
 		$conn->query($sql);
 
 	}
