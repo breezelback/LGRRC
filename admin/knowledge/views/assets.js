@@ -40,22 +40,6 @@ fetchProduct();
 //----------------------------------------------------------FETCH USER-----------------------------------------------------------------------
 
 
-// Swal.fire({
-//   title: 'Please Wait. . .',
-//   icon: 'info',
-//   html:
-//     '<span style="font-size:50px;"><i class="fa fa-cog"></i></span>',
-//   showCloseButton: true,
-//   showCancelButton: true,
-//   focusConfirm: false,
-//   confirmButtonText:
-//     '<i class="fa fa-thumbs-up"></i> Great!',
-//   confirmButtonAriaLabel: 'Thumbs up, great!',
-//   cancelButtonText:
-//     '<i class="fa fa-thumbs-down"></i>',
-//   cancelButtonAriaLabel: 'Thumbs down'
-// })
-
 
 //----------------------------------------------------------FILE PREVIEW-----------------------------------------------------------------------
 $(document).on("change", "#file_editProfile", function() { 
@@ -143,23 +127,17 @@ $('#btnInsertProduct').click(function(){
              processData:false,
 
              beforeSend:function() {
-
-                    // swal({
-                    // position: "top-end",
-                    // type: "info",
-                    // title: "Processing Data...",
-                    // showConfirmButton: false,
-                    // });
-
-
-                    Swal.fire({
-                      title: 'Processing Data...',
+              
+                   Swal.fire({
+                      title: 'Uploading Data...',
+                      html:
+                        "<span style='color: red; font-size:12px; '><i>Uploading speed depends on PDF size and Internet Speed</i></span>",
+                      // text: "<span style='color: red;'>Upload Product!</span>",
                       imageUrl: '../images/loading2.gif',
                       showConfirmButton: false,
-                      imageHeight: 120
+                      imageHeight: 120,
+                      allowOutsideClick: false
                     })
-
-
 
             }, 
 

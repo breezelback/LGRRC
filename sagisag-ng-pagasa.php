@@ -71,7 +71,7 @@ include 'function php/conn.php';
        ?>
       <center>
         <h3>Sagisag ng Pagasa</h3>
-        <h6>Sagisag ng Pag-Asa One Liner: Sagisag ng Pag-Asa is a documentation of local governance best practices of LGUs.</h6>
+        <h6>Sagisag ng Pag-Asa is a documentation of local governance best practices of LGUs.</h6>
         <h4>Videos</h4>
         <form action="" method="post">
           <select name="videoSeason" id="videoSeason" class="form-control" style="width: 10%;" onchange="this.form.submit();">
