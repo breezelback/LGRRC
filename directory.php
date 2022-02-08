@@ -106,12 +106,12 @@ include 'function php/conn.php';
       <div class="col-md-3" style="border-right: 2px solid lightgray;">
         <p style="font-weight: bold;">Categories:</p>
 
-        <button class="btn btn-sm float-right text-white" style="background-color: gray;" id="btnReload"><i class="fa fa-sync-alt"></i></button>
+        <button class="btn btn-sm float-right text-white" style="background-color: gray;" id="btnReload" rel="tooltip" title="Refresh"><i class="fa fa-sync-alt"></i></button>
         <br>
         <hr>
 
 
-        <p>Filter by Name</p>
+       <!--  <p>Filter by Name</p>
         <div class="row">
           <div class="input-group col-md-12">
                   <input class="form-control py-2 border-right-0 border" type="search" placeholder ="Name" id="searchName">
@@ -134,7 +134,7 @@ include 'function php/conn.php';
                     </span>
               </div>
         </div>
-        <hr>
+        <hr> -->
         <p>Filter by Expertise</p>
         <div class="row">
           <?php include 'expertise_selection.php'; ?> 
