@@ -178,27 +178,16 @@ include 'function php/conn.php';
 
       </div>
 
-      <div class="container">
+<!--       <div class="container">
 
           <div class="row" style="background-color: rgba(200,200,200,0.2); padding: 50px; ">
-            <!-- <div class="col-lg-2"></div> -->
             <div class="col-lg-12" style="border:1px solid whitesmoke; padding-top: 50px; border-radius:5px;">
               <div class="row mb-5 justify-content-center">
                 <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 25px; border-radius:10px; background-color: darkred;">
-                  <!-- <div class="col-lg-7 text-center text-white aos-init" data-aos="fade-up"  data-aos-duration="1500" style="border: 2px solid aliceblue; padding: 10px; border-radius:10px; background-color: rgba(100,0,0,0.5);"> -->
                   <h2 class="section-title text-white">PROGRAM FACILITIES</h2>
-                  <!-- <p>Promote a culture of learning and knowledge sharing in pursuit of sustainable development through excellence in local governance</p> -->
                 </div>
               </div>
               <div class="row mb-5 align-items-center">
-
-               <!--  <div class="col-lg-6 mb-4 aos-init" data-aos="fade-up"  data-aos-duration="1500">
-                   <?php 
-                    $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "mainImage" ');
-                    $result = $exec->fetch_assoc();
-                     ?>
-                  <img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid" style="margin-left: 10px;">
-                </div>-->
                 <div class="col-lg-12 ml-auto aos-init" data-aos="fade-up"  data-aos-duration="1500">
                   
                   <div class="row">
@@ -216,8 +205,6 @@ include 'function php/conn.php';
                          ?>
                       <center><img src="images/program features/<?php echo $result['imageName']; ?>" alt="Image" class="img-fluid imgGallery"></center>
                     </div>
-                  <!-- </div>
-                  <div class="row"> -->
                     <div class="col-sm-3 mb-4">
                         <?php 
                         $exec = $conn->query(' SELECT `id`, `imageName`, `status`, `dateUploaded` FROM `tbl_program_images` WHERE `status` = "subImage3" ');
@@ -237,15 +224,10 @@ include 'function php/conn.php';
                 </div>
               </div>  
             </div> 
-            <!-- <div class="col-lg-2"></div> -->
           </div>
+      </div>   -->
 
-        <!-- </div> -->
-        <!-- parallax -->
-
-      </div>  
-
-  <br><br><br>
+  <br>
 
     <?php include 'includes/footer.php'; ?>
     <?php include 'includes/js_includes.php'; ?>

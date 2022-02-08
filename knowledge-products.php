@@ -71,6 +71,16 @@ else
         border-radius: 20px;       /* roundness of the scroll thumb */
         border: 3px solid gray;  /* creates padding around scroll thumb */
       }
+      .active-link
+      {
+         background-color: whitesmoke !important; 
+         padding: 15px !important;
+      }
+      .vid-options
+      {
+         font-size: 20px !important;
+      }
+
 
     </style>
     <title>LGRRC</title>
@@ -80,37 +90,35 @@ else
      <!-- Navbar-->
      <?php include 'includes/header.php'; ?>
 
-<!--       <br><br><br>
-      <div class="container">
-
-          <div class="pt-5">
-
-            <div class="row align-items-center">
-
-              <div class="col-lg-12 mb-4 text-white headingContent">
-                <header class="py-5 mt-5">
-                    <h1 class="display-6 headingText">Knowledge Products</h1>
-                    <a href="#page2" class="btn btn-primary btn-lg mt-3 scrollTo"><i class="fa fa-angle-double-down"></i></a>
-                </header>
-              </div>
-
-
-
-            </div>
-          </div>
-      </div>
-
-      <span id="page2"></span> -->
-    </div>
+  </div>
     <!-- bgImage -->
 
 
     <hr>
 
  <!-- <div class="parallax"> -->
- <div class="container-fluid">
-<br>
-<div class="row">
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="col">
+        <center>
+         <!--  <button class="btn btn-warning">PDFs</button>
+          <button class="btn btn-primary">Videos</button> -->
+          <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+              <a class="nav-link vid-options active active-link" aria-current="page" href="knowledge-products.php">PDFs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link vid-options" href="knowledge-products-videos.php">Videos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link vid-options" href="knowledge-products-links.php">Links</a>
+            </li>
+          </ul>
+
+        </center>
+      </div>
+    </div>
+    <div class="row" style="background-color: whitesmoke;">
       <div class="col-md-2">
       </div>
       <div class="col-md-2 bookOutput">
@@ -151,23 +159,17 @@ else
         </div>
         <!-- <div class="files"> -->
       </div>
-      <div class="col-md-7 ml-2">
+      <div class="col-md-7 ml-2 mt-5">
         <!-- <br><hr> -->
-            <div id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
+        <div id="imgLoading"><center><img src="images/loading1.gif" width="30%"></center></div>
         <div class="row">
           <div class="col-md-12" id="productOutput">
               
 
 
 
-
-
-
           </div>
           <!-- <div class="col-md-12"> -->
-
-
-
 
         </div>
 
@@ -177,7 +179,7 @@ else
     </div>
         <!-- <div class="row"> -->
 
-    </div>
+  </div>
   <!-- </div> -->
 <div id="modalRead" data-izimodal-group="group1"></div>
 

@@ -24,8 +24,8 @@ $filename = $_GET['fileName'];
 
         <style>
             canvas {
-                width: 500px;
-                height: 600px;
+                width: 632px;
+                height: 800px;
                 border: 3px solid black;
                 border-radius: 10px;
 

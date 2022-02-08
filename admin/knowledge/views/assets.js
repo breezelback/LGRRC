@@ -58,7 +58,7 @@ $(document).on("change", "#file_editProfile", function() {
     swal('Error','File must be PDF!','error');
     this.value="";
   }
-  else if (image_size > 5000000) 
+  else if (image_size > 25000000) 
   {
     swal('Error','File too large!','error');
     this.value="";
@@ -406,7 +406,8 @@ $(document).on('click', "#td_btn_delete", function(){
             }).then((result) => {
               if (result.value) {
 
-                  fetchProduct();
+                  // fetchProduct();
+                  location.reload();
               }
             });
 

@@ -36,6 +36,12 @@ include 'function php/conn.php';
           -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
       }
 
+      .videoBody
+      {
+        height: 150px;
+        overflow-y: scroll;
+      }
+
     </style>
   </head>
   <body>
@@ -79,7 +85,7 @@ include 'function php/conn.php';
         <h4>Videos</h4>
           <form action="" method="post">
 
-            <select name="videoSeason" id="videoSeason" class="form-control" style="width: 10%;" onchange="this.form.submit();">
+            <select name="videoSeason" id="videoSeason" class="form-control" style="width: 25%;" onchange="this.form.submit();">
               <option selected disabled>Select Season</option>
               <?php 
               $sqlSeason = ' SELECT DISTINCT(`videoSeason`) FROM `tbl_videos` WHERE `category` = "linawin natin" ORDER BY `videoSeason` ';
@@ -110,8 +116,8 @@ include 'function php/conn.php';
 
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card">
-            <div class="fb-video card-img-top" data-href="<?php echo $res['videoLink']; ?>" data-width="500" data-show-text="false"><blockquote cite="<?php echo $res['videoLink']; ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $res['videoLink']; ?>"><?php echo $res['videoTitle']; ?></a><p></blockquote></div>
-            <div class="card-body">
+            <div class="fb-video card-img-top" data-href="<?php echo $res['videoLink']; ?>" data-width="610" data-show-text="false"><blockquote cite="<?php echo $res['videoLink']; ?>" class="fb-xfbml-parse-ignore"><a href="<?php echo $res['videoLink']; ?>"><?php echo $res['videoTitle']; ?></a><p></blockquote></div>
+            <div class="card-body videoBody">
               <p class="card-text"><b><?php echo $res['videoTitle']; ?></b></p>
               <p class="card-text text-muted"><?php echo $mysqldate; ?></p>
             </div>
