@@ -8,6 +8,9 @@ var dt = $('#table_news').DataTable( {
       'info'        : false,
       'autoWidth'   : false,
     });
+
+
+  $('#table_kp_videos').DataTable();
   //-----------------------------------------------------FETCH USER-----------------------------------------------------------------------
  function fetchProduct() {
    $('#result1').DataTable().destroy();
@@ -39,8 +42,6 @@ fetchProduct();
 
 //----------------------------------------------------------FETCH USER-----------------------------------------------------------------------
 
-
-
 //----------------------------------------------------------FILE PREVIEW-----------------------------------------------------------------------
 $(document).on("change", "#file_editProfile", function() { 
   event.preventDefault();
@@ -69,11 +70,7 @@ $(document).on("change", "#file_editProfile", function() {
   }
 
 }); 
-
-
 //----------------------------------------------------------FILE PREVIEW-----------------------------------------------------------------------
-
-
 
 $('#btnInsertProduct').click(function(){
   var file = document.getElementById("file_editProfile").files[0].name; 
@@ -174,8 +171,6 @@ $('#btnInsertProduct').click(function(){
       //confirmation end
   }
 });
-
-
 
 var id = 0;
 var image_status = 'old';
@@ -306,10 +301,6 @@ $(document).on('click', "#btnUpdateProduct", function(){
     } // else end
 });
 
-
-
-
-
 //----------------------------------------------------------UPDATE FILE PREVIEW----------------------------------------------------------------------
 $(document).on("change", "#updateFile", function() { 
   event.preventDefault();
@@ -345,13 +336,6 @@ $(document).on("change", "#updateFile", function() {
 
 
 //----------------------------------------------------------UPDATE FILE PREVIEW----------------------------------------------------------------------
-
-
-
-
-
-
-
 
 //-----------------------------------------------------DELETE FILE-----------------------------------------------------------------------
 $(document).on('click', "#td_btn_delete", function(){
@@ -422,7 +406,6 @@ $(document).on('click', "#td_btn_delete", function(){
   });
   //confirmation end
 
-
 });
 
 //-----------------------------------------------------DELETE FILE-----------------------------------------------------------------------
@@ -430,7 +413,84 @@ $(document).on('click', "#td_btn_delete", function(){
 
 
 
+//---------------------------------------------ADD-VIDEOS--------ADD-VIDEOS------------ADD-VIDEOS---------------------------------------------------
+$('#btnInsertProductVideos').click(function(){
+  var video_link = $('#video_link').val();
+  var title = $('#title').val();
+  var album = $('#album').val();
 
+
+  if ( video_link == '' || title == '' || album == '') 
+  {
+    swal('Error','Please input required fields!','error');
+  }
+  else
+  {
+    //confirmation start
+    swal({
+    title: "Are you sure?",
+    text: "Embed Video!",
+    type: "question",
+    showCancelButton: true,
+    confirmButtonColor: "#5cb85c",
+    cancelButtonColor: "#d9534f",
+    confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
+    cancelButtonText: '<span class="fa fa-remove"></span>&nbspDecline',
+    confirmButtonClass: "btn",
+    cancelButtonClass: "btn"
+    }).then((result) => {
+    if (result.value) {
+            
+            var other_data = 'video_link='+video_link+'&title='+title+'&album='+album;
+            // alert(other_data);
+
+            //ajax start
+            $.ajax({  
+               url:"function php/embedKnowledgeVideo.php?"+other_data, 
+               method:"POST",  
+               //post:data  
+               contentType:false,
+               cache:false,
+               processData:false,
+
+               beforeSend:function() {
+                  swal({
+                  position: "top-end",
+                  type: "info",
+                  title: "Processing Data...",
+                  showConfirmButton: false,
+                  });
+              }, 
+
+               success:function(data){ 
+                // alert(data) 
+                swal.close();
+
+                swal({
+                title: "Video Successfully Embedded!",
+                // text: data,
+                text: "Looking Good",
+                type: "success",
+                showCancelButton: false,
+                confirmButtonColor: "#5cb85c",
+                confirmButtonText: '<span class="fa fa-check"></span>&nbspProceed',
+                confirmButtonClass: "btn"
+                }).then((result) => {
+                  if (result.value) {
+                      location.reload();
+                  }
+                });
+
+                }
+                    
+            });  
+            //ajax end 
+    }
+    });
+    //confirmation end
+  }
+});
+//---------------------------------------------ADD-VIDEOS--------ADD-VIDEOS------------ADD-VIDEOS---------------------------------------------------
 
 
 

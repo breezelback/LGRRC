@@ -335,8 +335,10 @@ include 'function php/conn.php';
         keywordHolder = searchCategory;
       }
       
-      nameHolder = $('#searchName').val();
-      addressHolder = $('#searchAddress').val();
+      // nameHolder = $('#searchName').val();
+      // addressHolder = $('#searchAddress').val();
+      nameHolder = '';
+      addressHolder = '';
 
       $('#ViewText').text('Results for: '+keywordHolder+' '+nameHolder+' '+addressHolder);
 

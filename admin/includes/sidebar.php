@@ -58,8 +58,14 @@
                     <div class="sidebar-submenu">
                         <ul>
                             <li>
-                                <a href="knowledge-product.php">Product Management</a>
+                                <a href="knowledge-product.php">PDFs</a>
                             </li>
+                            <li>
+                                <a href="knowledge-product-videos.php">Videos</a>
+                            </li>
+                            <!-- <li>
+                                <a href="knowledge-product.php">Links</a>
+                            </li> -->
                             <li>
                                 <a href="borrowed-product-logs.php">Borrowed Product Logs</a>
                             </li>

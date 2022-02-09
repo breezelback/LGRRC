@@ -80,89 +80,71 @@ include 'function php/conn.php';
           </center>
         </div>
       </div>
+      
+      <div class="row mt-4">
+        <div class="col-md-12">
+        </div>
+      </div>
+      <?php 
+      if (isset($_POST['album'])) 
+      {
+        $season = $_POST['album'];
+
+        if ($_POST['album'] == 'all') 
+        {
+          $queryAdd = '';
+          $titleAdd = 'All Program';
+        }
+        else
+        {
+          $queryAdd = 'WHERE `album` = "'.$_POST['album'].'" ';
+          $titleAdd = $season;
+        }
+      }
+      else
+      {
+        $queryAdd = '';
+        $titleAdd = '';
+      }
+       ?>
+      <center>
+        <form action="" method="post">
+          <select name="album" id="album" class="form-control" style="width: 20%;" onchange="this.form.submit();">
+            <option selected disabled>Select Program</option>
+            <option value="all">All</option>
+            <?php 
+            $sqlSeason = ' SELECT DISTINCT(`album`) FROM `tbl_kp_videos` ORDER BY `album` ';
+            $exec = $conn->query($sqlSeason);
+            while ($season = $exec->fetch_assoc()) {
+             ?>
+              <option value="<?php echo $season['album']; ?>"><?php echo $season['album']; ?></option>
+            <?php } ?>
+          </select>
+        </form>
+        <h5 class="mt-2"><?php echo $titleAdd; ?></h5>
+      </center>
+      <br><hr>
 
       <div class="row mt-3">
 
+        <?php 
+        $sql = ' SELECT `id`, `video_link`, `title`, `album`, `status`, DATE_FORMAT(`date_created`, "%M %d, %Y") AS date_created FROM `tbl_kp_videos` '.$queryAdd.' ORDER BY id DESC ';
+        $exec = $conn->query($sql);
+        while ($row = $exec->fetch_assoc())
+        {
+         ?>
+
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="card">
-            <iframe src="https://drive.google.com/file/d/1ywS-b9uE1bjifOeGYnQn3TOzSS70x820/preview" width="100%" height="350" allow="autoplay"></iframe>
+            <iframe src="<?php echo $row['video_link']; ?>" width="100%" height="350" allow="autoplay"></iframe>
             <div class="card-body videoBody">
-              <p class="card-text"><b>Maragondon Success Story</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
+              <p class="card-text"><b><?php echo $row['title']; ?></b></p>
+              <p class="card-text text-muted"><?php echo $row['date_created']; ?></p>
             </div>
           </div>
         </div>
 
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/1BnhYNcWUCj_-7wmoLHhlFAq-Y-wOQXHO/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Calatagan Success Story</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/1mdc-TLUn5BLqdQD6QxnU5NAylF3hb1EY/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Candelaria Success Story</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/1ThF0JHkIpo0dKr8ju0hBcbPODVCucZqN/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Tanay Success Story</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/1066O8T1LPrTTTofY9V3Ks7FhfoSFarKA/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Majayjay Success Stories</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/1VEzadW1fHRrQVlipr2orf7FvILKxksM7/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Proejct_DINA_Tsunami</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/17nN9z2Z2kRMCr60b07oUR_ORfz0Qd1-8/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Project_DINA_Tropical_Cyclones</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <iframe src="https://drive.google.com/file/d/196IEEJo31x9AcWMyTRJqRR4thzSOl48R/preview" width="100%" height="350" allow="autoplay"></iframe>
-            <div class="card-body videoBody">
-              <p class="card-text"><b>Project_DINA_Volcanic_Eruptions</b></p>
-              <p class="card-text text-muted">Feb. 2, 2022</p>
-            </div>
-          </div>
-        </div>
-
+      <?php } ?>
       </div>
 
 
