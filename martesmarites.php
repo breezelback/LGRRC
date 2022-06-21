@@ -70,7 +70,7 @@ include 'function php/conn.php';
       }
        ?>
       <center>
-        <h3>#MartesMarites</h3>
+        <h3>#MaritesMartes</h3>
       <br><hr>
       <div class="row">
         
