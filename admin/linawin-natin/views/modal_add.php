@@ -16,7 +16,7 @@
           <div class="row">
             <div class="col-sm-6">
               Season:
-              <input type="number" class="form-control" id="videoSeason">
+              <input type="text" class="form-control" id="videoSeason">
             </div>
             <div class="col-sm-6">
               Date Uploaded:

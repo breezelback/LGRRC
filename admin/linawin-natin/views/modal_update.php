@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-sm-6">
             Season:
-            <input type="number" class="form-control" id="updateSeason">
+            <input type="text" class="form-control" id="updateSeason">
           </div>
           <div class="col-sm-6">
             Date Uploaded:
