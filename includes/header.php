@@ -25,7 +25,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="linawin-natin.php">Linawin Natin</a>
                             <a class="dropdown-item" href="sagisag-ng-pagasa.php">Sagisag ng Pag-asa</a>
-                            <a class="dropdown-item" href="sagisag-ng-pagasa.php">#MartesMarites</a>
+                            <a class="dropdown-item" href="martesmarites.php">#MartesMarites</a>
                         </div>
                     </li> 
 
