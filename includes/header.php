@@ -10,15 +10,25 @@
                     <li class="nav-item"><a href="about.php" class="nav-link"  id="navAbout">About</a></li>
                     <li class="nav-item"><a href="news.php" class="nav-link"  id="navNews">News</a></li>
                     <li class="nav-item"><a href="msac.php" class="nav-link"  id="navMsac">MSAC</a></li>
-                    <li class="nav-item"><a href="knowledge-products.php" class="nav-link" id="navBook">Knowledge Product</a></li>
+                    <!-- <li class="nav-item"><a href="knowledge-products.php" class="nav-link" id="navBook">Knowledge Product</a></li> -->
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navVideos">Knowledge Product</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="knowledge-products.php">Knowledge Products</a>
+                            <a class="dropdown-item" href="ct-module.php">CT Panel</a>
+                        </div>
+                    </li> 
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navVideos">Videos</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="linawin-natin.php">Linawin Natin</a>
                             <a class="dropdown-item" href="sagisag-ng-pagasa.php">Sagisag ng Pag-asa</a>
-                            <a class="dropdown-item" href="ct-module.php">CT Panel</a>
+                            <a class="dropdown-item" href="sagisag-ng-pagasa.php">#MartesMarites</a>
                         </div>
                     </li> 
+
                     <li class="nav-item"><a href="directory.php" class="nav-link"  id="navDir">Directory</a></li>
                     <li class="nav-item"><a href="faq.php" class="nav-link"  id="navFaq">FAQ</a></li>
 
