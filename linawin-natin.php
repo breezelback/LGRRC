@@ -71,7 +71,14 @@ include 'function php/conn.php';
       {
         $season = $_POST['videoSeason'];
         $queryAdd = 'AND `videoSeason` = "'.$_POST['videoSeason'].'" ';
-        $titleAdd = 'SEASON '.$season;
+        if ($season == '1') 
+        {
+          $titleAdd = 'SEASON '.$season;
+        }
+        else
+        {
+          $titleAdd = $season;
+        }
       }
       else
       {
