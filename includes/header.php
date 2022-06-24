@@ -16,7 +16,7 @@
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="navVideos">Knowledge Product</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="knowledge-products.php">Knowledge Products</a>
-                            <a class="dropdown-item" href="ct-module.php">CT Panel</a>
+                            <a class="dropdown-item" href="ct-module.php">Contact Tracing Panel</a>
                         </div>
                     </li> 
 
@@ -29,7 +29,7 @@
                         </div>
                     </li> 
 
-                    <li class="nav-item"><a href="directory.php" class="nav-link"  id="navDir">Directory</a></li>
+                    <li class="nav-item"><a href="directory.php" class="nav-link"  id="navDir">Directory of Experts</a></li>
                     <li class="nav-item"><a href="faq.php" class="nav-link"  id="navFaq">FAQ</a></li>
 
                     <!-- <li class="nav-item dropdown">
