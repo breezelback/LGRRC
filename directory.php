@@ -31,6 +31,13 @@ include 'function php/conn.php';
 
     <title>LGRRC</title>
     <style>
+      html, body{
+   
+   font-family: Poppins, Helvetica, "sans-serif";
+   -ms-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
       /* width */
       .expertisePanel::-webkit-scrollbar {
         width: 10px;

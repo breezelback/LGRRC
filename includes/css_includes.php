@@ -29,3 +29,24 @@
 
 
 <link href="admin/assets/bootstrap-4/dist/css/BsMultiSelect.css" rel="stylesheet" type="text/css">
+<style>
+     @font-face {
+            font-family: 'Poppins';
+            src: url('fonts/century/Poppins-Light.ttf') format('truetype');
+        }
+
+        html,
+        body {
+
+            font-family: 'Poppins';
+
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: transparent;
+
+        }
+</style>

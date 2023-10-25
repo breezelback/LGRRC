@@ -35,6 +35,7 @@
 <script src="dist/js/BsMultiSelect.js?v3"></script> -->
         
 <script type="text/javascript" src="admin/assets/bootstrap-4/dist/js/BsMultiSelect.js"></script>
+<script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 
 <script type="text/javascript">
 $(function () {

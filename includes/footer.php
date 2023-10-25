@@ -55,7 +55,7 @@
                             <div class="footer-social-icon">
                                 <span>Follow us</span>
                                 <a href="https://www.facebook.com/dilgr4a"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="https://twitter.com/dilgr4a"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="https://tiktok.com/@dilgr4a" style="border: 2px solid #fff; display: inline-block; border-radius: 50%;"><i class="fab fa-tiktok tiktok-bg"></i></a>                                <a href="https://twitter.com/dilgr4a"><i class="fab fa-twitter twitter-bg"></i></a>
                                 <a href="https://www.instagram.com/dilgr4a/"><i class="fab fa-instagram google-bg"></i></a>
                                 <a href="https://www.youtube.com/channel/UCGApvxj6AnY3bRrPtEq3xGw"><i class="fab fa-youtube youtube-bg"></i></a>
                             </div>

@@ -86,75 +86,7 @@ include 'function php/conn.php';
 
         <?php } ?>
 
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=1217901548744871" data-width="500" data-height="300" data-show-text="false"><blockquote cite="<?php echo $res['videoLink']; ?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=1217901548744871">SOCE</a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>#MaritesMartes: Kampanyahan sa Holy Week, Pwede ba?</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=316513527331465" data-width="500" data-height="300" data-show-text="false"><blockquote cite="https://www.facebook.com/watch/?v=316513527331465" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=316513527331465">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>MaritesMartes: Linawin Natin Special Series at Caviteños, Alam Nyo Ba?</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=1037985280177844" data-width="500" data-height="300" data-show-text="false"><blockquote cite="<?php echo $res['videoLink']; ?>" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=1037985280177844">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>#MaritesMartes: Reminders Before Voting</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=377546267740646" data-width="500" data-height="300" data-show-text="false"><blockquote cite="https://www.facebook.com/watch/?v=377546267740646" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=377546267740646">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>MaritesMartes: Local Governance Transition</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=751569805845948" data-width="500" data-height="300" data-show-text="false"><blockquote cite="https://www.facebook.com/watch/?v=751569805845948" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=751569805845948">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>#MaritesMartes: Absentee at Local Absentee Voters</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=326727389399011" data-width="500" data-height="300" data-show-text="false"><blockquote cite="https://www.facebook.com/watch/?v=326727389399011" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=326727389399011">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>#MaritesMartes: COMELEC Voter Verifier</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="fb-video card-img-top" data-href="https://www.facebook.com/watch/?v=1071155077082729" data-width="500" data-height="300" data-show-text="false"><blockquote cite="https://www.facebook.com/watch/?v=1071155077082729" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/watch/?v=1071155077082729">PANOORIN • </a><p></blockquote></div>
-            <div class="card-body">
-              <p class="card-text"><b>#MaritesMartes: Voting Process</b></p>
-              <p class="card-text text-muted">June 21, 2022</p>
-            </div>
-          </div>
-        </div>
+        
 
 
 
