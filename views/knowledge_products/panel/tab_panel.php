@@ -4,8 +4,8 @@
     }
 </style>
 
-<div id="tab1" class="tabcontent" style="display:block;">
-    <table class="table display" id="knowledge_products_table" style="font-size:10pt;text-align:left;margin-top:20px;">
+<div id="tab1" class="tabcontent" style="display:block;margin-top:30px;">
+    <table class="table display" id="knowledge_products_table" style="font-size:10pt;text-align:left;">
         <thead>
             <tr>
                 <th scope="col">Category</th>
@@ -13,7 +13,6 @@
                 <th scope="col" style="width:100% !important;">Title of the Book</th>
                 <th scope="col">Author/Publisher</th>
                 <th scope="col" style="width:0 !important;">Quantity</th>
-                <th scope="col">Year of Publication</th>
             </tr>
         </thead>
         <tbody>
@@ -22,10 +21,11 @@
                 <tr>
                   <td><?= $data['category'] ?></td>
                     <td><?= $data['subcategory'] ?></td>
-                    <td><?= $data['title'] ?></td>
+                    <td><?= $data['title'] ?>
+                <br><b><i>Year of Publication: <?= $data['publication_year'];?></i></b>
+                </td>
                     <td><?= $data['author'] ?></td>
                     <td><?= $data['quantity'] ?></td>
-                    <td><?= $data['publication_year'] ?></td>
 
                 </tr>
 

@@ -101,4 +101,15 @@ class LGRRCManager
         }
         return $data;
     }
+    public function fetchMessage($id){
+        $sql = 'SELECT * from tbl_quotations where id = "'.$id.'"';
+        $query = $this->db->query($sql);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data = [
+                'quotation'    => $row['quotation'],
+            ];
+        }
+        return $data;
+    }
 }

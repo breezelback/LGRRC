@@ -11,5 +11,7 @@ $linawin_season = $lg->fetchLinawinNatinSeason();
 $sagisag_season = $lg->fetchSagisagSeason();
 $linawin_video = $lg->fetchLinawinVideo();
 $sagisag_video = $lg->fetchSagisagVideo();
+$executive_msg = $lg->fetchMessage(2);
+$ard_msg = $lg->fetchMessage(3);
 
 ?>

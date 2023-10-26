@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="LGRRC Website">
     <meta name="keywords" content="dilg,lgrc calabarzon,lgrrc calabarzon,lgrrc,lgrc, calabarzon, dilg calabarzon">
-    <meta name="author" content="Jeck Castillo">
+    <meta name="author" content="DILG IV-A">
     <link rel="icon" type="image/png" href="images/lgrc_logo.png">
     <?php include 'includes/css_includes.php'; ?>
 
@@ -56,7 +56,7 @@
 </head>
 
 <body>
-    <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;">
+    <div class="bgImageSmall" style="background-image: url(images/hd7.jpg); background-position: 50% -25px;"></div>
         <!-- Navbar-->
         <?php include 'includes/header.php'; ?>
         <div>

@@ -59,20 +59,14 @@
 
 <script>
     $(document).ready(function() {
-        $('#knowledge_products_table').DataTable({
+        let table = new DataTable('#knowledge_products_table', {
             "paging": true, // Enable pagination
             "pageLength": 6, // Set the number of records per page to 5
             "searching": true,
-            "lengthChange": false,
-            'dom': 'lrtip',
-            'bFilter':true,
-            searchable: true
 
-
-
+            // options
         });
-
-    })
+    });
     $('.tablinks').on('click', function() {
         $('.tablinks').removeClass('active');
         $(this).addClass('active');
