@@ -88,6 +88,8 @@
                 $('#navBook').addClass('active');
             } else if (currentPath === '/LGRRC/msac_directory.php') {
                 $('#navMsac').addClass('active');
+            }else if (currentPath === '/LGRRC/aboutv2.php') {
+                $('#navAbout').addClass('active');
             }
         });
     })
