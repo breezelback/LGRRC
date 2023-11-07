@@ -7,8 +7,10 @@
             <div id="navbarSupportedContent" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link" id="navHome">Home <span class="sr-only">(current)</span></a></li>
-                    <li class="nav-item"><a href="aboutv2.php" class="nav-link"  id="navAbout">About</a></li>
+                    <li class="nav-item"><a href="about.php" class="nav-link"  id="navAbout">About</a></li>
                     <li class="nav-item"><a href="#" class="nav-link"  id="navSub">Sub-LGRRC</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"  id="navSuccess">Success Stories</a></li>
+
                     <li class="nav-item"><a href="msac_directory.php" class="nav-link"  id="navMsac">MSAC Partners</a></li>
                     <!-- <li class="nav-item"><a href="knowledge-products.php" class="nav-link" id="navBook">Knowledge Product</a></li> -->
 

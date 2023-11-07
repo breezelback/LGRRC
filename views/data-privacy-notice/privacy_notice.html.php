@@ -1,5 +1,5 @@
 
-    <div style="text-align: left;">
+    <div style="text-align: left;" data-aos="fade-up" data-aos-duration="1500">
         <h4>DILG IV-A DATA PRIVACY NOTICE</h4>
         <p style="text-indent:20px;">The Department of the Interior and Local Government (DILG) IV-A shall comply with the Republic Act No. 10173, likewise known as the Data Privacy Act of 2012 by protecting and securing custody of personal data submitted through our DILG IV-A Official Website.</p>
 

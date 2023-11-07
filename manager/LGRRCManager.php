@@ -101,13 +101,29 @@ class LGRRCManager
         }
         return $data;
     }
-    public function fetchMessage($id){
-        $sql = 'SELECT * from tbl_quotations where id = "'.$id.'"';
+    public function fetchMessage($id)
+    {
+        $sql = 'SELECT * from tbl_quotations where id = "' . $id . '"';
         $query = $this->db->query($sql);
         $data = [];
         while ($row = mysqli_fetch_assoc($query)) {
             $data = [
                 'quotation'    => $row['quotation'],
+            ];
+        }
+        return $data;
+    }
+    public function fetchAboutCarousel()
+    {
+        $sql = ' SELECT `id`, `position`, `imageName`, `dateUploaded` FROM `tbl_about` ORDER BY `position` ASC';
+        $query = $this->db->query($sql);
+        $data = [];
+        while ($row = mysqli_fetch_assoc($query)) {
+            $data[] = [
+                'id'    => $row['id'],
+                'position'    => $row['position'],
+                'imageName'    => $row['imageName'],
+                'dateUploaded'    => $row['dateUploaded'],
             ];
         }
         return $data;

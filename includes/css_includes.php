@@ -49,4 +49,180 @@
             -webkit-tap-highlight-color: transparent;
 
         }
+        .mt-10{
+        margin-top: -5% !important;
+    }
+    .img-banner{
+        max-width: 200%;
+        height: auto;
+        text-align: center;
+    }
+    .typing-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(40) infinite ;
+      }
+    html,
+    body {
+
+      font-family: Poppins, Helvetica, "sans-serif";
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .btn .btnBadge {
+      background-color: red;
+      color: white;
+      margin-top: 330px;
+      position: absolute;
+      margin-left: -34px;
+    }
+
+    #kbox1 {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 5px solid #3c95d9;
+      background-color: #fff;
+      position: fixed;
+    }
+
+    #ybox1 {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 5px solid #3c95d9;
+      background-color: #fff;
+      position: fixed;
+    }
+
+
+    #fbox1 {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 5px solid #3c95d9;
+      background-color: #fff;
+      position: fixed;
+    }
+
+    #ybox2 {
+      overflow: hidden;
+      text-align: left;
+    }
+
+    #kbox2 {
+      overflow: hidden;
+      text-align: left;
+    }
+
+    #fbox2 {
+      overflow: hidden;
+      text-align: left;
+    }
+
+    #ybox1 img {
+      position: absolute;
+      top: 0px;
+      cursor: pointer;
+      border: 0;
+      z-index: 10000;
+    }
+
+    #kbox1 img {
+      position: absolute;
+      top: 0px;
+      cursor: pointer;
+      border: 0;
+      z-index: 10000;
+    }
+
+    #fbox1 img {
+      position: absolute;
+      top: 0px;
+      cursor: pointer;
+      border: 0;
+      z-index: 10000;
+    }
+
+    #ybox1 iframe {
+      border: 0px;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    #kbox1 iframe {
+      border: 0px;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    #fbox1 iframe {
+      border: 0px;
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    #sw_twitter_feeds_sidebar {
+
+      position: relative;
+
+    }
+
+    #tbox1 {
+
+      -webkit-border-radius: 5px;
+
+      -moz-border-radius: 5px;
+
+      border-radius: 5px;
+
+      border: 5px solid #1da1f2;
+
+      background-color: #fff;
+
+      position: fixed;
+
+    }
+
+    #tbox2 {
+
+      overflow: hidden;
+
+      text-align: left;
+
+    }
+
+    #tbox1 img {
+
+      position: absolute;
+
+      top: 0px;
+
+      cursor: pointer;
+
+      border: 0;
+
+      z-index: 10000;
+
+    }
+
+    #tbox1 iframe {
+
+      border: 0px;
+
+      overflow: hidden;
+
+      position: absolute;
+
+      width: 100%;
+
+      height: 100%;
+
+    }
 </style>

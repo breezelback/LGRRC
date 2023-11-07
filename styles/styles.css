@@ -77,6 +77,15 @@
 * ==========================================
 *
 */
+.mandanas_panel {
+  background-image: url(../images/LGRC_Static.png);
+  background-position: 50% -25px;
+  background-size: cover;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  height: 100%;
+}
 .text-small {
     font-size: 0.9rem !important;
 }
