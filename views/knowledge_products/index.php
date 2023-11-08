@@ -39,17 +39,15 @@
         text-align: center;
     }
 </style>
-<div class="container-fluid">
-    <div class="row" style="padding: 100px;">
-        <div class="col-lg-2">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
             <?php include 'panel/side_panel.php'; ?>
         </div>
-        <div class="col-lg-8">
+        <div class="col-lg-9">
             <?php include 'panel/tab_panel.php'; ?>
         </div>
-        <div class="col-lg-2 text-white aos-init" style="margin-top: 20px;">
-            <?php include 'panel/right_panel.php'; ?>
-        </div>
+       
     </div>
 </div>
 <div id="fb-root">

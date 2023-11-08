@@ -90,6 +90,8 @@
                 $('#navMsac').addClass('active');
             }else if (currentPath === '/LGRRC/aboutv2.php') {
                 $('#navAbout').addClass('active');
+            } else if (currentPath === '/LGRRC/sub_lgrrc.php') {
+                $('#navSub').addClass('active');
             }
         });
     })

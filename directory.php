@@ -11,7 +11,7 @@ include 'function php/conn.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="LGRRC Website">
   <meta name="keywords" content="dilg,lgrc calabarzon,lgrrc calabarzon,lgrrc,lgrc, calabarzon, dilg calabarzon">
-  <meta name="author" content="Jeck Castillo">
+  <meta name="author" content="DILG IV-A">
   <link rel="icon" type="image/png" href="images/lgrc_logo.png">
   <?php include 'includes/css_includes.php'; ?>
   <!-- Font Awesome -->
@@ -142,7 +142,7 @@ include 'function php/conn.php';
   <!-- <div class="parallax"> -->
   <div class="container position-relative">
     <br>
-    <div class="row">
+    <div class="row" data-aos="fade-up" data-aos-duration="1500">
       <div class="col-md-9">
         <h1 class="display-6">Directory of Experts</h1>
       </div>

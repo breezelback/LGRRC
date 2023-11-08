@@ -1,7 +1,7 @@
 
 <div class="col-lg-3 mt-10 text-white">
     <!-- <header class="py-5 mt-5"> -->
-    <div class="e-card playing">
+    <div class="e-card playing" data-aos="fade-up" data-aos-duration="1500">
         <div class="image"></div>
         <div class="wave"></div>
         <div class="wave"></div>
@@ -18,13 +18,10 @@
             <div class="name" style="top: -2em!important;">LGRRC IV-A advocates knowledge management principles in the context of local governance and improves the capacities of public servants toward the attainment of inclusive growth and progress in our community.</div>
         </div>
     </div>
-
-    
-
 </div>
 <div class="col-lg-3 mt-10 text-white">
     <!-- <header class="py-5 mt-5"> -->
-    <div class="e-card playing">
+    <div class="e-card playing" data-aos="fade-up" data-aos-duration="1500">
         <div class="image"></div>
         <div class="wave"></div>
         <div class="wave"></div>
@@ -47,7 +44,7 @@
 </div>
 <div class="col-lg-3 mt-10 text-white">
     <!-- <header class="py-5 mt-5"> -->
-    <div class="e-card playing">
+    <div class="e-card playing" data-aos="fade-up" data-aos-duration="1500">
         <div class="image"></div>
         <div class="wave"></div>
         <div class="wave"></div>
@@ -72,7 +69,7 @@
 </div>
 <div class="col-lg-3 mt-10 text-white">
     <!-- <header class="py-5 mt-5"> -->
-    <div class="e-card playing">
+    <div class="e-card playing" data-aos="fade-up" data-aos-duration="1500">
         <div class="image"></div>
         <div class="wave"></div>
         <div class="wave"></div>
@@ -93,3 +90,4 @@
     
 
 </div>
+

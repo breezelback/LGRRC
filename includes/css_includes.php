@@ -51,6 +51,7 @@
         }
         .mt-10{
         margin-top: -5% !important;
+        margin-bottom: -5% !important;
     }
     .img-banner{
         max-width: 200%;

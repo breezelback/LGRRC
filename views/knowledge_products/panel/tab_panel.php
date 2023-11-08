@@ -4,7 +4,7 @@
     }
 </style>
 
-<div id="tab1" class="tabcontent" style="display:block;margin-top:30px;">
+<div id="tab1" class="tabcontent" style="display:block;margin-top:5%;">
     <table class="table display" id="knowledge_products_table" style="font-size:10pt;text-align:left;">
         <thead>
             <tr>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 </div>
-<div id="tab2" class="tabcontent" style="display:block;">
+<div id="tab2" class="tabcontent" style="display:block;margin-top:5%;margin-bottom:5%;">
     <div class="row">
         <div id="accordion" style="width: 100%;">
             <div class="card">
@@ -212,6 +212,54 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button class="btn  collapsed videos_title" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                            Leksyon Eleksyon
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn  collapsed videos_title" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            Weekender
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button class="btn  collapsed videos_title" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+                            Is it Legit
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            
                         </div>
                     </div>
                 </div>
