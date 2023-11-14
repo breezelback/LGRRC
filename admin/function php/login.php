@@ -7,7 +7,8 @@ $username = $conn -> real_escape_string($_GET['username']);
 $password = $conn -> real_escape_string($_GET['password']);
 
 
-$sqlSelect = ' SELECT `usertype` FROM `tbl_user` WHERE `username` = "'.$username.'" AND `password` = "'.$password.'" ';
+$sqlSelect = ' SELECT `usertype` FROM `tbl_user` WHERE `username` = "'.$username.'" AND `password` = "'.md5($password).'" ';
+
 $execSelect = $conn->query($sqlSelect);
 
 if ($execSelect->num_rows > 0) 

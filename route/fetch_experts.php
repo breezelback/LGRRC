@@ -98,12 +98,18 @@ function fetch($conn)
     
     
     
-    $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
-    FROM `tbl_expert` ' . $queryCondition . ' GROUP BY `name` ORDER BY `name` ASC';
-    
+   
+     if($queryCondition == null)
+     {
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
+        FROM `tbl_expert` WHERE expertise != ""  GROUP BY `name` ORDER BY `name` ASC';
+     }else{
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
+        FROM `tbl_expert` ' . $queryCondition . '  GROUP BY `name` ORDER BY `name` ASC';
+     }
 
 
-
+$data = '';
         $query = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($query)) {
             

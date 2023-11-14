@@ -6,21 +6,22 @@ $login_ip = $_SERVER['REMOTE_ADDR'];
 
 
 
-$username = $conn -> real_escape_string($_GET['username']);
-$password = $conn -> real_escape_string($_GET['password']);
+$username = $_GET['username'];
+$password = $_GET['password'];
 
 
 $selectUsername = ' SELECT `password` FROM `tbl_user` WHERE `username` = "'.$username.'" ';
+
 $execSelectUsername = $conn->query($selectUsername);
 
 if ($execSelectUsername->num_rows > 0) 
 {
 	$resultUser = $execSelectUsername->fetch_assoc();
 	$hashPassword = $resultUser['password'];
-
-	if (password_verify($password, $hashPassword)) 
+	if (isset($password))
 	{
 	    $sqlSelect = ' SELECT `id`, `lastname`, `firstname`, `middlename`, `address`, `mobile`, `birthday`, `username`, `password`, `status`, `dateUploaded`, `borrowerId`, `usertype` FROM `tbl_user` WHERE `username` = "'.$username.'" AND `status` = "approved"';
+		
 		$execSelect = $conn->query($sqlSelect);
 		$result = $execSelect->fetch_assoc();
 
@@ -54,13 +55,13 @@ if ($execSelectUsername->num_rows > 0)
 	}
 	else 
 	{
-	    echo "error";
+	    echo "gerror";
 	}
 
 }
 else
 {
-	echo "error";
+	echo "errofffr";
 
 }
 

@@ -128,4 +128,45 @@ class LGRRCManager
         }
         return $data;
     }
+    public function fetchExperts()
+    {
+        $directory = 'images/expert/dilg4a/Employee Photos/01 Regional Office Photos/';
+        $files1 = scandir($directory, 0);
+        $fileLimit = 44;
+        $fileCount = 1;
+        $data = [];
+
+        foreach ($files1 as $i => $value) {
+            // Exclude entries for the current directory (.) and parent directory (..)
+            if ($value !== '.' && $value !== '..') {
+                // Build the SQL query
+                $sql = "SELECT id, `name`, imageName FROM tbl_expert WHERE name LIKE '%" . substr($value, 2, -4) . "%'";
+                // Execute the query
+                $query = $this->db->query($sql);
+
+                // Fetch and store the result
+                while ($row = mysqli_fetch_assoc($query)) {
+                    $data[] = [
+                        'id'    => $row['id'],
+                        'name'  => $row['name'],
+                        'img'   => $row['imageName'],
+                    ];
+                    // Build the SQL query to update data
+                    $newFilename = $value; // Adjust as needed
+                    $updateSql = "UPDATE tbl_expert SET imageName = '$newFilename' WHERE id = " . $row['id'];
+
+                    // Execute the update query
+                    $this->db->query($updateSql);
+                }
+
+                // Check if the file limit is reached
+                $fileCount++;
+                if ($fileCount > $fileLimit) {
+                    break;
+                }
+            }
+        }
+
+        return $data;
+    }
 }

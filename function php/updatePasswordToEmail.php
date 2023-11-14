@@ -35,7 +35,7 @@ $passwordUsername = $_GET['passwordUsername'];
 $passwordEmail = $_GET['passwordEmail'];
 
 
-$sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$passwordUsername.'" AND `email` = "'.$passwordEmail.'" ';
+$sqlSelect = ' SELECT `username` FROM `tbl_user` WHERE `username` = "'.$passwordUsername.'"';
 $execSelect = $conn->query($sqlSelect);
 
 $newPassword = generateRandomString();

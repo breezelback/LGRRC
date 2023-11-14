@@ -110,7 +110,7 @@ $('#btn_login').click(function(){
           }
           else
           {
-            window.location = 'index.php';
+            window.location = 'index_v1.php';
           }
         }
       }); 
