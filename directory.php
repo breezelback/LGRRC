@@ -128,6 +128,20 @@ include 'function php/conn.php';
       border-radius: 15px;
       margin: auto;
     }
+
+    #page_navigation a {
+      padding: 0.7rem 1rem;
+      border: 1px solid #2163e8;
+      margin: 2px;
+      color: #595d69;
+      text-decoration: none;
+      border-radius: 0.25rem;
+    }
+
+    .active-page {
+      background-color: #192f72;
+      color: #fff !important;
+    }
   </style>
 </head>
 
@@ -174,6 +188,15 @@ include 'function php/conn.php';
         <div class="row" id="directoryOutput">
 
         </div>
+        <div id="page_navigation">
+          <a id="previous" data-page="1">&lt;&lt;</a>
+          <a id="page_num" class="page_link" data-page="1">1</a>
+          <a id="page_num2" class="page_link" data-page="11">2</a>
+          <a id="page_num3" class="page_link" data-page="21">3</a>
+          <a id="page_num4" class="page_link" data-page="31">4</a>
+          <a id="page_num5" class="page_link" data-page="41">5</a>
+          <a class="next_link" id="next">&gt;&gt;</a>
+        </div>
       </div>
       <!-- asd -->
     </div>
@@ -196,8 +219,62 @@ include 'function php/conn.php';
   </style>
 
   <script type="text/javascript">
+    const itemsPerPage = 10; // Number of items per page
+    let currentPage = 1; // Current page
+    let totalPages = 1000;
     // $("select").bsMultiSelect();
+    $(document).ready(function() {
+      $('.page_link').on('click', function() {
+        var pageNumber = $(this).data('page');
+        // Remove 'active-page' class from all elements with class 'page_link'
+        $('.page_link').removeClass('active-page');
 
+        // Handle page-specific logic
+        go_to_page(pageNumber);
+
+        // Handle 'next' and 'previous' elements if needed
+        $('#next, #previous').removeClass('active-page');
+        $(this).addClass('active-page');
+      });
+
+      $('#previous').on('click', function() {
+        previous();
+        $('.page_link').removeClass('active-page');
+        $('#next').removeClass('active-page');
+        $(this).addClass('active-page');
+      });
+
+      $('#next').on('click', function() {
+        next();
+        $('.page_link').removeClass('active-page');
+        $('#previous').removeClass('active-page');
+        $(this).addClass('active-page');
+      });
+    })
+    // Function to go to a specific page
+    function go_to_page(page) {
+      currentPage = page;
+      fetchExperts(page);
+      // Update pagination links here
+    }
+
+    // Function to go to the next page
+    function next() {
+      if (currentPage < totalPages) {
+        go_to_page(currentPage + 10);
+        console.log(currentPage+"--"+totalPages);
+      } else {
+        console.log("Page reaches limit")
+      }
+    }
+
+    // Function to go to the previous page
+    function previous() {
+      console.log(currentPage);
+      if (currentPage > 1) {
+        go_to_page(currentPage - 10);
+      }
+    }
     $("select").bsMultiSelect({
 
       cssPatch: {
@@ -381,8 +458,7 @@ include 'function php/conn.php';
 
 
 
-
-    function fetchExperts() {
+    function fetchExperts(page) {
 
       $('.navPill').removeClass("active");
       $('#btnAll').addClass("active");
@@ -395,6 +471,10 @@ include 'function php/conn.php';
 
         url: "route/fetch_experts.php",
         type: "POST",
+        data: {
+          page: page,
+          itemsPerPage: itemsPerPage
+        },
         beforeSend: function() {
 
           $('#imgLoading').show();
@@ -434,8 +514,8 @@ include 'function php/conn.php';
               '<div class="card-border-top"></div>' +
               '<div class="img">' + imgElement.prop('outerHTML') + '</div>' +
               '<span>' + item['name'] + '</span>' +
-              '<p class="job">POPS Planning, POC, ADAC</p>' +
-              '<p class="job">LGOO II</p>' +
+              '<p class="job">' + item['expertise'] + '</p>' +
+              '<p class="job">' + item['province'] + '<br>' + item['address'] + '</p>' +
               '</div></a><hr>'
             );
 
@@ -453,7 +533,7 @@ include 'function php/conn.php';
       });
     }
 
-    fetchExperts();
+    fetchExperts(1);
 
 
 

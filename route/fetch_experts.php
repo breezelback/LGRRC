@@ -2,8 +2,14 @@
 date_default_timezone_set('Asia/Manila');
 $conn = mysqli_connect("localhost", "calabarzondilggo_lgrrcuser", "`(q/*kTRV366'mqD@=eS-", "calabarzondilggo_lgrrc");
 
+$page = $_POST['page'];
+$itemsPerPage = $_POST['itemsPerPage'];
 
-fetch($conn);
+
+fetch($conn, $page, $itemsPerPage);
+
+
+
 
 function fetch($conn)
 {
@@ -14,8 +20,8 @@ function fetch($conn)
     $nameHolder = '';
     $addressHolder = '';
     $newExpertiseQry = '';
-    
-    
+
+
     // if (isset($_GET['id'])) 
     if (isset($_GET['id']) || isset($_GET['nameHolder']) || isset($_GET['addressHolder']) || isset($_GET['identifier'])) {
         $id = $_GET['id'];
@@ -23,16 +29,16 @@ function fetch($conn)
         $addressHolder = $_GET['addressHolder'];
         $identifier = $_GET['identifier'];
         $expertiseQry = '(';
-    
+
         if ($identifier != 'undefined') {
             $identifier = explode(',', $identifier);
-    
+
             for ($i = 0; $i < count($identifier); $i++) {
                 $expertiseQry .= '`expertise` LIKE "%' . $identifier[$i] . '%" AND ';
             }
             $newExpertiseQry = rtrim($expertiseQry, " AND ");
             $newExpertiseQry = $newExpertiseQry . ')';
-    
+
             if (($id != '') or ($id == 'test')) {
                 $queryCondition = ' WHERE ' . $newExpertiseQry . ' ';
                 if ($nameHolder != '') {
@@ -42,7 +48,7 @@ function fetch($conn)
                     $queryCondition .= ' AND (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 }
             }
-    
+
             if ($nameHolder != '') {
                 $queryCondition = ' WHERE (`name` LIKE "' . $nameHolder . '%" OR `name` LIKE "%' . $nameHolder . '%" OR `name` LIKE "' . $nameHolder . '")    ';
                 if ($id != '') {
@@ -52,7 +58,7 @@ function fetch($conn)
                     $queryCondition .= ' AND (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 }
             }
-    
+
             if ($addressHolder != '') {
                 $queryCondition = ' WHERE (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 if ($id != '') {
@@ -73,7 +79,7 @@ function fetch($conn)
                     $queryCondition .= ' AND (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 }
             }
-    
+
             if ($nameHolder != '') {
                 $queryCondition = ' WHERE (`name` LIKE "' . $nameHolder . '%" OR `name` LIKE "%' . $nameHolder . '%" OR `name` LIKE "' . $nameHolder . '")    ';
                 if ($id != '') {
@@ -83,7 +89,7 @@ function fetch($conn)
                     $queryCondition .= ' AND (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 }
             }
-    
+
             if ($addressHolder != '') {
                 $queryCondition = ' WHERE (`address` LIKE "' . $addressHolder . '%" OR `address` LIKE "%' . $addressHolder . '%" OR `address` LIKE "' . $addressHolder . '")    ';
                 if ($id != '') {
@@ -95,31 +101,38 @@ function fetch($conn)
             }
         }
     } //main if
-    
-    
-    
-   
-     if($queryCondition == null)
-     {
-        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
-        FROM `tbl_expert` WHERE expertise != ""  GROUP BY `name` ORDER BY `name` ASC';
-     }else{
-        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
-        FROM `tbl_expert` ' . $queryCondition . '  GROUP BY `name` ORDER BY `name` ASC';
-     }
 
 
-$data = '';
-        $query = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($query)) {
+
+    // Get the page number and items per page from the AJAX request
+    $page = $_POST['page'];
+    $itemsPerPage = $_POST['itemsPerPage'];
+
+    // Calculate the offset based on the current page
+    $offset = ($page - 1) * $itemsPerPage;
+
+    // SQL query to fetch data
+    if ($queryCondition == null) {
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
+        FROM `tbl_expert` WHERE expertise != ""  GROUP BY `name` ORDER BY `name` ASC  LIMIT ' . $page . ', ' . $itemsPerPage . '';
+    } else {
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
+        FROM `tbl_expert` ' . $queryCondition . '  GROUP BY `name` ORDER BY `name` ASC  LIMIT ' . $page . ', ' . $itemsPerPage . '';
+    }
+    $data = [];
+    $query = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_assoc($query)) {
+
+        $data[] = array(
+            'id' => $row['id'],
+            'name' => $row['name'],
+            'expertise' => $row['expertise'],
+            'imageName' => $row['imageName'],
+            'contactNumber' => $row['contactNumber'],
+            'address' => $row['address'],
             
-            $data[] = array(
-                'id' => $row['id'],
-                'name' => $row['name'],
-                'expertise' => $row['expertise'],
-                'imageName' => $row['imageName'],
-                'contactNumber' => $row['contactNumber'],
-            );
-        }
+
+        );
+    }
     echo json_encode($data);
 }

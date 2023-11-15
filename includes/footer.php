@@ -40,12 +40,9 @@
                             <ul>
                               <li><a href="index.php">Home</a></li>
                               <li><a href="about.php">About</a></li>
-                              <li><a href="news.php">News</a></li>
-                              <li><a href="msac.php">MSAC</a></li>
-                              <li><a href="knowledge-products.php">Knowledge Product</a></li>
-                              <li><a href="linawin-natin.php">Linawin Natin</a></li>
-                              <li><a href="sagisag-ng-pagasa.php">Sagisag ng Pag-asa</a></li>
-                              <li><a href="directory.php">Directory</a></li>
+                              <li><a href="msac_directory.php">MSAC</a></li>
+                              <li><a href="knowledge_products.php">Knowledge Product</a></li>                
+                              <li><a href="directory.php">Directory of Experts</a></li>
                               <li><a href="faq.php">FAQ</a></li>
                             </ul>
                         </div>
