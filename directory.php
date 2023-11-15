@@ -185,9 +185,6 @@ include 'function php/conn.php';
           <h2 id="ViewText"></h2>
         </center><br>
         <center><img src="images/loading1.gif" width="40%" id="imgLoading"></center>
-        <div class="row" id="directoryOutput">
-
-        </div>
         <div id="page_navigation">
           <a id="previous" data-page="1">&lt;&lt;</a>
           <a id="page_num" class="page_link" data-page="1">1</a>
@@ -196,7 +193,11 @@ include 'function php/conn.php';
           <a id="page_num4" class="page_link" data-page="31">4</a>
           <a id="page_num5" class="page_link" data-page="41">5</a>
           <a class="next_link" id="next">&gt;&gt;</a>
+        </div><br>
+        <div class="row" id="directoryOutput">
+
         </div>
+       
       </div>
       <!-- asd -->
     </div>
@@ -262,7 +263,7 @@ include 'function php/conn.php';
     function next() {
       if (currentPage < totalPages) {
         go_to_page(currentPage + 10);
-        console.log(currentPage+"--"+totalPages);
+        console.log(currentPage + "--" + totalPages);
       } else {
         console.log("Page reaches limit")
       }
@@ -469,31 +470,55 @@ include 'function php/conn.php';
 
       $.ajax({
 
-        url: "route/fetch_experts.php",
-        type: "POST",
-        data: {
-          page: page,
-          itemsPerPage: itemsPerPage
-        },
-        beforeSend: function() {
+          url: "route/fetch_experts.php",
+          type: "POST",
+          data: {
+            page: page,
+            itemsPerPage: itemsPerPage
+          },
+          beforeSend: function() {
 
-          $('#imgLoading').show();
+            $('#imgLoading').show();
 
-        },
-        success: function(data) {
+          },
+          success: function(data) {
 
-          let lists = JSON.parse(data);
-          $('#directoryOutput').empty();
+            let lists = JSON.parse(data);
+            $('#directoryOutput').empty();
 
-          let ex = '';
+            let ex = '';
+            // Define a mapping of provinces to folder names
+            var provinceMapping = {
+              'DILG IV-A Regional Office': 'Regional Office',
+              'DILG Batangas': 'Batangas',
+              'DILG Cavite': 'Cavite',
+              'DILG Laguna': 'Laguna',
+              'DILG Rizal': 'Rizal',
+              'DILG Quezon': 'Quezon',
+              'DILG Lucena City': 'Lucena'
+            };
 
-          $.each(lists, function(key, item) {
-            // Create an image element for each item
-            var imgElement = $('<img>', {
-              src: 'images/expert/' + item['imageName'],
-              alt: 'Original Image',
-              class: 'img-card media-object'
-            });
+            // Iterate through the 'lists' array
+            $.each(lists, function(key, item) {
+              // Get the province from the item
+              var province = item['province'];
+
+              // Use the mapping to get the folder name, default to 'other' if not found
+              var folderName = provinceMapping[province];
+
+              // Construct the img_source
+              var img_source = 'images/expert/dilg4a/' + folderName + '/' + item['imageName'];
+
+              // Create an image element for each item
+              var imgElement = $('<img>', {
+                src: img_source,
+                alt: 'Original Image',
+                class: 'img-card media-object'
+              });
+
+              // Use the imgElement as needed, for example, append it to a container
+              // $('#imageContainer').append(imgElement);
+
 
             // Check if the image exists
             imgElement.on("error", function() {
@@ -521,16 +546,15 @@ include 'function php/conn.php';
 
             // Append the card to the container (e.g., $('#container') or another parent element)
             $('#directoryOutput').append(card);
-          });
-          $('#imgLoading').hide();
+          }); $('#imgLoading').hide();
 
-          document.getElementById("directoryOutput").hidden = false;
+        document.getElementById("directoryOutput").hidden = false;
 
-        }
-
+      }
 
 
-      });
+
+    });
     }
 
     fetchExperts(1);

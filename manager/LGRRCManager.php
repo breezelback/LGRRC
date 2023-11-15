@@ -128,9 +128,9 @@ class LGRRCManager
         }
         return $data;
     }
-    public function fetchExperts()
+     public function fetchExperts()
     {
-        $directory = 'images/expert/dilg4a/Employee Photos/01 Regional Office Photos/';
+        $directory = 'images/expert/dilg4a/Regional Office/';
         $files1 = scandir($directory, 0);
         $fileLimit = 44;
         $fileCount = 1;
@@ -140,7 +140,7 @@ class LGRRCManager
             // Exclude entries for the current directory (.) and parent directory (..)
             if ($value !== '.' && $value !== '..') {
                 // Build the SQL query
-                $sql = "SELECT id, `name`, imageName FROM tbl_expert WHERE name LIKE '%" . substr($value, 2, -4) . "%'";
+                $sql = "SELECT id, `name`, imageName FROM tbl_expert WHERE province = 'DILG IV-A Regional Office' and name LIKE '%" . substr($value, 2, -4) . "%'";
                 // Execute the query
                 $query = $this->db->query($sql);
 

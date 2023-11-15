@@ -14,7 +14,7 @@ $executive_msg = $lg->fetchMessage(2);
 $ard_msg = $lg->fetchMessage(3);
 $about_carousel = $lg->fetchAboutCarousel();
 
-$experts_opts = $lg->fetchExperts();
+// $experts_opts = $lg->fetchExperts();
 
 
 ?>

@@ -113,10 +113,10 @@ function fetch($conn)
 
     // SQL query to fetch data
     if ($queryCondition == null) {
-        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
-        FROM `tbl_expert` WHERE expertise != ""  GROUP BY `name` ORDER BY `name` ASC  LIMIT ' . $page . ', ' . $itemsPerPage . '';
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`,`province`, `dateUploaded` 
+        FROM `tbl_expert` WHERE expertise != "" and province !=""  GROUP BY `name` ORDER BY `name` ASC  LIMIT ' . $page . ', ' . $itemsPerPage . '';
     } else {
-        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`, `dateUploaded` 
+        $sql = ' SELECT `id`, `name`, `expertise`, `contactNumber`, `address`, `email`, `imageName`,`province`, `dateUploaded` 
         FROM `tbl_expert` ' . $queryCondition . '  GROUP BY `name` ORDER BY `name` ASC  LIMIT ' . $page . ', ' . $itemsPerPage . '';
     }
     $data = [];
@@ -130,7 +130,7 @@ function fetch($conn)
             'imageName' => $row['imageName'],
             'contactNumber' => $row['contactNumber'],
             'address' => $row['address'],
-            
+            'province' => $row['province'],
 
         );
     }
